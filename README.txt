@@ -1,6 +1,6 @@
----+ Shoogl
+---+ Shoge
 
-Shoogl is a tool for generating ontologies based on simple grammatical
+Shoge is a tool for generating ontologies based on simple grammatical
 rules.
 
 ---++ SYNOPSIS
@@ -26,7 +26,7 @@ Example grammar file:
 Save this as "limbs.shg". Then generate phrases (on command line):
 
 ==
-  $ shoogle  --debug shoogl --grammar limbs --generate-phrases limb_segment
+  $ shoge  --debug shoge --grammar limbs --generate-phrases limb_segment
   [@left,@anterior,@limb,@stylopod]
   [@left,@posterior,@limb,@stylopod]
   [@right,@anterior,@limb,@stylopod]
@@ -37,7 +37,7 @@ Save this as "limbs.shg". Then generate phrases (on command line):
 List generated OWL axioms:
 
 ==
-  $ shoogle  --debug shoogl --grammar limbs --generate-ontology limb_segment --list-axioms
+  $ shoge  --debug shoge --grammar limbs --generate-ontology limb_segment --list-axioms
   stylopod and part_of some (anterior and limb and  and left) == 'left anterior limb stylopod'.
   ...
 ==
@@ -45,12 +45,12 @@ List generated OWL axioms:
 Generate ontology:
 
 ==
-  $ shoogle  --debug shoogl --grammar limbs --generate-ontology limb_segment --to owl -o limb_ontology.owl
+  $ shoge  --debug shoge --grammar limbs --generate-ontology limb_segment --to owl -o limb_ontology.owl
 ==
 
 ---++ ABOUT
 
-Shoogl is a tool for generating ontologies based on simple grammatical
+Shoge is a tool for generating ontologies based on simple grammatical
 rules. The principle can be loosely explained in terms of serial
 homology - the repetition of core structures of patterns, sometimes
 with variation, within an organism.

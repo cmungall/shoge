@@ -1,0 +1,12 @@
+---+ REQUIREMENTS
+
+* SWI-Prolog
+* Thea (pkb branch)
+
+---+ INSTALLATION
+
+Add the shoge/bin directory to your PATH
+
+---+ TODO
+
+Add Thea as git submodule.
