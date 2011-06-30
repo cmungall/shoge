@@ -26,7 +26,7 @@ Example grammar file:
 Save this as "limbs.shg". Then generate phrases (on command line):
 
 ==
-  $ shoge  --debug shoge --grammar limbs --generate-phrases limb_segment
+  $ shoge  --grammar limbs --generate-phrases limb_segment
   [@left,@anterior,@limb,@stylopod]
   [@left,@posterior,@limb,@stylopod]
   [@right,@anterior,@limb,@stylopod]
@@ -37,7 +37,7 @@ Save this as "limbs.shg". Then generate phrases (on command line):
 List generated OWL axioms:
 
 ==
-  $ shoge  --debug shoge --grammar limbs --generate-ontology limb_segment --list-axioms
+  $ shoge  --grammar limbs --generate-ontology limb_segment --list-axioms
   stylopod and part_of some (anterior and limb and  and left) == 'left anterior limb stylopod'.
   ...
 ==
@@ -45,7 +45,7 @@ List generated OWL axioms:
 Generate ontology:
 
 ==
-  $ shoge  --debug shoge --grammar limbs --generate-ontology limb_segment --to owl -o limb_ontology.owl
+  $ shoge  --grammar limbs --generate-ontology limb_segment --to owl -o limb_ontology.owl
 ==
 
 ---++ ABOUT
