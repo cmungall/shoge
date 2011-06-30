@@ -1,6 +1,6 @@
 /* -*- Mode: Prolog -*- */
 
-:- module(shoogle,
+:- module(shoge,
           [load_grammar/1,
            list_generated_axioms/1,
            list_generated_phrases/1,
@@ -23,7 +23,7 @@
 :- use_module(library(http/dcg_basics)).
 :- use_module(library(semweb/rdf_db)).
 
-% Shoogle files are prolog files
+% Shoge files are prolog files
 user:prolog_file_type(shg,prolog).
 
 :- multifile axiomlist/1.
@@ -267,7 +267,7 @@ generate_ontology(P) :-
 remove_unsatisfiable(O,Opts) :-
         owl_nothing(Nothing),
         forall(exclude(X),
-               (   debug(shoogl,'Excluding: ~w',[X]),
+               (   debug(shoge,'Excluding: ~w',[X]),
                    internal_to_owl(X < Nothing, Axiom),
                    assert_axiom(Axiom, O))),
         assume_entity_declarations,
@@ -277,7 +277,7 @@ remove_unsatisfiable(O,Opts) :-
         maplist(retract_class_and_axioms,UCs).
 
 retract_class_and_axioms(C) :-
-        debug(shoogl,'Retracting: ~w',[C]),
+        debug(shoge,'Retracting: ~w',[C]),
         retract_axiom(class(C)),
         forall(axiom_about(A,C),
                retract_axiom(A)).
@@ -299,7 +299,7 @@ add_default_label(X,O) :-
         atomic_list_concat([_,N],'#',X),
         !,
         assert_axiom(annotationAssertion('http://www.w3.org/2000/01/rdf-schema#label', X, literal(lang(en,N))),O),
-        debug(shoogl,'Default: ~w',[N]).
+        debug(shoge,'Default: ~w',[N]).
 add_default_label(X,_) :-
         print_message(error,no_label(X)).
 
