@@ -1,0 +1,18 @@
+/* -*- Mode: Prolog -*- */
+
+:- include(relations).
+
+%:- use_module(clp(bounds)).
+
+whole_number(1) --> [one].
+whole_number(2) --> [two].
+whole_number(3) --> [three].
+whole_number(4) --> [four].
+whole_number(5) --> [five].
+whole_number(N) --> {between(6,999,N)},[N].
+
+whole_number(N,Low-High) --> whole_number(N),{N>=Low,N=<High}.
+
+in_ordinal_series(has_order value N, Args) --> whole_number(N,Args).
+
+

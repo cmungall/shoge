@@ -1,0 +1,11 @@
+/* -*- Mode: Prolog -*- */
+
+spatial4 *--> body_laterality,ap_axis.
+spatial4 *--> ap_axis.
+
+ap_axis *--> @anterior.
+ap_axis *--> @posterior.
+body_laterality *--> left.
+body_laterality *--> right.
+left *--> [left] :: in_left_side_of some body.
+right *--> [right] :: in_right_side_of some body.

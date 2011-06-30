@@ -1,0 +1,6 @@
+axiomlist([
+           dataProperty(has_order),
+           transitiveProperty(part_of)
+           ]).
+
+          

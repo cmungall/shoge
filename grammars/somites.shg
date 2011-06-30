@@ -1,0 +1,93 @@
+/* -*- Mode: Prolog -*- */
+
+:- include(ordinal_series).
+
+/*
+:- switch.
+:- case('Homo sapiens').
+:- case('Mus').
+:- default.
+:- end.
+*/
+
+:- if(in_context('Homo sapiens')).
+
+somite_number *--> in_ordinal_series(1-39).
+
+:- endif.
+:- if(in_context('Mus')).
+
+somite_number *--> in_ordinal_series(1-65).
+
+:- endif.
+:- if(in_context('chick')).
+
+somite_number *--> in_ordinal_series(1-50).
+
+:- endif.
+:- if(in_context('snake')).
+
+somite_number *--> in_ordinal_series(1-500).
+
+:- endif.
+:- if(in_context('test')).
+
+somite_number *--> in_ordinal_series(1-3).  % REDUCE FOR TESTING
+
+:- endif.
+
+
+/*
+:- if(in_context('Homo sapiens')).
+
+somite_number *--> in_ordinal_series(1-39).
+
+:- else.
+:- if(in_context('Mus')).
+
+somite_number *--> in_ordinal_series(1-65).
+
+:- else.
+:- if(in_context('chick')).
+
+somite_number *--> in_ordinal_series(1-50).
+
+:- else.
+:- if(in_context('snake')).
+
+somite_number *--> in_ordinal_series(1-500).
+
+:- else.
+
+somite_number *--> in_ordinal_series(1-3).  % REDUCE FOR TESTING
+
+:- endif.
+:- endif.
+:- endif.
+:- endif.
+*/
+
+somitic_element *--> somite.
+somitic_element *--> sclerotome.
+somitic_element *--> myotome.
+somitic_element *--> dermatome.
+somitic_element *--> dermomyotome.
+
+somite *--> @somite,somite_number.
+sclerotome *--> @sclerotome,somite_number.
+dermatome *--> @dermatome,somite_number.
+myotome *--> @myotome,somite_number.
+dermomyotome *--> @dermomyotome,somite_number.
+
+about *-->
+        {develops_from(S1,S2)}, % RULE
+        somitic_element(S1 and X),[develops,from],somitic_element(S2 and X) % PHRASE
+        ::
+        S1 and X < develops_from some S2 and X. % AXIOM
+
+% from EHDAA2
+develops_from(dermatome,dermomyotome).
+develops_from(myotome,dermomyotome).
+develops_from(dermomyotome,somite).
+
+

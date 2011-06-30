@@ -1,0 +1,43 @@
+/* -*- Mode: Prolog -*- */
+
+:- include(ordinal_series).
+
+v_level *--> cervical,in_ordinal_series(1-7).
+v_level *--> thoracic,in_ordinal_series(1-12).
+v_level *--> lumbar,in_ordinal_series(1-5).
+v_level *--> sacral,in_ordinal_series(1-5).
+v_level *--> coccygeal,in_ordinal_series(1-4).
+
+cervical *--> ['C'] :: cervical.
+thoracic *--> ['T'] :: thoracic.
+lumbar *--> ['L'] :: lumbar.
+sacral *--> ['S'] :: sacral.
+coccygeal *--> ['CC'] :: coccygeal.
+
+vertebra *--> @vertebra, v_level.
+vertebra_cartilage_condensation *--> @vertebra_cartilage_condensation, v_level.
+vertebra_pre_cartilage_condensation *--> @vertebra_pre_cartilage_condensation, v_level.
+
+v_element *--> vertebra.
+v_element *--> vertebra_cartilage_condensation.
+v_element *--> vertebra_pre_cartilage_condensation.
+
+% these could also be derived from an ontology:
+atlas is_name_of vertebra and has_order value 1.
+axis is_name_of vertebra and has_order value 2.
+
+
+about *-->
+        {develops_from(S2,S1)},
+        v_element(S2 and X),[develops,from],v_element(S1 and X)
+        ::
+        S2 and X < develops_from some S2 and X.
+
+
+develops_from(vertebra,vertebra_cartilage_condensation).
+develops_from(vertebra_cartilage_condensation,vertebra_pre_cartilage_condensation).
+
+develops_from(vertebra_pre_cartilage_condensation,sclerotome,'C3',7).
+develops_from(vertebra_pre_cartilage_condensation,sclerotome,'C3',8).
+develops_from(vertebra_pre_cartilage_condensation,sclerotome,'C3',8).
+

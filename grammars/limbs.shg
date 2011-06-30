@@ -1,0 +1,96 @@
+/* -*- Mode: Prolog -*- */
+:- include(spatial).
+:- include(ordinal_series).
+
+limb *--> ?spatial4,@limb. % laterality only specified if axis is specified
+
+% ----------------------------------------
+% LIMB SEGMENTS
+% ----------------------------------------
+
+limb_segment *--> free_limb_segment | girdle.
+free_limb_segment *--> stylopod | zeugopod | autopod.
+
+stylopod *--> limb, @stylopod.
+zeugopod *--> limb, @zeugopod.
+autopod *--> limb, @autopod.
+girdle *--> limb, @girdle.
+
+limb_multisegment *--> [@zeugopod,plus,@autopod,of],limb(L)
+        ::
+        limb_multisegment and part_of some(L) and has_part some zeugopod and has_part some autopod.
+
+limb_unit *-->
+        limb |
+        limb_segment |
+        limb_multisegment |
+        anatomical_digit.
+
+anatomical_digit *--> limb/part_of, @anatomical_digit, ?in_ordinal_series(1-5).
+parent_limb(part_of some L) --> limb(L).
+
+% TODO: add context; e.g. human
+rephrase [@anterior,@limb] as @forelimb.
+rephrase [@posterior,@limb] as @hindlimb.
+rephrase [@forelimb, @anatomical_digit] as @finger.
+rephrase [@hindlimb, @anatomical_digit] as @toe.
+rephrase [@finger, one] as @thumb.
+
+% ----------------------------------------
+% INTERDIGITAL REGIONS
+% ----------------------------------------
+
+interdigital_region *--> @interdigital_region,[between],parent_limb, [digit], consecutive_number_pair.
+consecutive_number_pair(left_ordinal value X and right_ordinal value Y) --> whole_number(X,1-5),[and],{Y is X+1},whole_number(Y).
+
+% ----------------------------------------
+% BONES
+% ----------------------------------------
+
+phalanx *--> ?proximality,@phalanx,[of],anatomical_digit/part_of.
+proximality *--> @proximal | @distal | @medial.
+
+exclude(phalanx and medial and part_of some (anatomical_digit and has_order value 1)).
+
+attaches(proximal,medial,Num) :- between(2,5,Num).
+attaches(medial,distal,Num) :- between(2,5,Num).
+attaches(proximal,distal,1).
+
+digit_number(D,Num) :-
+        D =::= anatomical_digit and has_order value Num and tail(_).
+
+% Example test query: attached_to some 'medial phalanx of finger two'
+about *--> {attaches(Loc1,Loc2,Num)},[@phalanx,of],anatomical_digit(Digit),{digit_number(Digit,Num)},[has,@Loc1,to,@Loc2,attachment] ::
+        (phalanx and Loc1 and part_of some Digit) < attached_to some (phalanx and Loc2 and part_of some Digit).
+
+long_bone *--> phalanx.
+long_bone_subdivision *--> @proximal, @epiphysis, long_bone/part_of.
+long_bone_subdivision *--> @distal, @epiphysis, long_bone/part_of.
+long_bone_subdivision *--> @diaphysis, long_bone/part_of.
+
+skeleton *--> limb_unit/part_of,@skeleton.
+
+on_completion(
+  add B < part_of some S where (equivalent_to(S,SX),class(S),SX =::= skeleton and part_of some D,{B < phalanx and part_of some D},class(B))
+).
+
+skeletal_unit *--> skeleton | long_bone.
+
+% ----------------------------------------
+% DEVELOPMENT
+% ----------------------------------------
+
+precursor *--> mature_anatomical_entity(X),[precursor] :: precursor and develops_into some X.
+
+dev_slice *--> exists_in_form, anatomical_entity.
+exists_in_form *--> morphoform(S) :: exists_during some S.
+morphoform *--> @adult.
+morphoform *--> @embryonic.
+morphoform *--> @precursor.
+
+%axiom *--> {precedes(S1,S2)},time_slice(S2),[develops,from],time_slice(S1) :: S2 < develops_from some S1.
+
+anatomical_entity *--> mature_anatomical_entity | precursor.
+mature_anatomical_entity *--> limb_unit | skeletal_unit.
+
+

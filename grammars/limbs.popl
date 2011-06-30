@@ -1,0 +1,1 @@
+add B < part_of some S where (equivalent_to(S,SX),class(S),SX =::= skeleton and part_of some D,{B < phalanx and part_of some D}).

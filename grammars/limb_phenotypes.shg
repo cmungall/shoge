@@ -1,0 +1,11 @@
+/* -*- Mode: Prolog -*- */
+:- include(limbs).
+
+syndactyly *--> @syndactyly,[of],limb,[digits],contiguous_number_range.
+syndactyly *--> [syndactyly,of],fingers(D1),contiguous_number_range(Range),[and],toes(D2),contiguous_number_range(Range) :: (has_part some (D1 and Range and syndactyly) and has_part some (D2 and Range and syndactyly)).
+
+fingers *--> @anterior, @digit.
+toes *--> @posterior, @digit.
+
+
+contiguous_number_range(left_ordinal value X and right_ordinal value Y) --> whole_number(X,1-5),[to],{Xplus1 is X+1,between(Xplus1,5,Y)},whole_number(Y).
