@@ -8,13 +8,15 @@ rules.
 Example grammar file:
 
 ==
+  grammar(limbs_simple).
+
   limb_segment *--> stylopod | zeugopod | autopod.
   
   stylopod *--> in_limb, @stylopod.
   zeugopod *--> in_limb, @zeugopod.
   autopod *--> in_limb, @autopod.
   
-  in_limb *--> limb/part_of.
+  in_limb *--> part_of some limb.
   limb *--> laterality, anterioposterior, @limb.
   
   laterality *--> @left.
@@ -23,7 +25,7 @@ Example grammar file:
   anterioposterior *--> @posterior.
 ==
 
-Save this as "limbs.shg". Then generate phrases (on command line):
+Save this as "limbs_simple.shg". Then generate phrases (on command line):
 
 ==
   $ shoge  --grammar limbs --generate-phrases limb_segment
@@ -37,7 +39,7 @@ Save this as "limbs.shg". Then generate phrases (on command line):
 List generated OWL axioms:
 
 ==
-  $ shoge  --grammar limbs --generate-ontology limb_segment --list-axioms
+  $ shoge  --grammar limbs_simple --generate-ontology limb_segment --list-axioms
   stylopod and part_of some (anterior and limb and  and left) == 'left anterior limb stylopod'.
   ...
 ==
@@ -45,7 +47,7 @@ List generated OWL axioms:
 Generate ontology:
 
 ==
-  $ shoge  --grammar limbs --generate-ontology limb_segment --to owl -o limb_ontology.owl
+  $ shoge  --grammar limbs_simple --generate-ontology limb_segment --to owl > limb_ontology.owl
 ==
 
 ---++ ABOUT
@@ -74,7 +76,7 @@ classification, but not with ontology generation.
 
 Generation rules are expressed as extended Definite Clause Grammars
 (DCGs). These simultaneously generate the human-readable textual
-phrases together with the description logic (DL) class expressions.
+phrases together with the description logic (DL) equivalence axioms.
 
 The basic form is:
 
@@ -86,19 +88,28 @@ This rule states that terms of type x are written textually as the
 sequence of terms y1..yn, and that the class expression for the
 corresponding term is the intersection of the class expressions y1..yn.
 
+(this can also be thought of in terms of an anatomical structure "x"
+that is repeated in the body, where y1, y2 etc are state matrix
+characters).
+
 The symbols y1..yn may either be non-terminal or terminal. A
 non-terminal symbol must be accompanied by a separate grammar rule
 with the symbol on the left side. There are two forms of terminal
-symbol: a silent symbol, wrapped inside square brackets generates a
-phrase but not an expression, and an ontology symbol, denoted using
-the @ functor, generates an ontology term.
+symbol:
 
-A symbol can also be of the form Term/Relation.
+  * [Word] - a silent symbol, wrapped inside square brackets
+generates a phrase but not an expression. This is purely a grammatical
+convenience, it does not affect the logic.
+
+  * @Atom - an ontology symbol, denoted using the @ functor, generates
+    an ontology term. This can be thought of as an atomic unit.
+
+A symbol can also be of the form Relation some Term
 
 For example, the following rule:
 
 ==
-  autopod *--> @autopod,[of],limb/part_of.
+  autopod *--> @autopod, [of], part_of some limb.
 ==
 
 Generates phrases such as "autopod of left hindlimb", and class
@@ -106,6 +117,8 @@ expressions such as "autopod and part_of some (hindlimb and
 left)". The [of] terminal generates part of the phrase but not the
 class expression. The "@autopod" indicates that there is a core
 generic ontology class by this name.
+
+---+++ Compilation to DCGs
 
 Grammar rules are compiled down prolog DCGs. Arguments indicating
 class expressions are automatically added. For example
@@ -121,7 +134,7 @@ x(Y1 and Y2 and ... and Yn) --> y1(Y1), y2(Y2), ..., yn(YN).
 ==
 
 ==
-  autopod *--> @autopod,[of],limb/part_of.
+  autopod *--> @autopod, [of], part_of some limb_of.
 ==
 
 is compiled to:
@@ -135,6 +148,8 @@ is compiled to:
 
 Example 2: naming
 
+A grammar file can contain rules for contracting names such as "anterior limb autopod" to "hand":
+
 ==
   'hand' is_name_of anterior limb autopod.
   'foot' is_name_of posterior limb autopod.
@@ -142,17 +157,28 @@ Example 2: naming
 
 Example 3: ordinal series
 
+Iterative homology is the repeated generation of similar structures
+along some axis - e.g. digits or vertebrae.
+
+Include the "ordinal series" grammar if you want to use the built in naming and generation rules:
+
 ==
-  anatomical_digit *--> limb/part_of, @anatomical_digit, in_ordinal_series(1-5).
+  :- include(ordinal_series).
+  anatomical_digit *--> part_of some limb_of, @anatomical_digit, in_ordinal_series(1-5).
 ==
 
 This can generate terms such as "left anterior limb autopod digit 2",
-together with an OWL expression 
+together with an OWL expression:
+
+  autopod and part_of some (limb and left and anterior) and has_order value 2.
 
 Example 4: handling variation
 
+Not every structure is repeated identically. For example, humans have
+3 phalanges for every digit other than digit 1.
+
 ==
-  phalanx *--> ?proximality,@phalanx,[of],anatomical_digit/part_of.
+  phalanx *--> ?proximality,@phalanx,[of],part_of some anatomical_digit_of.
   proximality *--> @proximal.
   proximality *--> @distal.
   proximality *--> @medial.
@@ -162,19 +188,27 @@ Example 4: handling variation
 
 This encodes the rule that thumbs of a human do not have medial
 phalanges. This term and any related terms will be excluded during
-ontology generation
+ontology generation.
 
 Example 5a: consecutive ordinals
 
 ==
-  interdigital_region *--> @interdigital_region,[between],anatomical_digit/adjacent_to,[and],anatomical_digit/adjacent_to.
+  interdigital_region *--> 
+      @interdigital_region,[between],
+          adjacent_to some anatomical_digit, [and],
+          adjacent_to some anatomical_digit.
   % TODO
 ==
 
 Example 5b: consecutive ordinals
 
+Interdigital regions are associated with pairs of digits rather than "favoring" any one digit:
+
 ==
-  interdigital_region *--> @interdigital_region,[between],autopod/part_of, [digit], consecutive_number_pair.
+  interdigital_region *--> 
+     @interdigital_region,[between],
+     part_of some autopod, [digit], consecutive_number_pair.
+
   consecutive_number_pair(left_ordinal value X and right_ordinal value Y) --> whole_number(X,1-5),[and],{Y is X+1},whole_number(Y).
 ==
 
@@ -237,6 +271,9 @@ fully defined. The second form is often preferable when working on
 conjunction with an existing ontologies that names structures like
 forelimb and hindlimb.
 
+If we think in developmental terms, then the first might be preferred,
+as we are using "@limb" as the core genetic program that is repeated. 
+
 Another way would be to write:
 
 ==
@@ -254,3 +291,4 @@ existing ontologies.
 * Allow exclusion rules to be phrases as well as expressions
 * Integration with ACE
 * taxon syntax
+* integrate with prism, probabilistic grammars
