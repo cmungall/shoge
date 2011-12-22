@@ -5,6 +5,7 @@
            list_generated_axioms/1,
            list_generated_phrases/1,
            list_generated_expressions/1,
+           list_terminals_from_ontology/3,
            list_term_parses/2,
            generate_ontologies/1,
            generate_ontology/1,
@@ -20,6 +21,7 @@
 :- use_module(library(thea2/owl2_visitor)).
 :- use_module(library(thea2/owl2_popl)).
 :- use_module(library(thea2/owl2_util)).
+:- use_module(library(thea2/owl2_reasoner)).
 
 % REQUIREMENT: http, semweb
 :- use_module(library(http/dcg_basics)).
@@ -477,6 +479,16 @@ token_to_symbol(T,@T) :-
         !.
 token_to_symbol(T,T).
 
+list_terminals_from_ontology(Symbol,Class,Opts) :-
+        forall(reasoner_ask(subClassOf(D,Class)),
+               list_terminal_for_class(Symbol,D,Opts)).
+list_terminal_for_class(Symbol,D,_Opts) :-
+        labelAnnotation_value(D,Term),
+        tokenize_atom(Term,Toks),
+        Rule = (Symbol --> Toks),
+        format('~q.~n',[Rule]).
+
+
 
 % ----------------------------------------
 % SIMPLIFICATION
@@ -560,6 +572,7 @@ user:parse_arg_hook(['--generate-ontology',GA|L],L,goal(generate_ontologies(Gs))
         atomic_list_concat(Gs,',',GA).
 user:parse_arg_hook(['--generate-phrases',G|L],L,goal(list_generated_phrases(G))).
 user:parse_arg_hook(['--generate-expressions',G|L],L,goal(list_generated_expressions(G))).
+user:parse_arg_hook(['--make-terminals',G,C|L],L,goal(list_terminals_from_ontology(G,C,[]))).
 user:parse_arg_hook(['--list-axioms'|L],['--list-eq-axioms','--list-sc-axioms'|L],null).
 user:parse_arg_hook(['--list-eq-axioms'|L],['--query','equivalentClasses(X)','--save-opts','plsyn,labels'|L],null).
 user:parse_arg_hook(['--list-sc-axioms'|L],['--query','subClassOf(X,Y)','--save-opts','plsyn,labels'|L],null).
