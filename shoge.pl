@@ -335,14 +335,15 @@ generate_plaxiom(Ps,Axiom) :-
 generate_plaxiom(P,Axiom) :-
         P\=about,
         atom(P),
-        unit_goal_structure(P,G,X),
+        unit_goal_structure(P,G,ClassExpr),
         expression_phrase(G,Toks,[]),
         tokens_label(Toks,Label),
-        structure_toks_iri(X,Toks,IRI),
+        structure_toks_iri(ClassExpr,Toks,IRI),
         member(Axiom,
                [ class IRI,
-                 equivalentClasses([X,IRI]),
-                 annotationAssertion(rdfs:label, IRI, literal(lang(en,Label)))]).
+                 equivalentClasses([ClassExpr,IRI]),
+                 IRI label Label
+               ]).
 generate_plaxiom(about,Axiom) :-
         unit_goal_structure(about,G,Axiom),
         phrase(G,_).
@@ -357,7 +358,7 @@ structure_toks_iri(_,Toks,IRI) :-
         concat_tokens(   Toks,'-',N),
         atom_concat('http://x.org#',N,IRI).
 
-token_to_term(@X,X) :- !. % TODO - use existing ontology here
+token_to_term(@X,X) :- !. % TODO - use ontology for generation of syns
 token_to_term(X,X).
 
 % the native token list representation may include @X terms that
