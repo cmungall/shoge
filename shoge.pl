@@ -128,6 +128,7 @@ add_arg(X,Y,A) :- atom(X),!,Y =.. [X,A].
 %add_arg(X,Y,A) :- X =.. [P|L],!,add_argl(L,L2,A),Y =.. [P|L2]. % REMOVED - strictly only replaced args..
 add_arg(?(X),(X2,{Z=A};[],{Z=thing}),Z) :- !,add_arg(X,X2,A). % better to rewrite entire goal
 add_arg(X/P,Y,P some A) :- !,Y =.. [X,A].  % e.g. limb/part_of, @digit
+add_arg(P some X,Y,P some A) :- !,Y =.. [X,A].  % e.g. limb/part_of, @digit
 add_arg(X,Y,A) :- nonvar(X),X =.. [P|L], !, Y =.. [P,A|L].
 add_arg(X,X,_).
 
@@ -232,13 +233,13 @@ list_generated_axioms(P) :-
         forall(generate_plaxiom(P,Axiom),
                writeln(Axiom)).
 
+%% generate_ontology(+Unit)
 %% generate_ontology(+Unit,+Opts:list)
 %
 % generate an OWL ontology in-memory using Unit as a base
 %
-%% generate_ontology(+Unit)
-%
-% as generate_ontology/2
+% Opts:
+%  on_completion(POPL_Pattern)
 generate_ontology(P,Opts) :-
         option(ontology(O),Opts),
         assert_axiom(ontology(O)),
@@ -256,6 +257,7 @@ generate_ontology(P,Opts) :-
         forall(generate_axiom(about,A),
                assert_axiom(A,O)),
         remove_unsatisfiable(O,Opts),
+        name_unnamed_entities(O),
         % TODO - proper re-syncing of reasoner
         forall(on_completion(X),
                popl_translate(X,[syntax(plsyn),translate(labels),ontology(O)])),
@@ -271,7 +273,6 @@ remove_unsatisfiable(O,Opts) :-
                    internal_to_owl(X < Nothing, Axiom),
                    assert_axiom(Axiom, O))),
         assume_entity_declarations,
-        name_unnamed_entities(O),
         initialize_reasoner(pellet,RE,Opts),
         findall(C,reasoner_ask(RE,unsatisfiable(C)),UCs),
         maplist(retract_class_and_axioms,UCs).
