@@ -1,2 +1,3 @@
 #!/bin/sh
+PATH="$PATH:thea/bin"
 thea-jpl --boot-module shoge "$@"

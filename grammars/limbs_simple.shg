@@ -6,7 +6,6 @@ stylopod *--> in_limb, @stylopod.
 zeugopod *--> in_limb, @zeugopod.
 autopod *--> in_limb, @autopod.
   
-%in_limb *--> limb/part_of.
 in_limb *--> part_of some limb.
 limb *--> laterality, anterioposterior, @limb.
   

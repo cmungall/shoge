@@ -239,6 +239,16 @@ Example 6: additional axiom generation rules
   develops_from(vertebra_cartilage_condensation, vertebra_pre_cartilage_condensation).
 ==
 
+Example 7: enhancing existing ontologies
+
+Shoge can be used to enhance existing ontologies
+
+==
+shoge ontologies/limb_segment_core.owl --grammar limbs_simple --generate-ontology limb_segment --to owl > ontologies/limb_segment_all.owl
+==
+
+Here the core ontology already has classes called 'limb', 'limb segment', 'zeugopod' - but not specific class such as anterior limb left zeugopod
+
 ---++ GRAMMAR DESIGN
 
 Often there are multiple grammars that can generate the same structures. For example:

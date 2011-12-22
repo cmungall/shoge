@@ -100,6 +100,7 @@ system:term_expansion((H*-->B :: X),Goal) :-
         dcg_translate_rule( (H2-->B), Goal).
 system:term_expansion(H*-->B,[Goal|AxiomGoals]) :-
         axioms_from_production(H,B,AxiomGoals),
+        % we add an argument such that e.g. limb_segment *--> ... becomes limb_segment(X and Y and ...)
         add_arg(B,B2,Args),
         add_arg(H,H2,Args),
         dcg_translate_rule( (H2-->B2), Goal).
@@ -107,7 +108,7 @@ system:term_expansion(H*-->B,[Goal|AxiomGoals]) :-
 % todo - normalization in DCG expansion
 argi(A1,A2,A) :- nonvar(A1),A1=thing,!,A=A2.
 argi(A1,A2,A) :- nonvar(A2),A2=thing,!,A=A1.
-argi(A1,A2,A1 and A2).
+argi(A1,A2,A1 and A2).  % head of each DCG rule is an OWL class expression wich is by default a conjunction
 
 add_arg((X,Y),(X2,Y2),A) :-
         !,
@@ -122,7 +123,7 @@ add_arg((X|Y),(X2,{A=A1}|Y2,{A=A2}),A) :-
         !,
         add_arg(X,X2,A1),
         add_arg(Y,Y2,A2).
-add_arg(@(X),[@X],X) :- !.            % TODO
+add_arg(@(X),[@X],@X) :- !.            % TODO
 add_arg(X,X,thing) :- is_list(X),!.
 add_arg(X,Y,A) :- atom(X),!,Y =.. [X,A].
 %add_arg(X,Y,A) :- X =.. [P|L],!,add_argl(L,L2,A),Y =.. [P|L2]. % REMOVED - strictly only replaced args..
@@ -139,23 +140,34 @@ add_argl([H|T],[H2|T2],A) :-
 
 % ----------------------------------------
 % AXIOMS FROM PRODUCTIONS
-% ----------------------------------------
+% ---------------------------------------- 
+% any rule H --> A generates A SubClassOf H.
+% e.g limb_segment --> autopod
 axioms_from_production(H, (A|B), G) :-
         atom(H),
         !,
         axioms_from_production(H, A, GA),
         axioms_from_production(H, B, GB),
         append(GA,GB,G).
+axioms_from_production(H, A, [+(subClassOf(@A,@H))]) :-
+        atom(H),
+        atom(A),
+        !.
+axioms_from_production(H, @A, [+(subClassOf(@A,@H))]) :-
+        atom(H),
+        atom(A).
+/*
 axioms_from_production(H, A, [+(Ax)]) :-
         atom(H),
         atom(A),
         !,
-        internal_to_owl(A < H,Ax).
+        internal_to_owl( subClassOf(@A,@H), Ax).
 axioms_from_production(H, @A, [+(Ax)]) :-
         atom(H),
         atom(A),
         !,
-        internal_to_owl(A < H,Ax).
+        internal_to_owl( subClassOf(@A,@H), Ax).
+*/
 axioms_from_production(_,_,[]).
 
 
@@ -346,9 +358,10 @@ generate_plaxiom(P,Axiom) :-
         expression_phrase(G,Toks,[]),
         tokens_label(Toks,Label),
         structure_toks_iri(ClassExpr,Toks,IRI),
+        rewrite_class_expression_with_IRIs(ClassExpr,ClassExpr_2),
         member(Axiom,
                [ class IRI,
-                 equivalentClasses([ClassExpr,IRI]),
+                 equivalentClasses([ClassExpr_2,IRI]),
                  IRI label Label
                ]).
 generate_plaxiom(about,Axiom) :-
@@ -371,6 +384,11 @@ structure_toks_iri(_,Toks,IRI) :-
         maplist(token_iri_component,Toks,Frags),
         concat_tokens(Frags,'-',N),
         atom_concat('http://x.org#',N,IRI).
+
+rewrite_class_expression_with_IRIs(X,X) :- atom(X),!.
+rewrite_class_expression_with_IRIs(@X,Y) :- structure_toks_iri(_,[@X],Y),!.
+rewrite_class_expression_with_IRIs(X,Y) :- X =.. ArgsX,maplist(rewrite_class_expression_with_IRIs,ArgsX,ArgsY),Y =.. ArgsY.
+
 
 %token_to_term(@X,X) :- !. % TODO - use ontology for generation of syns
 token_to_term(X,X).
@@ -396,6 +414,12 @@ replace_labels(literal(X),literal(X)) :- !.
 replace_labels(NS:Local,IRI) :-
         rdf_global_id(NS:Local,IRI), % temp?
         !.
+replace_labels(@X,Y) :-
+        symbol_to_iri(X,Y),
+        !.
+replace_labels(@X,Y) :-
+        !,
+        replace_labels(X,Y).
 replace_labels(X,Y) :-
         atom(X),
         !,
@@ -411,6 +435,14 @@ replace_labels(X,Y) :-
 
 replace_label(X,Y) :- \+ atom_concat(http,_,X),!,atom_concat('http://x.org#',X,Y).
 replace_label(X,X).
+
+
+symbol_to_iri(S,X) :- labelAnnotation_value(X,S),!.
+symbol_to_iri(S,X) :-
+        atomic_list_concat(Toks,'_',S),
+        atomic_list_concat(Toks,' ',S2),
+        labelAnnotation_value(X,S2),
+        !.
 
 
 % ----------------------------------------
