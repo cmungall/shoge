@@ -318,6 +318,13 @@ generate_and_save_ontology(P,File) :-
 
 % creates a goal that can be used in phrase/2
 unit_goal(P,G) :- G =.. [P,_].
+
+%% unit_goal_structure(+P, ?Goal, ?ClassExpr)
+%
+% generates a goal that can be used in phrase/2 to generate
+% an OWL class expression.
+%
+% E.g. Goal = limb_segment(ClassExpr)
 unit_goal_structure(P,G,X) :- G =.. [P,X].
 
 % generates an axiom using P as base.
@@ -353,13 +360,27 @@ internal_to_owl(PlAxiom,Axiom) :-
         replace_labels(RawAxiom,Axiom).
 
 tokens_label(Toks,N) :-
-        concat_tokens(Toks,' ',N).
+        maplist(token_label,Toks,Labels),
+        concat_tokens(Labels,' ',N).
+
+structure_toks_iri(_,[@Tok],IRI) :-
+        % reuse existing entity IRI
+        labelAnnotation_value(IRI,Tok),
+        !.
 structure_toks_iri(_,Toks,IRI) :-
-        concat_tokens(   Toks,'-',N),
+        maplist(token_iri_component,Toks,Frags),
+        concat_tokens(Frags,'-',N),
         atom_concat('http://x.org#',N,IRI).
 
-token_to_term(@X,X) :- !. % TODO - use ontology for generation of syns
+%token_to_term(@X,X) :- !. % TODO - use ontology for generation of syns
 token_to_term(X,X).
+
+token_label(@X,X) :- !.
+token_label(X,X) :- !.
+
+token_iri_component(@X,X) :- !.
+token_iri_component(X,X) :- !.
+
 
 % the native token list representation may include @X terms that
 % correspond to vocabulary elements - generate the full string for
