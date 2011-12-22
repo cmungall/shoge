@@ -5,6 +5,8 @@
            list_generated_axioms/1,
            list_generated_phrases/1,
            list_generated_expressions/1,
+           list_term_parses/2,
+           generate_ontologies/1,
            generate_ontology/1,
            generate_ontology/2,
            generate_and_save_ontology/2,
@@ -191,6 +193,7 @@ load_grammar(Path) :-
 % ----------------------------------------
 % PHRASE REWRITING
 % ----------------------------------------
+% user can control rewriting using rephrase/1 
 rewrite_phrase(L1,L2) :-
         rewrite_phrase_1(L1,Lx),
         !,
@@ -244,6 +247,13 @@ list_generated_ontology(P) :-
 list_generated_axioms(P) :-
         forall(generate_plaxiom(P,Axiom),
                writeln(Axiom)).
+
+list_term_parses(Unit,T) :-
+        forall(parse_term_to_expression(Unit,T,Expr,[]),
+               writeln(Expr)).
+
+generate_ontologies(Ps) :-
+        maplist(generate_ontology,Ps).
 
 %% generate_ontology(+Unit)
 %% generate_ontology(+Unit,+Opts:list)
@@ -449,6 +459,25 @@ symbol_to_iri(S,X) :-
 % PARSING - TODO
 % ----------------------------------------
 
+parse_term_to_expression(Unit,Term,Expr,Opts) :-
+        atom(Term),
+        !,
+        tokenize_atom(Term,Toks), % nlp
+        % inefficient - tries all combos
+        maplist(token_to_symbol,Toks,Symbols),
+        writeln(Symbols),
+        parse_term_to_expression(Unit,Symbols,Expr,Opts).
+parse_term_to_expression(Unit,Toks,Expr,_) :-
+        Expr =.. [Unit,_],
+        phrase(Expr,Toks).
+
+token_to_symbol(T,@T) :-
+%        Head =.. [T,_,_,_],
+%        clause(Head,_),
+        !.
+token_to_symbol(T,T).
+
+
 % ----------------------------------------
 % SIMPLIFICATION
 % ----------------------------------------
@@ -523,14 +552,17 @@ in_context(X) :- organism_type(X).
 % COMMAND LINE HOOKS (THEA)
 % ----------------------------------------
 
+
 :- multifile user:parse_arg_hook/3.
 user:parse_arg_hook(['--set-context',G|L],L,null) :- retractall(organism_type(_)),asserta(organism_type(G)).
 user:parse_arg_hook(['--grammar',G|L],L,null) :- load_grammar(G).
-user:parse_arg_hook(['--generate-ontology',G|L],L,goal(generate_ontology(G))).
+user:parse_arg_hook(['--generate-ontology',GA|L],L,goal(generate_ontologies(Gs))) :-
+        atomic_list_concat(Gs,',',GA).
 user:parse_arg_hook(['--generate-phrases',G|L],L,goal(list_generated_phrases(G))).
 user:parse_arg_hook(['--generate-expressions',G|L],L,goal(list_generated_expressions(G))).
 user:parse_arg_hook(['--list-axioms'|L],['--list-eq-axioms','--list-sc-axioms'|L],null).
 user:parse_arg_hook(['--list-eq-axioms'|L],['--query','equivalentClasses(X)','--save-opts','plsyn,labels'|L],null).
 user:parse_arg_hook(['--list-sc-axioms'|L],['--query','subClassOf(X,Y)','--save-opts','plsyn,labels'|L],null).
+user:parse_arg_hook(['--parse-term',P,T|L],L,goal(list_term_parses(P,T))).
 
 
