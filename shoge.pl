@@ -470,22 +470,26 @@ parse_term_to_expression(Unit,Term,Expr,Opts) :-
         writeln(Symbols),
         parse_term_to_expression(Unit,Symbols,Expr,Opts).
 parse_term_to_expression(Unit,Toks,Expr,_) :-
-        Expr =.. [Unit,_],
-        phrase(Expr,Toks).
+        Goal =.. [Unit,Expr],
+        phrase(Goal,Toks).
 
-token_to_symbol(T,@T) :-
 %        Head =.. [T,_,_,_],
 %        clause(Head,_),
-        !.
-token_to_symbol(T,T).
+%        !.
+
+token_to_symbol(T,T). % force this 
+%token_to_symbol(T,@T).
 
 list_terminals_from_ontology(Symbol,Class,Opts) :-
-        forall(reasoner_ask(subClassOf(D,Class)),
+        nb_current(reasoner,Reasoner),
+        list_terminal_for_class(Symbol,Class,Opts),
+        forall(reasoner_ask(Reasoner,subClassOf(D,Class),false),
                list_terminal_for_class(Symbol,D,Opts)).
 list_terminal_for_class(Symbol,D,_Opts) :-
         labelAnnotation_value(D,Term),
         tokenize_atom(Term,Toks),
-        Rule = (Symbol --> Toks),
+        Head =.. [Symbol,D],
+        Rule = (Head --> Toks),
         format('~q.~n',[Rule]).
 
 
