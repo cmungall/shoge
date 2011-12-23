@@ -398,6 +398,7 @@ structure_toks_iri(_,Toks,IRI) :-
         atom_concat('http://x.org#',N,IRI).
 
 rewrite_class_expression_with_IRIs(X,X) :- atom(X),!.
+rewrite_class_expression_with_IRIs(R some X,R2 some X2) :- structure_toks_iri(_,[@R],R2),!,rewrite_class_expression_with_IRIs(X,X2).
 rewrite_class_expression_with_IRIs(@X,Y) :- structure_toks_iri(_,[@X],Y),!.
 rewrite_class_expression_with_IRIs(X,Y) :- X =.. ArgsX,maplist(rewrite_class_expression_with_IRIs,ArgsX,ArgsY),Y =.. ArgsY.
 
@@ -470,8 +471,9 @@ parse_term_to_expression(Unit,Term,Expr,Opts) :-
         writeln(Symbols),
         parse_term_to_expression(Unit,Symbols,Expr,Opts).
 parse_term_to_expression(Unit,Toks,Expr,_) :-
-        Goal =.. [Unit,Expr],
-        phrase(Goal,Toks).
+        Goal =.. [Unit,Expr_1],
+        phrase(Goal,Toks),
+        rewrite_class_expression_with_IRIs(Expr_1,Expr).
 
 %        Head =.. [T,_,_,_],
 %        clause(Head,_),
@@ -486,7 +488,7 @@ list_terminals_from_ontology(Symbol,Class,Opts) :-
         forall(reasoner_ask(Reasoner,subClassOf(D,Class),false),
                list_terminal_for_class(Symbol,D,Opts)).
 list_terminal_for_class(Symbol,D,_Opts) :-
-        labelAnnotation_value(D,Term),
+        labelAnnotation_value(D,Term), % TODO - synonyms
         tokenize_atom(Term,Toks),
         Head =.. [Symbol,D],
         Rule = (Head --> Toks),
