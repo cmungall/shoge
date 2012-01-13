@@ -381,6 +381,13 @@ generate_plaxiom(about,Axiom) :-
         unit_goal_structure(about,G,Axiom),
         phrase(G,_).
 
+internal_to_owl(X label L,Axiom) :-
+        % this is included in new versions of the thea:
+        Axiom_1=annotationAssertion(RDFS_Label,X,literal(type(XSD_String,L))),
+        RDFS_Label='http://www.w3.org/2000/01/rdf-schema#label',
+        XSD_String='http://www.w3.org/2001/XMLSchema#string',
+        replace_labels(Axiom_1,Axiom).
+
 internal_to_owl(PlAxiom,Axiom) :-
         plsyn_owl(PlAxiom,RawAxiom),
         replace_labels(RawAxiom,Axiom).

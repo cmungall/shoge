@@ -50,6 +50,8 @@ Generate ontology:
   $ shoge  --grammar limbs_simple --generate-ontology limb_segment --to owl > limb_ontology.owl
 ==
 
+The 10 rules in the grammar generates 24 classes and 43 axioms.
+
 ---++ ABOUT
 
 Shoge is a tool for generating ontologies based on simple grammatical
@@ -97,7 +99,7 @@ non-terminal symbol must be accompanied by a separate grammar rule
 with the symbol on the left side. There are two forms of terminal
 symbol:
 
-  * [Word] - a silent symbol, wrapped inside square brackets
+  * [Word] - a logically silent symbol, wrapped inside square brackets
 generates a phrase but not an expression. This is purely a grammatical
 convenience, it does not affect the logic.
 
