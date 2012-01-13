@@ -7,6 +7,7 @@
            list_generated_expressions/1,
            list_terminals_from_ontology/3,
            list_term_parses/2,
+           parse_ontology/2,
            generate_ontologies/1,
            generate_ontology/1,
            generate_ontology/2,
@@ -462,13 +463,21 @@ symbol_to_iri(S,X) :-
 % PARSING - TODO
 % ----------------------------------------
 
+parse_ontology(Unit,Opts) :-
+        class(C),
+        labelAnnotation_value(C,Term),
+        parse_term_to_expression(Unit,Term,Expr,Opts),
+        Axiom=equivalentClasses([C,Expr]),
+        assert_axiom(Axiom),
+        writeln(Axiom),
+        fail.
 parse_term_to_expression(Unit,Term,Expr,Opts) :-
         atom(Term),
         !,
         tokenize_atom(Term,Toks), % nlp
         % inefficient - tries all combos
         maplist(token_to_symbol,Toks,Symbols),
-        writeln(Symbols),
+        debug(parse,'  Tokens: ~w',[Symbols]),
         parse_term_to_expression(Unit,Symbols,Expr,Opts).
 parse_term_to_expression(Unit,Toks,Expr,_) :-
         Goal =.. [Unit,Expr_1],
@@ -583,5 +592,6 @@ user:parse_arg_hook(['--list-axioms'|L],['--list-eq-axioms','--list-sc-axioms'|L
 user:parse_arg_hook(['--list-eq-axioms'|L],['--query','equivalentClasses(X)','--save-opts','plsyn,labels'|L],null).
 user:parse_arg_hook(['--list-sc-axioms'|L],['--query','subClassOf(X,Y)','--save-opts','plsyn,labels'|L],null).
 user:parse_arg_hook(['--parse-term',P,T|L],L,goal(list_term_parses(P,T))).
+user:parse_arg_hook(['--parse-ontology',P|L],L,goal(parse_ontology(P,[]))).
 
 

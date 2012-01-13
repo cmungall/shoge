@@ -1,0 +1,12 @@
+grammar(go).
+% shoge ontologies/go.owl --reasoner elk --make-terminals developmental_process http://purl.obolibrary.org/obo/GO_0032502
+:- include(t_developmental_process).
+
+dev *--> qualifier,developmental_process.
+inv *--> developmental_process,[involved, in],part_of some developmental_process.
+
+%qualifier *--> 'part of' some stage.
+qualifier *--> part_of some stage.
+stage('http://purl.obolibrary.org/obo/UBERON_0000068') --> [embryonic].
+stage('http://purl.obolibrary.org/obo/UBERON_0000092') --> [post,-,embryonic].
+

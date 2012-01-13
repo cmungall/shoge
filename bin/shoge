@@ -1,3 +1,4 @@
 #!/bin/sh
 PATH="$PATH:thea/bin"
-thea-jpl --boot-module shoge "$@"
+DIRNAME=`dirname $0`
+thea-jpl --boot-module "'$DIRNAME/../shoge.pl'" "$@"
