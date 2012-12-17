@@ -1,0 +1,10 @@
+?segment:CLASS,
+?mucosa:CLASS,
+?submucosa:CLASS
+SELECT
+   ?mucosa EquivalentTo mucosa and part_of some ?segment,
+   ?submucosa EquivalentTo submucosa and part_of some ?segment
+BEGIN
+ADD
+ ?mucosa SubClassOf adjacent_to some ?submucosa
+END;
