@@ -1,0 +1,79 @@
+/* -*- Mode: Prolog -*- */
+:- include(spatial).
+
+dt_layer *--> layer, [of], segment/part_of.
+ 
+segment(@X) --> {segment_member(X)},[@X].
+
+
+
+
+layer *--> @mucosa | @submucosa | @serosa.
+
+%about *--> {true}, [mucosa, adjacent, to, submucosa] :: mucosa < adjacent_to some submucosa.
+about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
+about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
+
+
+% note: this works but some exporters may not handle GCIs. Use OPPL?
+/*
+about *-->
+        {continuous_with(S1,S2)}, % RULE
+        dt_layer(X and R some S1),[continuous_with],dt_layer(X and R some S2) % PHRASE
+        ::
+        (X and part_of some S1) <
+          continuous_with some (X and part_of some S2). % AXIOM
+*/
+/*
+about *-->
+        {true},
+        dt_layer(S1),[adjacent,to],dt_layer(S2) % PHRASE
+        ::
+        S1 < adjacent_to some S2.
+*/
+
+/*
+about *-->
+        {adj(S1,S2)}, % RULE
+        layer(S1),adjacent,layer(S2)
+        ::
+        S1 < adjacent_to some S2. % AXIOM
+*/
+
+%continuous_with(X,Y) :- ordering(proximal-distal, L),nth1(N,L,X),Next is N+1,nth1(Next,L,Y).
+adjacent_to(X,Y) :- ordering(layers, L),nth1(N,L,X),Next is N+1,nth1(Next,L,Y).
+
+/*
+ordering(proximal-distal,[@esophagus,@stomach,@intestine]).
+xordering(proximal-distal,[esophagus,stomach,intestine]).
+*/
+
+ordering(layers,[@mucosa,@submucosa,@serosa]).
+
+
+segment_hierarchy([esophagus,stomach,intestine=[small_intestine,large_intestine]]).
+segment_member(X) :-
+        segment_hierarchy(L),
+        segment_member(X,L).
+segment_member(X,L) :-  member(X,L),atom(X).
+segment_member(X,L) :-  member(X=_,L).
+segment_member(X,L) :-  member(_=L2,L),segment_member(X,L2).
+
+continuous_with(X,Y) :-
+        segment_hierarchy(L),
+        append(_,[X,Y|_],L),
+        atom(X),
+        atom(Y).
+
+        
+
+
+
+/*
+                                %continuous_with(@esophagus, @stomach).
+adj('http://x.org#mucosa','http://x.org#submucosa').
+adj(mucosa,submucosa).
+*/
+
+
+
