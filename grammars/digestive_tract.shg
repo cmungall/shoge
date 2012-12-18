@@ -4,63 +4,56 @@
 dt_layer *--> layer, [of], segment/part_of.
  
 segment(@X) --> {segment_member(X)},[@X].
+layer(@X) --> {layer_member(X)},[@X].
 
+%layer *--> @mucosa | @submucosa | @serosa.
 
-
-
-layer *--> @mucosa | @submucosa | @serosa.
-
-%about *--> {true}, [mucosa, adjacent, to, submucosa] :: mucosa < adjacent_to some submucosa.
+% axioms for generic segments and layers
 about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
 about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
 
 
-% note: this works but some exporters may not handle GCIs. Use OPPL?
-/*
-about *-->
-        {continuous_with(S1,S2)}, % RULE
-        dt_layer(X and R some S1),[continuous_with],dt_layer(X and R some S2) % PHRASE
-        ::
-        (X and part_of some S1) <
-          continuous_with some (X and part_of some S2). % AXIOM
-*/
-/*
-about *-->
-        {true},
-        dt_layer(S1),[adjacent,to],dt_layer(S2) % PHRASE
-        ::
-        S1 < adjacent_to some S2.
-*/
+%adjacent_to(X,Y) :- ordering(layers, L),nth1(N,L,X),Next is N+1,nth1(Next,L,Y).
+adjacent_to(X,Y) :- hierarchy(wall,L),hierarchy_pair(X,Y,L).
 
-/*
-about *-->
-        {adj(S1,S2)}, % RULE
-        layer(S1),adjacent,layer(S2)
-        ::
-        S1 < adjacent_to some S2. % AXIOM
-*/
-
-%continuous_with(X,Y) :- ordering(proximal-distal, L),nth1(N,L,X),Next is N+1,nth1(Next,L,Y).
-adjacent_to(X,Y) :- ordering(layers, L),nth1(N,L,X),Next is N+1,nth1(Next,L,Y).
-
-/*
-ordering(proximal-distal,[@esophagus,@stomach,@intestine]).
-xordering(proximal-distal,[esophagus,stomach,intestine]).
-*/
-
-ordering(layers,[@mucosa,@submucosa,@serosa]).
+%ordering(layers,[@mucosa,@submucosa,@serosa]).
 
 
-segment_hierarchy([esophagus,stomach,intestine=[small_intestine,large_intestine]]).
+hierarchy(digestive_tract, [esophagus,stomach,intestine=[small_intestine,large_intestine]]).
+hierarchy(wall, [mucosa=[epithelium,lamina_propria,muscularis_mucosa],submucosa,serosa]).
+
 segment_member(X) :-
-        segment_hierarchy(L),
-        segment_member(X,L).
-segment_member(X,L) :-  member(X,L),atom(X).
-segment_member(X,L) :-  member(X=_,L).
-segment_member(X,L) :-  member(_=L2,L),segment_member(X,L2).
+        T=digestive_tract,
+        hierarchy(T,L),
+        hierarchy_member(X,[T=L]).
+layer_member(X) :-
+        T=wall,
+        hierarchy(T,L),
+        hierarchy_member(X,[T=L]).
+
+hierarchy_member(X,L) :-  member(X,L),atom(X).
+hierarchy_member(X,L) :-  member(X=_,L).
+hierarchy_member(X,L) :-  member(_=L2,L),hierarchy_member(X,L2).
+
+hierarchy_pair(X,Y,L) :-  append(_,[X1,Y1|_],L),extract_pair(X1,Y1,X,Y).
+hierarchy_pair(X,Y,L) :-  member(_=L2,L),hierarchy_pair(X,Y,L2).
+
+extract_pair(X,Y,X,Y) :- atom(X),atom(Y).
+extract_pair(X,Y=_,X,Y) :- atom(X).
+extract_pair(X,_=[Y1|_],X,Y) :- extract_pair(X,Y1,X,Y).
+% todo - end of list
+
+/*
+process_hierarchy(Last,[Next|L],[Last-Next|Pairs]) :-
+        atom(Next),
+        add(consecutive(Type,Last,Next)),
+        process_hierarchy(Next,L,Pairs).
+*/
+
+
 
 continuous_with(X,Y) :-
-        segment_hierarchy(L),
+        hierarchy(digestive_tract,L),
         append(_,[X,Y|_],L),
         atom(X),
         atom(Y).
@@ -68,12 +61,6 @@ continuous_with(X,Y) :-
         
 
 
-
-/*
-                                %continuous_with(@esophagus, @stomach).
-adj('http://x.org#mucosa','http://x.org#submucosa').
-adj(mucosa,submucosa).
-*/
 
 
 
