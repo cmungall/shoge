@@ -6,19 +6,14 @@ dt_layer *--> layer, [of], segment/part_of.
 segment(@X) --> {segment_member(X)},[@X].
 layer(@X) --> {layer_member(X)},[@X].
 
-%layer *--> @mucosa | @submucosa | @serosa.
-
 about *--> {hierarchy(T,G,_),hierarchy_member_type(X,T)}, [X,isa,G] :: X < G.
 
 % axioms for generic segments and layers
 about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
 about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
 
-
-%adjacent_to(X,Y) :- ordering(layers, L),nth1(N,L,X),Next is N+1,nth1(Next,L,Y).
 adjacent_to(X,Y) :- hierarchy(wall,L),hierarchy_pair(X,Y,L).
 
-%ordering(layers,[@mucosa,@submucosa,@serosa]).
 
 hierarchy(T,L) :- hierarchy(T,_,L).
 hierarchy(digestive_tract, segment, [esophagus,stomach,intestine=[small_intestine,large_intestine]]).
@@ -47,6 +42,16 @@ hierarchy_pair(X,Y,L) :-  member(_=L2,L),hierarchy_pair(X,Y,L2).
 extract_pair(X,Y,X,Y) :- atom(X),atom(Y).
 extract_pair(X,Y=_,X,Y) :- atom(X).
 extract_pair(X,_=[Y1|_],X,Y) :- extract_pair(X,Y1,X,Y).
+
+hierarchy_parent(Part,Whole,L) :-
+        member(Whole=Parts,L),
+        member(Part,Parts),
+        atom(Part).
+hierarchy_parent(Part,Whole,L) :-
+        member(_=L2,L),hierarchy_pair(X,Y,L2),
+        hierarchy_parent(Part,Whole,L2).
+
+
 % todo - end of list
 
 /*
