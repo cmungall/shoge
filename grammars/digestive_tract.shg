@@ -8,6 +8,8 @@ layer(@X) --> {layer_member(X)},[@X].
 
 %layer *--> @mucosa | @submucosa | @serosa.
 
+about *--> {hierarchy(T,G,_),hierarchy_member_type(X,T)}, [X,isa,G] :: X < G.
+
 % axioms for generic segments and layers
 about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
 about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
@@ -18,9 +20,9 @@ adjacent_to(X,Y) :- hierarchy(wall,L),hierarchy_pair(X,Y,L).
 
 %ordering(layers,[@mucosa,@submucosa,@serosa]).
 
-
-hierarchy(digestive_tract, [esophagus,stomach,intestine=[small_intestine,large_intestine]]).
-hierarchy(wall, [mucosa=[epithelium,lamina_propria,muscularis_mucosa],submucosa,serosa]).
+hierarchy(T,L) :- hierarchy(T,_,L).
+hierarchy(digestive_tract, segment, [esophagus,stomach,intestine=[small_intestine,large_intestine]]).
+hierarchy(wall, layer, [mucosa=[epithelium,lamina_propria,muscularis_mucosa],submucosa,serosa]).
 
 segment_member(X) :-
         T=digestive_tract,
@@ -28,6 +30,10 @@ segment_member(X) :-
         hierarchy_member(X,[T=L]).
 layer_member(X) :-
         T=wall,
+        hierarchy(T,L),
+        hierarchy_member(X,[T=L]).
+
+hierarchy_member_type(X,T) :-
         hierarchy(T,L),
         hierarchy_member(X,[T=L]).
 
