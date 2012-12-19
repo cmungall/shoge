@@ -40,17 +40,23 @@ layer(@X) --> {layer_member(X)},[@X].
 about *--> {hierarchy(T,G,_),hierarchy_member_type(X,T)}, [X,isa,G] :: X < G.
 
 % axioms for generic segments and layers
-about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
-about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
+%about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
+%about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
 about *--> {part_of(X,Y)}, [X,part,of,Y] :: X < part_of some Y.
 about *--> {true},[transitivity,of,part_of] :: transitive(part_of).
 about *--> {true},[] :: subPropertyOf(maximal_part_of,part_of).
 
 about *-->
-        dt_layer(X),{X =::= ( (@LT1) and maximal_part_of some (@SX))},
+        dt_layer(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
         { adjacent_to( LT1, LT2) },
-        dt_layer(Y),{Y =::= ( (@LT2) and maximal_part_of some (@SX))}
-        :: X < foobar some Y.
+        dt_layer(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
+        :: X < adjacent_to some Y.
+
+about *-->
+        dt_layer(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
+        { continuous_with( SX, SY) },
+        dt_layer(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
+        :: X < continuous_with some Y.
 
 
 % ----------------------------------------
@@ -61,78 +67,4 @@ adjacent_to(X,Y) :- hierarchy(wall,L),hierarchy_pair(X,Y,L).
 part_of(X,Y) :- hierarchy(T,L),hierarchy_parent(X,Y,[T=L]).
 
 continuous_with(X,Y) :- hierarchy(digestive_tract,L),hierarchy_pair(X,Y,L).
-
-% ----------------------------------------
-% UTIL
-% ----------------------------------------
-
-
-segment_member(X) :-
-        T=digestive_tract,
-        hierarchy(T,L),
-        hierarchy_member(X,[T=L]).
-layer_member(X) :-
-        T=wall,
-        hierarchy(T,L),
-        hierarchy_member(X,[T=L]).
-
-hierarchy_member_type(X,T) :-
-        hierarchy(T,L),
-        hierarchy_member(X,[T=L]).
-
-hierarchy_member(X,L) :-  member(X,L),atom(X).
-hierarchy_member(X,L) :-  member(X=_,L).
-hierarchy_member(X,L) :-  member(_=L2,L),hierarchy_member(X,L2).
-
-% consecutive
-hierarchy_pair(X,Y,L) :-  hierarchy_pair_1(X,Y,L).
-hierarchy_pair(X,Y,L) :-  rev_lists(L,L2),hierarchy_pair_1(Y,X,L2).
-hierarchy_pair_1(X,Y,L) :-  append(_,[X1,Y1|_],L),extract_pair(X1,Y1,X,Y).
-hierarchy_pair_1(X,Y,L) :-  member(_=L2,L),hierarchy_pair_1(X,Y,L2).
-
-extract_pair(X,Y,X,Y) :- atom(X),atom(Y).
-extract_pair(X,Y=_,X,Y) :- atom(X).
-extract_pair(X,_=[Y1|_],X,Y) :- extract_pair(X,Y1,X,Y).
-extract_pair(X=_,Y=_,X,Y).
-extract_pair(X=_,Y,X,Y) :- atom(Y).
-
-
-hierarchy_parent(Part,Whole,L) :-
-        member(Whole=Parts,L),
-        member(Part,Parts),
-        atom(Part).
-hierarchy_parent(Part,Whole,L) :-
-        member(_=L2,L),
-        hierarchy_parent(Part,Whole,L2).
-
-rev_lists(L, RL) :-
-    forall(member(M, L), is_list(M)), !,
-    maplist(rev_lists, L, L0),
-    reverse(L0, RL).
-rev_lists(L, L).
-
-% todo - end of list
-
-/*
-
-process_hierarchy(Last,[Whole=Parts|L],[Pair|Pairs]) :-
-        Pair=consecutive(Last,Whole),
-        process_hierarchy(Last,Parts,PairList1),
-        Parts=[P1|Rest],
-        process_hierarchy(P1,Rest,PairList2),
-        append(PairList1,PairList2,Pairs).
-process_hierarchy(Last,[Next|L],[Pair|Pairs]) :-
-        atom(Next),
-        Pair=consecutive(Last,Next),
-        process_hierarchy(Next,L,Pairs).
-*/
-
-
-
-
-        
-
-
-
-
 
