@@ -42,18 +42,23 @@ about *--> {hierarchy(T,G,_),hierarchy_member_type(X,T)}, [X,isa,G] :: X < G.
 % axioms for generic segments and layers
 about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
 about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
-about *--> {maximal_part_of(X,Y)}, [X,part,of,Y] :: X < maximal_part_of some Y.
+about *--> {part_of(X,Y)}, [X,part,of,Y] :: X < part_of some Y.
 about *--> {true},[transitivity,of,part_of] :: transitive(part_of).
 about *--> {true},[] :: subPropertyOf(maximal_part_of,part_of).
+
+about *-->
+        dt_layer(X),{X =::= ( (@LT1) and maximal_part_of some (@SX))},
+        { adjacent_to( LT1, LT2) },
+        dt_layer(Y),{Y =::= ( (@LT2) and maximal_part_of some (@SX))}
+        :: X < foobar some Y.
 
 
 % ----------------------------------------
 % RULES
 % ----------------------------------------
 
-
 adjacent_to(X,Y) :- hierarchy(wall,L),hierarchy_pair(X,Y,L).
-maximal_part_of(X,Y) :- hierarchy(T,L),hierarchy_parent(X,Y,[T=L]).
+part_of(X,Y) :- hierarchy(T,L),hierarchy_parent(X,Y,[T=L]).
 
 continuous_with(X,Y) :- hierarchy(digestive_tract,L),hierarchy_pair(X,Y,L).
 
