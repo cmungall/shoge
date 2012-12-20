@@ -278,7 +278,9 @@ all layers:
     layer(@X) --> {hierarchy_member_type(X,wall)},[@X].
 
 The following rules generate additional axioms connecting continuous
-segments in the proximo-distal axis and adjacent layers:
+segments in the proximo-distal axis and adjacent segments in distinct
+layers, also adding part_of relationships between segments (both
+through the layers and through the segments):
 
     about *-->
             layer_of_digestive_tract(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
