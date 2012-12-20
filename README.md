@@ -54,10 +54,14 @@ List generated OWL axioms:
 Generate ontology:
 
 ==
-    $ shoge  --grammar limbs_simple --generate-ontology limb_segment --to owl > limb_ontology.owl
+    $ shoge  --grammar limbs_simple --generate-ontology limb_segment --to owl --out limb_ontology.owl
 ==
 
 The 10 rules in the grammar generates 24 classes and 43 axioms.
+
+See
+(https://github.com/cmungall/shoge/blob/master/sample-output/limbs_simple.omn)[limbs_simple.omn]
+in the sample-output directory
 
 ## Details
 
