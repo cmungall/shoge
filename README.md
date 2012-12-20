@@ -60,7 +60,7 @@ Generate ontology:
 The 10 rules in the grammar generates 24 classes and 43 axioms.
 
 See
-(https://github.com/cmungall/shoge/blob/master/sample-output/limbs_simple.omn)[limbs_simple.omn]
+[limbs_simple.omn](https://github.com/cmungall/shoge/blob/master/sample-output/limbs_simple.omn)
 in the sample-output directory
 
 ## Details
