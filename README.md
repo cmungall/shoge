@@ -137,16 +137,16 @@ is compiled to:
     autopod(@autopod and part_of some X) *--> [@autopod],[of],limb(X).
 
 
-## EXAMPLES
+## Examples
 
-Example 2: naming
+### Example 2: naming
 
 A grammar file can contain rules for contracting names such as "anterior limb autopod" to "hand":
 
     'hand' is_name_of anterior limb autopod.
     'foot' is_name_of posterior limb autopod.
 
-Example 3: ordinal series
+### Example 3: ordinal series
 
 Iterative homology is the repeated generation of similar structures
 along some axis - e.g. digits or vertebrae.
@@ -161,7 +161,7 @@ together with an OWL expression:
 
     autopod and part_of some (limb and left and anterior) and has_order value 2.
 
-Example 4: handling variation
+### Example 4: handling variation
 
 Not every structure is repeated identically. For example, humans have
 3 phalanges for every digit other than digit 1.
@@ -179,7 +179,7 @@ This encodes the rule that thumbs of a human do not have medial
 phalanges. This term and any related terms will be excluded during
 ontology generation.
 
-Example 5a: consecutive ordinals
+### Example 5a: consecutive ordinals
 
 
     interdigital_region *--> 
@@ -189,7 +189,7 @@ Example 5a: consecutive ordinals
     % TODO
 
 
-Example 5b: consecutive ordinals
+### Example 5b: consecutive ordinals
 
 Interdigital regions are associated with pairs of digits rather than "favoring" any one digit:
 
@@ -201,7 +201,7 @@ Interdigital regions are associated with pairs of digits rather than "favoring" 
     consecutive_number_pair(left_ordinal value X and right_ordinal value Y) --> whole_number(X,1-5),[and],{Y is X+1},whole_number(Y).
 
 
-Example 6: additional axiom generation rules
+### Example 6: additional axiom generation rules
 
 
     v_level *--> @cervical,in_ordinal_series(1-7).
@@ -228,34 +228,28 @@ Example 6: additional axiom generation rules
     develops_from(vertebra_cartilage_condensation, vertebra_pre_cartilage_condensation).
 
 
-Example 7: enhancing existing ontologies
+### Example 7: enhancing existing ontologies
 
 Shoge can be used to enhance existing ontologies
-
 
     shoge ontologies/limb_segment_core.owl --grammar limbs_simple --generate-ontology limb_segment --to owl > ontologies/limb_segment_all.owl
 
 Here the core ontology already has classes called 'limb', 'limb segment', 'zeugopod' - but not specific class such as anterior limb left zeugopod
 
-## GRAMMAR DESIGN
+## Grammar design
 
 Often there are multiple grammars that can generate the same structures. For example:
-
 
     limb *--> laterality, anterioposterior, @limb.
     anterioposterior *--> @anterior | @posterior.
 
-
 is the same as:
-
 
     limb *--> hindlimb | forelimb.
     hindlimb *--> laterality, @hindlimb.
     forelimb *--> laterality, @forelimb.
 
-
 plus the following supplemental axioms:
-
 
     forelimb == limb and anterior.
     forelimb == limb and posterior.
@@ -273,9 +267,7 @@ as we are using "@limb" as the core genetic program that is repeated.
 
 Another way would be to write:
 
-
     limb *--> laterality, (@hindlimb | @forelimb).
-
 
 Which is concise, but has the disadvantage of lacking "hindlimb" and
 "forelimb" as non-terminals.
