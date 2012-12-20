@@ -1,9 +1,9 @@
----+ Shoge
+# Shoge
 
 Shoge is a tool for generating ontologies based on simple grammatical
 rules.
 
----++ SYNOPSIS
+## SYNOPSIS
 
 Example grammar file:
 
@@ -52,7 +52,7 @@ Generate ontology:
 
 The 10 rules in the grammar generates 24 classes and 43 axioms.
 
----++ ABOUT
+## ABOUT
 
 Shoge is a tool for generating ontologies based on simple grammatical
 rules. The principle can be loosely explained in terms of serial
@@ -74,7 +74,7 @@ repeated structures is often done manually, which is tedious and error
 prone. Automated Reasoners can help with validation and
 classification, but not with ontology generation.
 
----++ GRAMMARS
+## GRAMMARS
 
 Generation rules are expressed as extended Definite Clause Grammars
 (DCGs). These simultaneously generate the human-readable textual
@@ -120,7 +120,7 @@ left)". The [of] terminal generates part of the phrase but not the
 class expression. The "@autopod" indicates that there is a core
 generic ontology class by this name.
 
----+++ Compilation to DCGs
+##+ Compilation to DCGs
 
 Grammar rules are compiled down prolog DCGs. Arguments indicating
 class expressions are automatically added. For example
@@ -146,7 +146,7 @@ is compiled to:
 ==
 
 
----++ EXAMPLES
+## EXAMPLES
 
 Example 2: naming
 
@@ -251,7 +251,7 @@ shoge ontologies/limb_segment_core.owl --grammar limbs_simple --generate-ontolog
 
 Here the core ontology already has classes called 'limb', 'limb segment', 'zeugopod' - but not specific class such as anterior limb left zeugopod
 
----++ GRAMMAR DESIGN
+## GRAMMAR DESIGN
 
 Often there are multiple grammars that can generate the same structures. For example:
 
@@ -298,7 +298,7 @@ Which is concise, but has the disadvantage of lacking "hindlimb" and
 One possible future extension is automatic generation of grammars from
 existing ontologies.
 
----++ TODO
+## TODO
 
 * Allow exclusion rules to be phrases as well as expressions
 * Integration with ACE
