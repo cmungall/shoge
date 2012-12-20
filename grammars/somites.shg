@@ -10,6 +10,8 @@
 :- end.
 */
 
+somite_number *--> in_ordinal_series(1-39).
+
 :- if(in_context('Homo sapiens')).
 
 somite_number *--> in_ordinal_series(1-39).
@@ -89,5 +91,12 @@ about *-->
 develops_from(dermatome,dermomyotome).
 develops_from(myotome,dermomyotome).
 develops_from(dermomyotome,somite).
+develops_from(sclerotome,somite).
 
+/*
 
+  query on EHDAA2:
+  
+ehdaa2 -query "member(Z,['EHDAA2:0001848','EHDAA2:0000737']),parent(X,part_of,Z),class(X,N),sub_atom(N,_,_,_,'somite 0'),parent(Y,develops_from,X),(parent(ID,develops_from,Y);ID=Y)"  
+  
+  */

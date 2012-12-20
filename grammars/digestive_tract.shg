@@ -27,7 +27,9 @@ hierarchy(wall,
 % GRAMMAR
 % ----------------------------------------
 
-dt_layer *--> layer, [of], segment/maximal_part_of.
+structure *--> layer_of_digestive_tract | segment | layer.
+
+layer_of_digestive_tract *--> layer, [of], segment/maximal_part_of.
  
 segment(@X) --> {segment_member(X)},[@X].
 layer(@X) --> {layer_member(X)},[@X].
@@ -42,21 +44,33 @@ about *--> {hierarchy(T,G,_),hierarchy_member_type(X,T)}, [X,isa,G] :: X < G.
 % axioms for generic segments and layers
 %about *--> {continuous_with(X,Y)}, [X,continuous,with,Y] :: X < continuous_with some Y.
 %about *--> {adjacent_to(X,Y)}, [X,adjacent,to,Y] :: X < adjacent_to some Y.
-about *--> {part_of(X,Y)}, [X,part,of,Y] :: X < part_of some Y.
+%about *--> {part_of(X,Y)}, [X,part,of,Y] :: X < part_of some Y.
 about *--> {true},[transitivity,of,part_of] :: transitive(part_of).
 about *--> {true},[] :: subPropertyOf(maximal_part_of,part_of).
 
 about *-->
-        dt_layer(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
+        layer_of_digestive_tract(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
         { adjacent_to( LT1, LT2) },
-        dt_layer(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
+        layer_of_digestive_tract(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
         :: X < adjacent_to some Y.
 
 about *-->
-        dt_layer(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
+        layer_of_digestive_tract(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
         { continuous_with( SX, SY) },
-        dt_layer(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
+        layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
         :: X < continuous_with some Y.
+
+about *-->
+        layer_of_digestive_tract(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
+        { part_of( LT1, LT2) },
+        layer_of_digestive_tract(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
+        :: X < part_of some Y.
+
+about *-->
+        layer_of_digestive_tract(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
+        { part_of( SX, SY) },
+        layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
+        :: X < part_of some Y.
 
 
 % ----------------------------------------

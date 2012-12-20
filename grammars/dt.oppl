@@ -1,10 +1,16 @@
 ?segment:CLASS,
-?mucosa:CLASS,
-?submucosa:CLASS
+?layer1:CLASS,
+?layer2:CLASS,
+?layer1type:CLASS,
+?layer2type:CLASS
 SELECT
-   ?mucosa EquivalentTo mucosa and part_of some ?segment,
-   ?submucosa EquivalentTo submucosa and part_of some ?segment
+   ?layer1type SubClassOf layer,
+   ?layer2type SubClassOf layer,
+   ?segment SubClassOf segment,
+   ?layer1 EquivalentTo ?layer1type and maximal_part_of some ?segment,
+   ?layer2 EquivalentTo ?layer2type and maximal_part_of some ?segment,
+   ?layer1type SubClassOf adjacent_to some ?layer2type
 BEGIN
 ADD
- ?mucosa SubClassOf adjacent_to some ?submucosa
+ ?layer1 SubClassOf adjacent_to some ?layer2
 END;

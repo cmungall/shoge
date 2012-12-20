@@ -2,10 +2,12 @@
 
 :- include(ordinal_series).
 
+/*
 v_level *--> cervical,in_ordinal_series(1-7).
 v_level *--> thoracic,in_ordinal_series(1-12).
 v_level *--> lumbar,in_ordinal_series(1-5).
 v_level *--> sacral,in_ordinal_series(1-5).
+*/
 v_level *--> coccygeal,in_ordinal_series(1-4).
 
 cervical *--> ['C'] :: cervical.

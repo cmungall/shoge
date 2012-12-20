@@ -1,0 +1,1836 @@
+format-version: 1.2
+ontology: http://x.org
+
+[Term]
+id: anal_canal
+name: anal_canal
+is_a: segment
+
+[Term]
+id: ascending_colon
+name: ascending_colon
+is_a: segment
+
+[Term]
+id: cecum
+name: cecum
+is_a: segment
+
+[Term]
+id: circular_muscle
+name: circular_muscle
+is_a: layer
+
+[Term]
+id: circular_muscle-of-anal_canal
+name: circular_muscle of anal_canal
+intersection_of: circular_muscle
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to longitudinal_muscle-of-anal_canal
+relationship: adjacent_to submucosa-of-anal_canal
+relationship: continuous_with circular_muscle-of-rectum
+relationship: part_of circular_muscle-of-large_intestine
+relationship: part_of muscularis_propria-of-anal_canal
+
+[Term]
+id: circular_muscle-of-ascending_colon
+name: circular_muscle of ascending_colon
+intersection_of: circular_muscle
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to longitudinal_muscle-of-ascending_colon
+relationship: adjacent_to submucosa-of-ascending_colon
+relationship: continuous_with circular_muscle-of-cecum
+relationship: continuous_with circular_muscle-of-transverse_colon
+relationship: part_of circular_muscle-of-colon
+relationship: part_of muscularis_propria-of-ascending_colon
+
+[Term]
+id: circular_muscle-of-cecum
+name: circular_muscle of cecum
+intersection_of: circular_muscle
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to longitudinal_muscle-of-cecum
+relationship: adjacent_to submucosa-of-cecum
+relationship: continuous_with circular_muscle-of-ascending_colon
+relationship: continuous_with circular_muscle-of-colon
+relationship: part_of circular_muscle-of-large_intestine
+relationship: part_of muscularis_propria-of-cecum
+
+[Term]
+id: circular_muscle-of-colon
+name: circular_muscle of colon
+intersection_of: circular_muscle
+intersection_of: maximal_part_of colon
+relationship: adjacent_to longitudinal_muscle-of-colon
+relationship: adjacent_to submucosa-of-colon
+relationship: continuous_with circular_muscle-of-cecum
+relationship: continuous_with circular_muscle-of-rectum
+relationship: part_of muscularis_propria-of-colon
+
+[Term]
+id: circular_muscle-of-digestive_tract
+name: circular_muscle of digestive_tract
+intersection_of: circular_muscle
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to longitudinal_muscle-of-digestive_tract
+relationship: adjacent_to submucosa-of-digestive_tract
+relationship: part_of muscularis_propria-of-digestive_tract
+
+[Term]
+id: circular_muscle-of-duodenum
+name: circular_muscle of duodenum
+intersection_of: circular_muscle
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to longitudinal_muscle-of-duodenum
+relationship: adjacent_to submucosa-of-duodenum
+relationship: continuous_with circular_muscle-of-jejunum
+relationship: continuous_with circular_muscle-of-stomach
+relationship: part_of circular_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-duodenum
+
+[Term]
+id: circular_muscle-of-esophagus
+name: circular_muscle of esophagus
+intersection_of: circular_muscle
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to longitudinal_muscle-of-esophagus
+relationship: adjacent_to submucosa-of-esophagus
+relationship: continuous_with circular_muscle-of-stomach
+relationship: part_of circular_muscle-of-digestive_tract
+relationship: part_of muscularis_propria-of-esophagus
+
+[Term]
+id: circular_muscle-of-ileum
+name: circular_muscle of ileum
+intersection_of: circular_muscle
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to longitudinal_muscle-of-ileum
+relationship: adjacent_to submucosa-of-ileum
+relationship: continuous_with circular_muscle-of-jejunum
+relationship: part_of circular_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-ileum
+
+[Term]
+id: circular_muscle-of-intestine
+name: circular_muscle of intestine
+intersection_of: circular_muscle
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to longitudinal_muscle-of-intestine
+relationship: adjacent_to submucosa-of-intestine
+relationship: continuous_with circular_muscle-of-stomach
+relationship: part_of muscularis_propria-of-intestine
+
+[Term]
+id: circular_muscle-of-jejunum
+name: circular_muscle of jejunum
+intersection_of: circular_muscle
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to longitudinal_muscle-of-jejunum
+relationship: adjacent_to submucosa-of-jejunum
+relationship: continuous_with circular_muscle-of-duodenum
+relationship: continuous_with circular_muscle-of-ileum
+relationship: part_of circular_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-jejunum
+
+[Term]
+id: circular_muscle-of-large_intestine
+name: circular_muscle of large_intestine
+intersection_of: circular_muscle
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to longitudinal_muscle-of-large_intestine
+relationship: adjacent_to submucosa-of-large_intestine
+relationship: continuous_with circular_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-large_intestine
+
+[Term]
+id: circular_muscle-of-rectum
+name: circular_muscle of rectum
+intersection_of: circular_muscle
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to longitudinal_muscle-of-rectum
+relationship: adjacent_to submucosa-of-rectum
+relationship: continuous_with circular_muscle-of-anal_canal
+relationship: continuous_with circular_muscle-of-colon
+relationship: part_of circular_muscle-of-large_intestine
+relationship: part_of muscularis_propria-of-rectum
+
+[Term]
+id: circular_muscle-of-sigmoid_colon
+name: circular_muscle of sigmoid_colon
+intersection_of: circular_muscle
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to longitudinal_muscle-of-sigmoid_colon
+relationship: adjacent_to submucosa-of-sigmoid_colon
+relationship: continuous_with circular_muscle-of-transverse_colon
+relationship: part_of circular_muscle-of-colon
+relationship: part_of muscularis_propria-of-sigmoid_colon
+
+[Term]
+id: circular_muscle-of-small_intestine
+name: circular_muscle of small_intestine
+intersection_of: circular_muscle
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to longitudinal_muscle-of-small_intestine
+relationship: adjacent_to submucosa-of-small_intestine
+relationship: continuous_with circular_muscle-of-large_intestine
+relationship: continuous_with circular_muscle-of-stomach
+relationship: part_of muscularis_propria-of-small_intestine
+
+[Term]
+id: circular_muscle-of-stomach
+name: circular_muscle of stomach
+intersection_of: circular_muscle
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to longitudinal_muscle-of-stomach
+relationship: adjacent_to submucosa-of-stomach
+relationship: continuous_with circular_muscle-of-duodenum
+relationship: continuous_with circular_muscle-of-esophagus
+relationship: continuous_with circular_muscle-of-intestine
+relationship: continuous_with circular_muscle-of-small_intestine
+relationship: part_of circular_muscle-of-digestive_tract
+relationship: part_of muscularis_propria-of-stomach
+
+[Term]
+id: circular_muscle-of-transverse_colon
+name: circular_muscle of transverse_colon
+intersection_of: circular_muscle
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to longitudinal_muscle-of-transverse_colon
+relationship: adjacent_to submucosa-of-transverse_colon
+relationship: continuous_with circular_muscle-of-ascending_colon
+relationship: continuous_with circular_muscle-of-sigmoid_colon
+relationship: part_of circular_muscle-of-colon
+relationship: part_of muscularis_propria-of-transverse_colon
+
+[Term]
+id: colon
+name: colon
+is_a: segment
+
+[Term]
+id: digestive_tract
+name: digestive_tract
+is_a: segment
+
+[Term]
+id: duodenum
+name: duodenum
+is_a: segment
+
+[Term]
+id: epithelium
+name: epithelium
+is_a: layer
+
+[Term]
+id: epithelium-of-anal_canal
+name: epithelium of anal_canal
+intersection_of: epithelium
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to lamina_propria-of-anal_canal
+relationship: continuous_with epithelium-of-rectum
+relationship: part_of epithelium-of-large_intestine
+relationship: part_of mucosa-of-anal_canal
+
+[Term]
+id: epithelium-of-ascending_colon
+name: epithelium of ascending_colon
+intersection_of: epithelium
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to lamina_propria-of-ascending_colon
+relationship: continuous_with epithelium-of-cecum
+relationship: continuous_with epithelium-of-transverse_colon
+relationship: part_of epithelium-of-colon
+relationship: part_of mucosa-of-ascending_colon
+
+[Term]
+id: epithelium-of-cecum
+name: epithelium of cecum
+intersection_of: epithelium
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to lamina_propria-of-cecum
+relationship: continuous_with epithelium-of-ascending_colon
+relationship: continuous_with epithelium-of-colon
+relationship: part_of epithelium-of-large_intestine
+relationship: part_of mucosa-of-cecum
+
+[Term]
+id: epithelium-of-colon
+name: epithelium of colon
+intersection_of: epithelium
+intersection_of: maximal_part_of colon
+relationship: adjacent_to lamina_propria-of-colon
+relationship: continuous_with epithelium-of-cecum
+relationship: continuous_with epithelium-of-rectum
+relationship: part_of mucosa-of-colon
+
+[Term]
+id: epithelium-of-digestive_tract
+name: epithelium of digestive_tract
+intersection_of: epithelium
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to lamina_propria-of-digestive_tract
+relationship: part_of mucosa-of-digestive_tract
+
+[Term]
+id: epithelium-of-duodenum
+name: epithelium of duodenum
+intersection_of: epithelium
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to lamina_propria-of-duodenum
+relationship: continuous_with epithelium-of-jejunum
+relationship: continuous_with epithelium-of-stomach
+relationship: part_of epithelium-of-small_intestine
+relationship: part_of mucosa-of-duodenum
+
+[Term]
+id: epithelium-of-esophagus
+name: epithelium of esophagus
+intersection_of: epithelium
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to lamina_propria-of-esophagus
+relationship: continuous_with epithelium-of-stomach
+relationship: part_of epithelium-of-digestive_tract
+relationship: part_of mucosa-of-esophagus
+
+[Term]
+id: epithelium-of-ileum
+name: epithelium of ileum
+intersection_of: epithelium
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to lamina_propria-of-ileum
+relationship: continuous_with epithelium-of-jejunum
+relationship: part_of epithelium-of-small_intestine
+relationship: part_of mucosa-of-ileum
+
+[Term]
+id: epithelium-of-intestine
+name: epithelium of intestine
+intersection_of: epithelium
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to lamina_propria-of-intestine
+relationship: continuous_with epithelium-of-stomach
+relationship: part_of mucosa-of-intestine
+
+[Term]
+id: epithelium-of-jejunum
+name: epithelium of jejunum
+intersection_of: epithelium
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to lamina_propria-of-jejunum
+relationship: continuous_with epithelium-of-duodenum
+relationship: continuous_with epithelium-of-ileum
+relationship: part_of epithelium-of-small_intestine
+relationship: part_of mucosa-of-jejunum
+
+[Term]
+id: epithelium-of-large_intestine
+name: epithelium of large_intestine
+intersection_of: epithelium
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to lamina_propria-of-large_intestine
+relationship: continuous_with epithelium-of-small_intestine
+relationship: part_of mucosa-of-large_intestine
+
+[Term]
+id: epithelium-of-rectum
+name: epithelium of rectum
+intersection_of: epithelium
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to lamina_propria-of-rectum
+relationship: continuous_with epithelium-of-anal_canal
+relationship: continuous_with epithelium-of-colon
+relationship: part_of epithelium-of-large_intestine
+relationship: part_of mucosa-of-rectum
+
+[Term]
+id: epithelium-of-sigmoid_colon
+name: epithelium of sigmoid_colon
+intersection_of: epithelium
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to lamina_propria-of-sigmoid_colon
+relationship: continuous_with epithelium-of-transverse_colon
+relationship: part_of epithelium-of-colon
+relationship: part_of mucosa-of-sigmoid_colon
+
+[Term]
+id: epithelium-of-small_intestine
+name: epithelium of small_intestine
+intersection_of: epithelium
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to lamina_propria-of-small_intestine
+relationship: continuous_with epithelium-of-large_intestine
+relationship: continuous_with epithelium-of-stomach
+relationship: part_of mucosa-of-small_intestine
+
+[Term]
+id: epithelium-of-stomach
+name: epithelium of stomach
+intersection_of: epithelium
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to lamina_propria-of-stomach
+relationship: continuous_with epithelium-of-duodenum
+relationship: continuous_with epithelium-of-esophagus
+relationship: continuous_with epithelium-of-intestine
+relationship: continuous_with epithelium-of-small_intestine
+relationship: part_of epithelium-of-digestive_tract
+relationship: part_of mucosa-of-stomach
+
+[Term]
+id: epithelium-of-transverse_colon
+name: epithelium of transverse_colon
+intersection_of: epithelium
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to lamina_propria-of-transverse_colon
+relationship: continuous_with epithelium-of-ascending_colon
+relationship: continuous_with epithelium-of-sigmoid_colon
+relationship: part_of epithelium-of-colon
+relationship: part_of mucosa-of-transverse_colon
+
+[Term]
+id: esophagus
+name: esophagus
+is_a: segment
+
+[Term]
+id: ileum
+name: ileum
+is_a: segment
+
+[Term]
+id: intestine
+name: intestine
+is_a: segment
+
+[Term]
+id: jejunum
+name: jejunum
+is_a: segment
+
+[Term]
+id: lamina_propria
+name: lamina_propria
+is_a: layer
+
+[Term]
+id: lamina_propria-of-anal_canal
+name: lamina_propria of anal_canal
+intersection_of: lamina_propria
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to epithelium-of-anal_canal
+relationship: adjacent_to muscularis_mucosa-of-anal_canal
+relationship: continuous_with lamina_propria-of-rectum
+relationship: part_of lamina_propria-of-large_intestine
+relationship: part_of mucosa-of-anal_canal
+
+[Term]
+id: lamina_propria-of-ascending_colon
+name: lamina_propria of ascending_colon
+intersection_of: lamina_propria
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to epithelium-of-ascending_colon
+relationship: adjacent_to muscularis_mucosa-of-ascending_colon
+relationship: continuous_with lamina_propria-of-cecum
+relationship: continuous_with lamina_propria-of-transverse_colon
+relationship: part_of lamina_propria-of-colon
+relationship: part_of mucosa-of-ascending_colon
+
+[Term]
+id: lamina_propria-of-cecum
+name: lamina_propria of cecum
+intersection_of: lamina_propria
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to epithelium-of-cecum
+relationship: adjacent_to muscularis_mucosa-of-cecum
+relationship: continuous_with lamina_propria-of-ascending_colon
+relationship: continuous_with lamina_propria-of-colon
+relationship: part_of lamina_propria-of-large_intestine
+relationship: part_of mucosa-of-cecum
+
+[Term]
+id: lamina_propria-of-colon
+name: lamina_propria of colon
+intersection_of: lamina_propria
+intersection_of: maximal_part_of colon
+relationship: adjacent_to epithelium-of-colon
+relationship: adjacent_to muscularis_mucosa-of-colon
+relationship: continuous_with lamina_propria-of-cecum
+relationship: continuous_with lamina_propria-of-rectum
+relationship: part_of mucosa-of-colon
+
+[Term]
+id: lamina_propria-of-digestive_tract
+name: lamina_propria of digestive_tract
+intersection_of: lamina_propria
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to epithelium-of-digestive_tract
+relationship: adjacent_to muscularis_mucosa-of-digestive_tract
+relationship: part_of mucosa-of-digestive_tract
+
+[Term]
+id: lamina_propria-of-duodenum
+name: lamina_propria of duodenum
+intersection_of: lamina_propria
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to epithelium-of-duodenum
+relationship: adjacent_to muscularis_mucosa-of-duodenum
+relationship: continuous_with lamina_propria-of-jejunum
+relationship: continuous_with lamina_propria-of-stomach
+relationship: part_of lamina_propria-of-small_intestine
+relationship: part_of mucosa-of-duodenum
+
+[Term]
+id: lamina_propria-of-esophagus
+name: lamina_propria of esophagus
+intersection_of: lamina_propria
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to epithelium-of-esophagus
+relationship: adjacent_to muscularis_mucosa-of-esophagus
+relationship: continuous_with lamina_propria-of-stomach
+relationship: part_of lamina_propria-of-digestive_tract
+relationship: part_of mucosa-of-esophagus
+
+[Term]
+id: lamina_propria-of-ileum
+name: lamina_propria of ileum
+intersection_of: lamina_propria
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to epithelium-of-ileum
+relationship: adjacent_to muscularis_mucosa-of-ileum
+relationship: continuous_with lamina_propria-of-jejunum
+relationship: part_of lamina_propria-of-small_intestine
+relationship: part_of mucosa-of-ileum
+
+[Term]
+id: lamina_propria-of-intestine
+name: lamina_propria of intestine
+intersection_of: lamina_propria
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to epithelium-of-intestine
+relationship: adjacent_to muscularis_mucosa-of-intestine
+relationship: continuous_with lamina_propria-of-stomach
+relationship: part_of mucosa-of-intestine
+
+[Term]
+id: lamina_propria-of-jejunum
+name: lamina_propria of jejunum
+intersection_of: lamina_propria
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to epithelium-of-jejunum
+relationship: adjacent_to muscularis_mucosa-of-jejunum
+relationship: continuous_with lamina_propria-of-duodenum
+relationship: continuous_with lamina_propria-of-ileum
+relationship: part_of lamina_propria-of-small_intestine
+relationship: part_of mucosa-of-jejunum
+
+[Term]
+id: lamina_propria-of-large_intestine
+name: lamina_propria of large_intestine
+intersection_of: lamina_propria
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to epithelium-of-large_intestine
+relationship: adjacent_to muscularis_mucosa-of-large_intestine
+relationship: continuous_with lamina_propria-of-small_intestine
+relationship: part_of mucosa-of-large_intestine
+
+[Term]
+id: lamina_propria-of-rectum
+name: lamina_propria of rectum
+intersection_of: lamina_propria
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to epithelium-of-rectum
+relationship: adjacent_to muscularis_mucosa-of-rectum
+relationship: continuous_with lamina_propria-of-anal_canal
+relationship: continuous_with lamina_propria-of-colon
+relationship: part_of lamina_propria-of-large_intestine
+relationship: part_of mucosa-of-rectum
+
+[Term]
+id: lamina_propria-of-sigmoid_colon
+name: lamina_propria of sigmoid_colon
+intersection_of: lamina_propria
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to epithelium-of-sigmoid_colon
+relationship: adjacent_to muscularis_mucosa-of-sigmoid_colon
+relationship: continuous_with lamina_propria-of-transverse_colon
+relationship: part_of lamina_propria-of-colon
+relationship: part_of mucosa-of-sigmoid_colon
+
+[Term]
+id: lamina_propria-of-small_intestine
+name: lamina_propria of small_intestine
+intersection_of: lamina_propria
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to epithelium-of-small_intestine
+relationship: adjacent_to muscularis_mucosa-of-small_intestine
+relationship: continuous_with lamina_propria-of-large_intestine
+relationship: continuous_with lamina_propria-of-stomach
+relationship: part_of mucosa-of-small_intestine
+
+[Term]
+id: lamina_propria-of-stomach
+name: lamina_propria of stomach
+intersection_of: lamina_propria
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to epithelium-of-stomach
+relationship: adjacent_to muscularis_mucosa-of-stomach
+relationship: continuous_with lamina_propria-of-duodenum
+relationship: continuous_with lamina_propria-of-esophagus
+relationship: continuous_with lamina_propria-of-intestine
+relationship: continuous_with lamina_propria-of-small_intestine
+relationship: part_of lamina_propria-of-digestive_tract
+relationship: part_of mucosa-of-stomach
+
+[Term]
+id: lamina_propria-of-transverse_colon
+name: lamina_propria of transverse_colon
+intersection_of: lamina_propria
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to epithelium-of-transverse_colon
+relationship: adjacent_to muscularis_mucosa-of-transverse_colon
+relationship: continuous_with lamina_propria-of-ascending_colon
+relationship: continuous_with lamina_propria-of-sigmoid_colon
+relationship: part_of lamina_propria-of-colon
+relationship: part_of mucosa-of-transverse_colon
+
+[Term]
+id: large_intestine
+name: large_intestine
+is_a: segment
+
+[Term]
+id: layer
+name: layer
+is_a: structure
+
+[Term]
+id: layer_of_digestive_tract
+name: layer_of_digestive_tract
+is_a: structure
+
+[Term]
+id: longitudinal_muscle
+name: longitudinal_muscle
+is_a: layer
+
+[Term]
+id: longitudinal_muscle-of-anal_canal
+name: longitudinal_muscle of anal_canal
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to circular_muscle-of-anal_canal
+relationship: continuous_with longitudinal_muscle-of-rectum
+relationship: part_of longitudinal_muscle-of-large_intestine
+relationship: part_of muscularis_propria-of-anal_canal
+
+[Term]
+id: longitudinal_muscle-of-ascending_colon
+name: longitudinal_muscle of ascending_colon
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to circular_muscle-of-ascending_colon
+relationship: continuous_with longitudinal_muscle-of-cecum
+relationship: continuous_with longitudinal_muscle-of-transverse_colon
+relationship: part_of longitudinal_muscle-of-colon
+relationship: part_of muscularis_propria-of-ascending_colon
+
+[Term]
+id: longitudinal_muscle-of-cecum
+name: longitudinal_muscle of cecum
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to circular_muscle-of-cecum
+relationship: continuous_with longitudinal_muscle-of-ascending_colon
+relationship: continuous_with longitudinal_muscle-of-colon
+relationship: part_of longitudinal_muscle-of-large_intestine
+relationship: part_of muscularis_propria-of-cecum
+
+[Term]
+id: longitudinal_muscle-of-colon
+name: longitudinal_muscle of colon
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of colon
+relationship: adjacent_to circular_muscle-of-colon
+relationship: continuous_with longitudinal_muscle-of-cecum
+relationship: continuous_with longitudinal_muscle-of-rectum
+relationship: part_of muscularis_propria-of-colon
+
+[Term]
+id: longitudinal_muscle-of-digestive_tract
+name: longitudinal_muscle of digestive_tract
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to circular_muscle-of-digestive_tract
+relationship: part_of muscularis_propria-of-digestive_tract
+
+[Term]
+id: longitudinal_muscle-of-duodenum
+name: longitudinal_muscle of duodenum
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to circular_muscle-of-duodenum
+relationship: continuous_with longitudinal_muscle-of-jejunum
+relationship: continuous_with longitudinal_muscle-of-stomach
+relationship: part_of longitudinal_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-duodenum
+
+[Term]
+id: longitudinal_muscle-of-esophagus
+name: longitudinal_muscle of esophagus
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to circular_muscle-of-esophagus
+relationship: continuous_with longitudinal_muscle-of-stomach
+relationship: part_of longitudinal_muscle-of-digestive_tract
+relationship: part_of muscularis_propria-of-esophagus
+
+[Term]
+id: longitudinal_muscle-of-ileum
+name: longitudinal_muscle of ileum
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to circular_muscle-of-ileum
+relationship: continuous_with longitudinal_muscle-of-jejunum
+relationship: part_of longitudinal_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-ileum
+
+[Term]
+id: longitudinal_muscle-of-intestine
+name: longitudinal_muscle of intestine
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to circular_muscle-of-intestine
+relationship: continuous_with longitudinal_muscle-of-stomach
+relationship: part_of muscularis_propria-of-intestine
+
+[Term]
+id: longitudinal_muscle-of-jejunum
+name: longitudinal_muscle of jejunum
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to circular_muscle-of-jejunum
+relationship: continuous_with longitudinal_muscle-of-duodenum
+relationship: continuous_with longitudinal_muscle-of-ileum
+relationship: part_of longitudinal_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-jejunum
+
+[Term]
+id: longitudinal_muscle-of-large_intestine
+name: longitudinal_muscle of large_intestine
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to circular_muscle-of-large_intestine
+relationship: continuous_with longitudinal_muscle-of-small_intestine
+relationship: part_of muscularis_propria-of-large_intestine
+
+[Term]
+id: longitudinal_muscle-of-rectum
+name: longitudinal_muscle of rectum
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to circular_muscle-of-rectum
+relationship: continuous_with longitudinal_muscle-of-anal_canal
+relationship: continuous_with longitudinal_muscle-of-colon
+relationship: part_of longitudinal_muscle-of-large_intestine
+relationship: part_of muscularis_propria-of-rectum
+
+[Term]
+id: longitudinal_muscle-of-sigmoid_colon
+name: longitudinal_muscle of sigmoid_colon
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to circular_muscle-of-sigmoid_colon
+relationship: continuous_with longitudinal_muscle-of-transverse_colon
+relationship: part_of longitudinal_muscle-of-colon
+relationship: part_of muscularis_propria-of-sigmoid_colon
+
+[Term]
+id: longitudinal_muscle-of-small_intestine
+name: longitudinal_muscle of small_intestine
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to circular_muscle-of-small_intestine
+relationship: continuous_with longitudinal_muscle-of-large_intestine
+relationship: continuous_with longitudinal_muscle-of-stomach
+relationship: part_of muscularis_propria-of-small_intestine
+
+[Term]
+id: longitudinal_muscle-of-stomach
+name: longitudinal_muscle of stomach
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to circular_muscle-of-stomach
+relationship: continuous_with longitudinal_muscle-of-duodenum
+relationship: continuous_with longitudinal_muscle-of-esophagus
+relationship: continuous_with longitudinal_muscle-of-intestine
+relationship: continuous_with longitudinal_muscle-of-small_intestine
+relationship: part_of longitudinal_muscle-of-digestive_tract
+relationship: part_of muscularis_propria-of-stomach
+
+[Term]
+id: longitudinal_muscle-of-transverse_colon
+name: longitudinal_muscle of transverse_colon
+intersection_of: longitudinal_muscle
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to circular_muscle-of-transverse_colon
+relationship: continuous_with longitudinal_muscle-of-ascending_colon
+relationship: continuous_with longitudinal_muscle-of-sigmoid_colon
+relationship: part_of longitudinal_muscle-of-colon
+relationship: part_of muscularis_propria-of-transverse_colon
+
+[Term]
+id: mucosa
+name: mucosa
+is_a: layer
+
+[Term]
+id: mucosa-of-anal_canal
+name: mucosa of anal_canal
+intersection_of: mucosa
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to submucosa-of-anal_canal
+relationship: continuous_with mucosa-of-rectum
+relationship: part_of mucosa-of-large_intestine
+
+[Term]
+id: mucosa-of-ascending_colon
+name: mucosa of ascending_colon
+intersection_of: mucosa
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to submucosa-of-ascending_colon
+relationship: continuous_with mucosa-of-cecum
+relationship: continuous_with mucosa-of-transverse_colon
+relationship: part_of mucosa-of-colon
+
+[Term]
+id: mucosa-of-cecum
+name: mucosa of cecum
+intersection_of: mucosa
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to submucosa-of-cecum
+relationship: continuous_with mucosa-of-ascending_colon
+relationship: continuous_with mucosa-of-colon
+relationship: part_of mucosa-of-large_intestine
+
+[Term]
+id: mucosa-of-colon
+name: mucosa of colon
+intersection_of: mucosa
+intersection_of: maximal_part_of colon
+relationship: adjacent_to submucosa-of-colon
+relationship: continuous_with mucosa-of-cecum
+relationship: continuous_with mucosa-of-rectum
+
+[Term]
+id: mucosa-of-digestive_tract
+name: mucosa of digestive_tract
+intersection_of: mucosa
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to submucosa-of-digestive_tract
+
+[Term]
+id: mucosa-of-duodenum
+name: mucosa of duodenum
+intersection_of: mucosa
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to submucosa-of-duodenum
+relationship: continuous_with mucosa-of-jejunum
+relationship: continuous_with mucosa-of-stomach
+relationship: part_of mucosa-of-small_intestine
+
+[Term]
+id: mucosa-of-esophagus
+name: mucosa of esophagus
+intersection_of: mucosa
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to submucosa-of-esophagus
+relationship: continuous_with mucosa-of-stomach
+relationship: part_of mucosa-of-digestive_tract
+
+[Term]
+id: mucosa-of-ileum
+name: mucosa of ileum
+intersection_of: mucosa
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to submucosa-of-ileum
+relationship: continuous_with mucosa-of-jejunum
+relationship: part_of mucosa-of-small_intestine
+
+[Term]
+id: mucosa-of-intestine
+name: mucosa of intestine
+intersection_of: mucosa
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to submucosa-of-intestine
+relationship: continuous_with mucosa-of-stomach
+
+[Term]
+id: mucosa-of-jejunum
+name: mucosa of jejunum
+intersection_of: mucosa
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to submucosa-of-jejunum
+relationship: continuous_with mucosa-of-duodenum
+relationship: continuous_with mucosa-of-ileum
+relationship: part_of mucosa-of-small_intestine
+
+[Term]
+id: mucosa-of-large_intestine
+name: mucosa of large_intestine
+intersection_of: mucosa
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to submucosa-of-large_intestine
+relationship: continuous_with mucosa-of-small_intestine
+
+[Term]
+id: mucosa-of-rectum
+name: mucosa of rectum
+intersection_of: mucosa
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to submucosa-of-rectum
+relationship: continuous_with mucosa-of-anal_canal
+relationship: continuous_with mucosa-of-colon
+relationship: part_of mucosa-of-large_intestine
+
+[Term]
+id: mucosa-of-sigmoid_colon
+name: mucosa of sigmoid_colon
+intersection_of: mucosa
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to submucosa-of-sigmoid_colon
+relationship: continuous_with mucosa-of-transverse_colon
+relationship: part_of mucosa-of-colon
+
+[Term]
+id: mucosa-of-small_intestine
+name: mucosa of small_intestine
+intersection_of: mucosa
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to submucosa-of-small_intestine
+relationship: continuous_with mucosa-of-large_intestine
+relationship: continuous_with mucosa-of-stomach
+
+[Term]
+id: mucosa-of-stomach
+name: mucosa of stomach
+intersection_of: mucosa
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to submucosa-of-stomach
+relationship: continuous_with mucosa-of-duodenum
+relationship: continuous_with mucosa-of-esophagus
+relationship: continuous_with mucosa-of-intestine
+relationship: continuous_with mucosa-of-small_intestine
+relationship: part_of mucosa-of-digestive_tract
+
+[Term]
+id: mucosa-of-transverse_colon
+name: mucosa of transverse_colon
+intersection_of: mucosa
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to submucosa-of-transverse_colon
+relationship: continuous_with mucosa-of-ascending_colon
+relationship: continuous_with mucosa-of-sigmoid_colon
+relationship: part_of mucosa-of-colon
+
+[Term]
+id: muscularis_mucosa
+name: muscularis_mucosa
+is_a: layer
+
+[Term]
+id: muscularis_mucosa-of-anal_canal
+name: muscularis_mucosa of anal_canal
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to lamina_propria-of-anal_canal
+relationship: continuous_with muscularis_mucosa-of-rectum
+relationship: part_of mucosa-of-anal_canal
+relationship: part_of muscularis_mucosa-of-large_intestine
+
+[Term]
+id: muscularis_mucosa-of-ascending_colon
+name: muscularis_mucosa of ascending_colon
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to lamina_propria-of-ascending_colon
+relationship: continuous_with muscularis_mucosa-of-cecum
+relationship: continuous_with muscularis_mucosa-of-transverse_colon
+relationship: part_of mucosa-of-ascending_colon
+relationship: part_of muscularis_mucosa-of-colon
+
+[Term]
+id: muscularis_mucosa-of-cecum
+name: muscularis_mucosa of cecum
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to lamina_propria-of-cecum
+relationship: continuous_with muscularis_mucosa-of-ascending_colon
+relationship: continuous_with muscularis_mucosa-of-colon
+relationship: part_of mucosa-of-cecum
+relationship: part_of muscularis_mucosa-of-large_intestine
+
+[Term]
+id: muscularis_mucosa-of-colon
+name: muscularis_mucosa of colon
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of colon
+relationship: adjacent_to lamina_propria-of-colon
+relationship: continuous_with muscularis_mucosa-of-cecum
+relationship: continuous_with muscularis_mucosa-of-rectum
+relationship: part_of mucosa-of-colon
+
+[Term]
+id: muscularis_mucosa-of-digestive_tract
+name: muscularis_mucosa of digestive_tract
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to lamina_propria-of-digestive_tract
+relationship: part_of mucosa-of-digestive_tract
+
+[Term]
+id: muscularis_mucosa-of-duodenum
+name: muscularis_mucosa of duodenum
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to lamina_propria-of-duodenum
+relationship: continuous_with muscularis_mucosa-of-jejunum
+relationship: continuous_with muscularis_mucosa-of-stomach
+relationship: part_of mucosa-of-duodenum
+relationship: part_of muscularis_mucosa-of-small_intestine
+
+[Term]
+id: muscularis_mucosa-of-esophagus
+name: muscularis_mucosa of esophagus
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to lamina_propria-of-esophagus
+relationship: continuous_with muscularis_mucosa-of-stomach
+relationship: part_of mucosa-of-esophagus
+relationship: part_of muscularis_mucosa-of-digestive_tract
+
+[Term]
+id: muscularis_mucosa-of-ileum
+name: muscularis_mucosa of ileum
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to lamina_propria-of-ileum
+relationship: continuous_with muscularis_mucosa-of-jejunum
+relationship: part_of mucosa-of-ileum
+relationship: part_of muscularis_mucosa-of-small_intestine
+
+[Term]
+id: muscularis_mucosa-of-intestine
+name: muscularis_mucosa of intestine
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to lamina_propria-of-intestine
+relationship: continuous_with muscularis_mucosa-of-stomach
+relationship: part_of mucosa-of-intestine
+
+[Term]
+id: muscularis_mucosa-of-jejunum
+name: muscularis_mucosa of jejunum
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to lamina_propria-of-jejunum
+relationship: continuous_with muscularis_mucosa-of-duodenum
+relationship: continuous_with muscularis_mucosa-of-ileum
+relationship: part_of mucosa-of-jejunum
+relationship: part_of muscularis_mucosa-of-small_intestine
+
+[Term]
+id: muscularis_mucosa-of-large_intestine
+name: muscularis_mucosa of large_intestine
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to lamina_propria-of-large_intestine
+relationship: continuous_with muscularis_mucosa-of-small_intestine
+relationship: part_of mucosa-of-large_intestine
+
+[Term]
+id: muscularis_mucosa-of-rectum
+name: muscularis_mucosa of rectum
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to lamina_propria-of-rectum
+relationship: continuous_with muscularis_mucosa-of-anal_canal
+relationship: continuous_with muscularis_mucosa-of-colon
+relationship: part_of mucosa-of-rectum
+relationship: part_of muscularis_mucosa-of-large_intestine
+
+[Term]
+id: muscularis_mucosa-of-sigmoid_colon
+name: muscularis_mucosa of sigmoid_colon
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to lamina_propria-of-sigmoid_colon
+relationship: continuous_with muscularis_mucosa-of-transverse_colon
+relationship: part_of mucosa-of-sigmoid_colon
+relationship: part_of muscularis_mucosa-of-colon
+
+[Term]
+id: muscularis_mucosa-of-small_intestine
+name: muscularis_mucosa of small_intestine
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to lamina_propria-of-small_intestine
+relationship: continuous_with muscularis_mucosa-of-large_intestine
+relationship: continuous_with muscularis_mucosa-of-stomach
+relationship: part_of mucosa-of-small_intestine
+
+[Term]
+id: muscularis_mucosa-of-stomach
+name: muscularis_mucosa of stomach
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to lamina_propria-of-stomach
+relationship: continuous_with muscularis_mucosa-of-duodenum
+relationship: continuous_with muscularis_mucosa-of-esophagus
+relationship: continuous_with muscularis_mucosa-of-intestine
+relationship: continuous_with muscularis_mucosa-of-small_intestine
+relationship: part_of mucosa-of-stomach
+relationship: part_of muscularis_mucosa-of-digestive_tract
+
+[Term]
+id: muscularis_mucosa-of-transverse_colon
+name: muscularis_mucosa of transverse_colon
+intersection_of: muscularis_mucosa
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to lamina_propria-of-transverse_colon
+relationship: continuous_with muscularis_mucosa-of-ascending_colon
+relationship: continuous_with muscularis_mucosa-of-sigmoid_colon
+relationship: part_of mucosa-of-transverse_colon
+relationship: part_of muscularis_mucosa-of-colon
+
+[Term]
+id: muscularis_propria
+name: muscularis_propria
+is_a: layer
+
+[Term]
+id: muscularis_propria-of-anal_canal
+name: muscularis_propria of anal_canal
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to serosa-of-anal_canal
+relationship: adjacent_to submucosa-of-anal_canal
+relationship: continuous_with muscularis_propria-of-rectum
+relationship: part_of muscularis_propria-of-large_intestine
+
+[Term]
+id: muscularis_propria-of-ascending_colon
+name: muscularis_propria of ascending_colon
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to serosa-of-ascending_colon
+relationship: adjacent_to submucosa-of-ascending_colon
+relationship: continuous_with muscularis_propria-of-cecum
+relationship: continuous_with muscularis_propria-of-transverse_colon
+relationship: part_of muscularis_propria-of-colon
+
+[Term]
+id: muscularis_propria-of-cecum
+name: muscularis_propria of cecum
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to serosa-of-cecum
+relationship: adjacent_to submucosa-of-cecum
+relationship: continuous_with muscularis_propria-of-ascending_colon
+relationship: continuous_with muscularis_propria-of-colon
+relationship: part_of muscularis_propria-of-large_intestine
+
+[Term]
+id: muscularis_propria-of-colon
+name: muscularis_propria of colon
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of colon
+relationship: adjacent_to serosa-of-colon
+relationship: adjacent_to submucosa-of-colon
+relationship: continuous_with muscularis_propria-of-cecum
+relationship: continuous_with muscularis_propria-of-rectum
+
+[Term]
+id: muscularis_propria-of-digestive_tract
+name: muscularis_propria of digestive_tract
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to serosa-of-digestive_tract
+relationship: adjacent_to submucosa-of-digestive_tract
+
+[Term]
+id: muscularis_propria-of-duodenum
+name: muscularis_propria of duodenum
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to serosa-of-duodenum
+relationship: adjacent_to submucosa-of-duodenum
+relationship: continuous_with muscularis_propria-of-jejunum
+relationship: continuous_with muscularis_propria-of-stomach
+relationship: part_of muscularis_propria-of-small_intestine
+
+[Term]
+id: muscularis_propria-of-esophagus
+name: muscularis_propria of esophagus
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to serosa-of-esophagus
+relationship: adjacent_to submucosa-of-esophagus
+relationship: continuous_with muscularis_propria-of-stomach
+relationship: part_of muscularis_propria-of-digestive_tract
+
+[Term]
+id: muscularis_propria-of-ileum
+name: muscularis_propria of ileum
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to serosa-of-ileum
+relationship: adjacent_to submucosa-of-ileum
+relationship: continuous_with muscularis_propria-of-jejunum
+relationship: part_of muscularis_propria-of-small_intestine
+
+[Term]
+id: muscularis_propria-of-intestine
+name: muscularis_propria of intestine
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to serosa-of-intestine
+relationship: adjacent_to submucosa-of-intestine
+relationship: continuous_with muscularis_propria-of-stomach
+
+[Term]
+id: muscularis_propria-of-jejunum
+name: muscularis_propria of jejunum
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to serosa-of-jejunum
+relationship: adjacent_to submucosa-of-jejunum
+relationship: continuous_with muscularis_propria-of-duodenum
+relationship: continuous_with muscularis_propria-of-ileum
+relationship: part_of muscularis_propria-of-small_intestine
+
+[Term]
+id: muscularis_propria-of-large_intestine
+name: muscularis_propria of large_intestine
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to serosa-of-large_intestine
+relationship: adjacent_to submucosa-of-large_intestine
+relationship: continuous_with muscularis_propria-of-small_intestine
+
+[Term]
+id: muscularis_propria-of-rectum
+name: muscularis_propria of rectum
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to serosa-of-rectum
+relationship: adjacent_to submucosa-of-rectum
+relationship: continuous_with muscularis_propria-of-anal_canal
+relationship: continuous_with muscularis_propria-of-colon
+relationship: part_of muscularis_propria-of-large_intestine
+
+[Term]
+id: muscularis_propria-of-sigmoid_colon
+name: muscularis_propria of sigmoid_colon
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to serosa-of-sigmoid_colon
+relationship: adjacent_to submucosa-of-sigmoid_colon
+relationship: continuous_with muscularis_propria-of-transverse_colon
+relationship: part_of muscularis_propria-of-colon
+
+[Term]
+id: muscularis_propria-of-small_intestine
+name: muscularis_propria of small_intestine
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to serosa-of-small_intestine
+relationship: adjacent_to submucosa-of-small_intestine
+relationship: continuous_with muscularis_propria-of-large_intestine
+relationship: continuous_with muscularis_propria-of-stomach
+
+[Term]
+id: muscularis_propria-of-stomach
+name: muscularis_propria of stomach
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to serosa-of-stomach
+relationship: adjacent_to submucosa-of-stomach
+relationship: continuous_with muscularis_propria-of-duodenum
+relationship: continuous_with muscularis_propria-of-esophagus
+relationship: continuous_with muscularis_propria-of-intestine
+relationship: continuous_with muscularis_propria-of-small_intestine
+relationship: part_of muscularis_propria-of-digestive_tract
+
+[Term]
+id: muscularis_propria-of-transverse_colon
+name: muscularis_propria of transverse_colon
+intersection_of: muscularis_propria
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to serosa-of-transverse_colon
+relationship: adjacent_to submucosa-of-transverse_colon
+relationship: continuous_with muscularis_propria-of-ascending_colon
+relationship: continuous_with muscularis_propria-of-sigmoid_colon
+relationship: part_of muscularis_propria-of-colon
+
+[Term]
+id: rectum
+name: rectum
+is_a: segment
+
+[Term]
+id: segment
+name: segment
+is_a: structure
+
+[Term]
+id: serosa
+name: serosa
+is_a: layer
+
+[Term]
+id: serosa-of-anal_canal
+name: serosa of anal_canal
+intersection_of: serosa
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to muscularis_propria-of-anal_canal
+relationship: continuous_with serosa-of-rectum
+relationship: part_of serosa-of-large_intestine
+relationship: part_of wall-of-anal_canal
+
+[Term]
+id: serosa-of-ascending_colon
+name: serosa of ascending_colon
+intersection_of: serosa
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to muscularis_propria-of-ascending_colon
+relationship: continuous_with serosa-of-cecum
+relationship: continuous_with serosa-of-transverse_colon
+relationship: part_of serosa-of-colon
+relationship: part_of wall-of-ascending_colon
+
+[Term]
+id: serosa-of-cecum
+name: serosa of cecum
+intersection_of: serosa
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to muscularis_propria-of-cecum
+relationship: continuous_with serosa-of-ascending_colon
+relationship: continuous_with serosa-of-colon
+relationship: part_of serosa-of-large_intestine
+relationship: part_of wall-of-cecum
+
+[Term]
+id: serosa-of-colon
+name: serosa of colon
+intersection_of: serosa
+intersection_of: maximal_part_of colon
+relationship: adjacent_to muscularis_propria-of-colon
+relationship: continuous_with serosa-of-cecum
+relationship: continuous_with serosa-of-rectum
+relationship: part_of wall-of-colon
+
+[Term]
+id: serosa-of-digestive_tract
+name: serosa of digestive_tract
+intersection_of: serosa
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to muscularis_propria-of-digestive_tract
+relationship: part_of wall-of-digestive_tract
+
+[Term]
+id: serosa-of-duodenum
+name: serosa of duodenum
+intersection_of: serosa
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to muscularis_propria-of-duodenum
+relationship: continuous_with serosa-of-jejunum
+relationship: continuous_with serosa-of-stomach
+relationship: part_of serosa-of-small_intestine
+relationship: part_of wall-of-duodenum
+
+[Term]
+id: serosa-of-esophagus
+name: serosa of esophagus
+intersection_of: serosa
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to muscularis_propria-of-esophagus
+relationship: continuous_with serosa-of-stomach
+relationship: part_of serosa-of-digestive_tract
+relationship: part_of wall-of-esophagus
+
+[Term]
+id: serosa-of-ileum
+name: serosa of ileum
+intersection_of: serosa
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to muscularis_propria-of-ileum
+relationship: continuous_with serosa-of-jejunum
+relationship: part_of serosa-of-small_intestine
+relationship: part_of wall-of-ileum
+
+[Term]
+id: serosa-of-intestine
+name: serosa of intestine
+intersection_of: serosa
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to muscularis_propria-of-intestine
+relationship: continuous_with serosa-of-stomach
+relationship: part_of wall-of-intestine
+
+[Term]
+id: serosa-of-jejunum
+name: serosa of jejunum
+intersection_of: serosa
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to muscularis_propria-of-jejunum
+relationship: continuous_with serosa-of-duodenum
+relationship: continuous_with serosa-of-ileum
+relationship: part_of serosa-of-small_intestine
+relationship: part_of wall-of-jejunum
+
+[Term]
+id: serosa-of-large_intestine
+name: serosa of large_intestine
+intersection_of: serosa
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to muscularis_propria-of-large_intestine
+relationship: continuous_with serosa-of-small_intestine
+relationship: part_of wall-of-large_intestine
+
+[Term]
+id: serosa-of-rectum
+name: serosa of rectum
+intersection_of: serosa
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to muscularis_propria-of-rectum
+relationship: continuous_with serosa-of-anal_canal
+relationship: continuous_with serosa-of-colon
+relationship: part_of serosa-of-large_intestine
+relationship: part_of wall-of-rectum
+
+[Term]
+id: serosa-of-sigmoid_colon
+name: serosa of sigmoid_colon
+intersection_of: serosa
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to muscularis_propria-of-sigmoid_colon
+relationship: continuous_with serosa-of-transverse_colon
+relationship: part_of serosa-of-colon
+relationship: part_of wall-of-sigmoid_colon
+
+[Term]
+id: serosa-of-small_intestine
+name: serosa of small_intestine
+intersection_of: serosa
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to muscularis_propria-of-small_intestine
+relationship: continuous_with serosa-of-large_intestine
+relationship: continuous_with serosa-of-stomach
+relationship: part_of wall-of-small_intestine
+
+[Term]
+id: serosa-of-stomach
+name: serosa of stomach
+intersection_of: serosa
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to muscularis_propria-of-stomach
+relationship: continuous_with serosa-of-duodenum
+relationship: continuous_with serosa-of-esophagus
+relationship: continuous_with serosa-of-intestine
+relationship: continuous_with serosa-of-small_intestine
+relationship: part_of serosa-of-digestive_tract
+relationship: part_of wall-of-stomach
+
+[Term]
+id: serosa-of-transverse_colon
+name: serosa of transverse_colon
+intersection_of: serosa
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to muscularis_propria-of-transverse_colon
+relationship: continuous_with serosa-of-ascending_colon
+relationship: continuous_with serosa-of-sigmoid_colon
+relationship: part_of serosa-of-colon
+relationship: part_of wall-of-transverse_colon
+
+[Term]
+id: sigmoid_colon
+name: sigmoid_colon
+is_a: segment
+
+[Term]
+id: small_intestine
+name: small_intestine
+is_a: segment
+
+[Term]
+id: stomach
+name: stomach
+is_a: segment
+
+[Term]
+id: structure
+name: structure
+
+[Term]
+id: submucosa
+name: submucosa
+is_a: layer
+
+[Term]
+id: submucosa-of-anal_canal
+name: submucosa of anal_canal
+intersection_of: submucosa
+intersection_of: maximal_part_of anal_canal
+relationship: adjacent_to circular_muscle-of-anal_canal
+relationship: adjacent_to mucosa-of-anal_canal
+relationship: adjacent_to muscularis_propria-of-anal_canal
+relationship: continuous_with submucosa-of-rectum
+relationship: part_of submucosa-of-large_intestine
+relationship: part_of wall-of-anal_canal
+
+[Term]
+id: submucosa-of-ascending_colon
+name: submucosa of ascending_colon
+intersection_of: submucosa
+intersection_of: maximal_part_of ascending_colon
+relationship: adjacent_to circular_muscle-of-ascending_colon
+relationship: adjacent_to mucosa-of-ascending_colon
+relationship: adjacent_to muscularis_propria-of-ascending_colon
+relationship: continuous_with submucosa-of-cecum
+relationship: continuous_with submucosa-of-transverse_colon
+relationship: part_of submucosa-of-colon
+relationship: part_of wall-of-ascending_colon
+
+[Term]
+id: submucosa-of-cecum
+name: submucosa of cecum
+intersection_of: submucosa
+intersection_of: maximal_part_of cecum
+relationship: adjacent_to circular_muscle-of-cecum
+relationship: adjacent_to mucosa-of-cecum
+relationship: adjacent_to muscularis_propria-of-cecum
+relationship: continuous_with submucosa-of-ascending_colon
+relationship: continuous_with submucosa-of-colon
+relationship: part_of submucosa-of-large_intestine
+relationship: part_of wall-of-cecum
+
+[Term]
+id: submucosa-of-colon
+name: submucosa of colon
+intersection_of: submucosa
+intersection_of: maximal_part_of colon
+relationship: adjacent_to circular_muscle-of-colon
+relationship: adjacent_to mucosa-of-colon
+relationship: adjacent_to muscularis_propria-of-colon
+relationship: continuous_with submucosa-of-cecum
+relationship: continuous_with submucosa-of-rectum
+relationship: part_of wall-of-colon
+
+[Term]
+id: submucosa-of-digestive_tract
+name: submucosa of digestive_tract
+intersection_of: submucosa
+intersection_of: maximal_part_of digestive_tract
+relationship: adjacent_to circular_muscle-of-digestive_tract
+relationship: adjacent_to mucosa-of-digestive_tract
+relationship: adjacent_to muscularis_propria-of-digestive_tract
+relationship: part_of wall-of-digestive_tract
+
+[Term]
+id: submucosa-of-duodenum
+name: submucosa of duodenum
+intersection_of: submucosa
+intersection_of: maximal_part_of duodenum
+relationship: adjacent_to circular_muscle-of-duodenum
+relationship: adjacent_to mucosa-of-duodenum
+relationship: adjacent_to muscularis_propria-of-duodenum
+relationship: continuous_with submucosa-of-jejunum
+relationship: continuous_with submucosa-of-stomach
+relationship: part_of submucosa-of-small_intestine
+relationship: part_of wall-of-duodenum
+
+[Term]
+id: submucosa-of-esophagus
+name: submucosa of esophagus
+intersection_of: submucosa
+intersection_of: maximal_part_of esophagus
+relationship: adjacent_to circular_muscle-of-esophagus
+relationship: adjacent_to mucosa-of-esophagus
+relationship: adjacent_to muscularis_propria-of-esophagus
+relationship: continuous_with submucosa-of-stomach
+relationship: part_of submucosa-of-digestive_tract
+relationship: part_of wall-of-esophagus
+
+[Term]
+id: submucosa-of-ileum
+name: submucosa of ileum
+intersection_of: submucosa
+intersection_of: maximal_part_of ileum
+relationship: adjacent_to circular_muscle-of-ileum
+relationship: adjacent_to mucosa-of-ileum
+relationship: adjacent_to muscularis_propria-of-ileum
+relationship: continuous_with submucosa-of-jejunum
+relationship: part_of submucosa-of-small_intestine
+relationship: part_of wall-of-ileum
+
+[Term]
+id: submucosa-of-intestine
+name: submucosa of intestine
+intersection_of: submucosa
+intersection_of: maximal_part_of intestine
+relationship: adjacent_to circular_muscle-of-intestine
+relationship: adjacent_to mucosa-of-intestine
+relationship: adjacent_to muscularis_propria-of-intestine
+relationship: continuous_with submucosa-of-stomach
+relationship: part_of wall-of-intestine
+
+[Term]
+id: submucosa-of-jejunum
+name: submucosa of jejunum
+intersection_of: submucosa
+intersection_of: maximal_part_of jejunum
+relationship: adjacent_to circular_muscle-of-jejunum
+relationship: adjacent_to mucosa-of-jejunum
+relationship: adjacent_to muscularis_propria-of-jejunum
+relationship: continuous_with submucosa-of-duodenum
+relationship: continuous_with submucosa-of-ileum
+relationship: part_of submucosa-of-small_intestine
+relationship: part_of wall-of-jejunum
+
+[Term]
+id: submucosa-of-large_intestine
+name: submucosa of large_intestine
+intersection_of: submucosa
+intersection_of: maximal_part_of large_intestine
+relationship: adjacent_to circular_muscle-of-large_intestine
+relationship: adjacent_to mucosa-of-large_intestine
+relationship: adjacent_to muscularis_propria-of-large_intestine
+relationship: continuous_with submucosa-of-small_intestine
+relationship: part_of wall-of-large_intestine
+
+[Term]
+id: submucosa-of-rectum
+name: submucosa of rectum
+intersection_of: submucosa
+intersection_of: maximal_part_of rectum
+relationship: adjacent_to circular_muscle-of-rectum
+relationship: adjacent_to mucosa-of-rectum
+relationship: adjacent_to muscularis_propria-of-rectum
+relationship: continuous_with submucosa-of-anal_canal
+relationship: continuous_with submucosa-of-colon
+relationship: part_of submucosa-of-large_intestine
+relationship: part_of wall-of-rectum
+
+[Term]
+id: submucosa-of-sigmoid_colon
+name: submucosa of sigmoid_colon
+intersection_of: submucosa
+intersection_of: maximal_part_of sigmoid_colon
+relationship: adjacent_to circular_muscle-of-sigmoid_colon
+relationship: adjacent_to mucosa-of-sigmoid_colon
+relationship: adjacent_to muscularis_propria-of-sigmoid_colon
+relationship: continuous_with submucosa-of-transverse_colon
+relationship: part_of submucosa-of-colon
+relationship: part_of wall-of-sigmoid_colon
+
+[Term]
+id: submucosa-of-small_intestine
+name: submucosa of small_intestine
+intersection_of: submucosa
+intersection_of: maximal_part_of small_intestine
+relationship: adjacent_to circular_muscle-of-small_intestine
+relationship: adjacent_to mucosa-of-small_intestine
+relationship: adjacent_to muscularis_propria-of-small_intestine
+relationship: continuous_with submucosa-of-large_intestine
+relationship: continuous_with submucosa-of-stomach
+relationship: part_of wall-of-small_intestine
+
+[Term]
+id: submucosa-of-stomach
+name: submucosa of stomach
+intersection_of: submucosa
+intersection_of: maximal_part_of stomach
+relationship: adjacent_to circular_muscle-of-stomach
+relationship: adjacent_to mucosa-of-stomach
+relationship: adjacent_to muscularis_propria-of-stomach
+relationship: continuous_with submucosa-of-duodenum
+relationship: continuous_with submucosa-of-esophagus
+relationship: continuous_with submucosa-of-intestine
+relationship: continuous_with submucosa-of-small_intestine
+relationship: part_of submucosa-of-digestive_tract
+relationship: part_of wall-of-stomach
+
+[Term]
+id: submucosa-of-transverse_colon
+name: submucosa of transverse_colon
+intersection_of: submucosa
+intersection_of: maximal_part_of transverse_colon
+relationship: adjacent_to circular_muscle-of-transverse_colon
+relationship: adjacent_to mucosa-of-transverse_colon
+relationship: adjacent_to muscularis_propria-of-transverse_colon
+relationship: continuous_with submucosa-of-ascending_colon
+relationship: continuous_with submucosa-of-sigmoid_colon
+relationship: part_of submucosa-of-colon
+relationship: part_of wall-of-transverse_colon
+
+[Term]
+id: transverse_colon
+name: transverse_colon
+is_a: segment
+
+[Term]
+id: wall
+name: wall
+is_a: layer
+
+[Term]
+id: wall-of-anal_canal
+name: wall of anal_canal
+intersection_of: wall
+intersection_of: maximal_part_of anal_canal
+relationship: continuous_with wall-of-rectum
+relationship: part_of wall-of-large_intestine
+
+[Term]
+id: wall-of-ascending_colon
+name: wall of ascending_colon
+intersection_of: wall
+intersection_of: maximal_part_of ascending_colon
+relationship: continuous_with wall-of-cecum
+relationship: continuous_with wall-of-transverse_colon
+relationship: part_of wall-of-colon
+
+[Term]
+id: wall-of-cecum
+name: wall of cecum
+intersection_of: wall
+intersection_of: maximal_part_of cecum
+relationship: continuous_with wall-of-ascending_colon
+relationship: continuous_with wall-of-colon
+relationship: part_of wall-of-large_intestine
+
+[Term]
+id: wall-of-colon
+name: wall of colon
+intersection_of: wall
+intersection_of: maximal_part_of colon
+relationship: continuous_with wall-of-cecum
+relationship: continuous_with wall-of-rectum
+
+[Term]
+id: wall-of-digestive_tract
+name: wall of digestive_tract
+intersection_of: wall
+intersection_of: maximal_part_of digestive_tract
+
+[Term]
+id: wall-of-duodenum
+name: wall of duodenum
+intersection_of: wall
+intersection_of: maximal_part_of duodenum
+relationship: continuous_with wall-of-jejunum
+relationship: continuous_with wall-of-stomach
+relationship: part_of wall-of-small_intestine
+
+[Term]
+id: wall-of-esophagus
+name: wall of esophagus
+intersection_of: wall
+intersection_of: maximal_part_of esophagus
+relationship: continuous_with wall-of-stomach
+relationship: part_of wall-of-digestive_tract
+
+[Term]
+id: wall-of-ileum
+name: wall of ileum
+intersection_of: wall
+intersection_of: maximal_part_of ileum
+relationship: continuous_with wall-of-jejunum
+relationship: part_of wall-of-small_intestine
+
+[Term]
+id: wall-of-intestine
+name: wall of intestine
+intersection_of: wall
+intersection_of: maximal_part_of intestine
+relationship: continuous_with wall-of-stomach
+
+[Term]
+id: wall-of-jejunum
+name: wall of jejunum
+intersection_of: wall
+intersection_of: maximal_part_of jejunum
+relationship: continuous_with wall-of-duodenum
+relationship: continuous_with wall-of-ileum
+relationship: part_of wall-of-small_intestine
+
+[Term]
+id: wall-of-large_intestine
+name: wall of large_intestine
+intersection_of: wall
+intersection_of: maximal_part_of large_intestine
+relationship: continuous_with wall-of-small_intestine
+
+[Term]
+id: wall-of-rectum
+name: wall of rectum
+intersection_of: wall
+intersection_of: maximal_part_of rectum
+relationship: continuous_with wall-of-anal_canal
+relationship: continuous_with wall-of-colon
+relationship: part_of wall-of-large_intestine
+
+[Term]
+id: wall-of-sigmoid_colon
+name: wall of sigmoid_colon
+intersection_of: wall
+intersection_of: maximal_part_of sigmoid_colon
+relationship: continuous_with wall-of-transverse_colon
+relationship: part_of wall-of-colon
+
+[Term]
+id: wall-of-small_intestine
+name: wall of small_intestine
+intersection_of: wall
+intersection_of: maximal_part_of small_intestine
+relationship: continuous_with wall-of-large_intestine
+relationship: continuous_with wall-of-stomach
+
+[Term]
+id: wall-of-stomach
+name: wall of stomach
+intersection_of: wall
+intersection_of: maximal_part_of stomach
+relationship: continuous_with wall-of-duodenum
+relationship: continuous_with wall-of-esophagus
+relationship: continuous_with wall-of-intestine
+relationship: continuous_with wall-of-small_intestine
+relationship: part_of wall-of-digestive_tract
+
+[Term]
+id: wall-of-transverse_colon
+name: wall of transverse_colon
+intersection_of: wall
+intersection_of: maximal_part_of transverse_colon
+relationship: continuous_with wall-of-ascending_colon
+relationship: continuous_with wall-of-sigmoid_colon
+relationship: part_of wall-of-colon
+
+[Typedef]
+id: adjacent_to
+name: adjacent_to
+
+[Typedef]
+id: continuous_with
+name: continuous_with
+
+[Typedef]
+id: maximal_part_of
+name: maximal_part_of
+is_a: part_of
+
+[Typedef]
+id: part_of
+name: part_of
+is_transitive: true
+

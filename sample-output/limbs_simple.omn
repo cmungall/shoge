@@ -1,0 +1,269 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://x.org>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://x.org#part_of>
+
+    Annotations: 
+        rdfs:label "part_of"@en
+    
+    
+Class: <http://x.org#right-anterior-limb-zeugopod>
+
+    Annotations: 
+        rdfs:label "right anterior limb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#zeugopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#anterior>
+             and <http://x.org#limb>
+             and <http://x.org#right>))
+    
+    
+Class: <http://x.org#right-posterior-limb-stylopod>
+
+    Annotations: 
+        rdfs:label "right posterior limb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#stylopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#limb>
+             and <http://x.org#posterior>
+             and <http://x.org#right>))
+    
+    
+Class: <http://x.org#right-anterior-limb-autopod>
+
+    Annotations: 
+        rdfs:label "right anterior limb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#anterior>
+             and <http://x.org#limb>
+             and <http://x.org#right>))
+    
+    
+Class: <http://x.org#left-posterior-limb-autopod>
+
+    Annotations: 
+        rdfs:label "left posterior limb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#left>
+             and <http://x.org#limb>
+             and <http://x.org#posterior>))
+    
+    
+Class: <http://x.org#left-anterior-limb-zeugopod>
+
+    Annotations: 
+        rdfs:label "left anterior limb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#zeugopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#anterior>
+             and <http://x.org#left>
+             and <http://x.org#limb>))
+    
+    
+Class: <http://x.org#left-anterior-limb-autopod>
+
+    Annotations: 
+        rdfs:label "left anterior limb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#anterior>
+             and <http://x.org#left>
+             and <http://x.org#limb>))
+    
+    
+Class: <http://x.org#right-posterior-limb-autopod>
+
+    Annotations: 
+        rdfs:label "right posterior limb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#limb>
+             and <http://x.org#posterior>
+             and <http://x.org#right>))
+    
+    
+Class: <http://x.org#anterior>
+
+    Annotations: 
+        rdfs:label "anterior"@en
+    
+    SubClassOf: 
+        <http://x.org#anterioposterior>
+    
+    
+Class: <http://x.org#left-anterior-limb-stylopod>
+
+    Annotations: 
+        rdfs:label "left anterior limb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#stylopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#anterior>
+             and <http://x.org#left>
+             and <http://x.org#limb>))
+    
+    
+Class: <http://x.org#right-anterior-limb-stylopod>
+
+    Annotations: 
+        rdfs:label "right anterior limb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#stylopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#anterior>
+             and <http://x.org#limb>
+             and <http://x.org#right>))
+    
+    
+Class: <http://x.org#limb_segment>
+
+    Annotations: 
+        rdfs:label "limb_segment"@en
+    
+    
+Class: <http://x.org#autopod>
+
+    Annotations: 
+        rdfs:label "autopod"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_segment>
+    
+    
+Class: <http://x.org#laterality>
+
+    Annotations: 
+        rdfs:label "laterality"@en
+    
+    
+Class: <http://x.org#right-posterior-limb-zeugopod>
+
+    Annotations: 
+        rdfs:label "right posterior limb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#zeugopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#limb>
+             and <http://x.org#posterior>
+             and <http://x.org#right>))
+    
+    
+Class: <http://x.org#stylopod>
+
+    Annotations: 
+        rdfs:label "stylopod"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_segment>
+    
+    
+Class: <http://x.org#left-posterior-limb-zeugopod>
+
+    Annotations: 
+        rdfs:label "left posterior limb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#zeugopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#left>
+             and <http://x.org#limb>
+             and <http://x.org#posterior>))
+    
+    
+Class: <http://x.org#zeugopod>
+
+    Annotations: 
+        rdfs:label "zeugopod"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_segment>
+    
+    
+Class: <http://x.org#posterior>
+
+    Annotations: 
+        rdfs:label "posterior"@en
+    
+    SubClassOf: 
+        <http://x.org#anterioposterior>
+    
+    
+Class: <http://x.org#left>
+
+    Annotations: 
+        rdfs:label "left"@en
+    
+    SubClassOf: 
+        <http://x.org#laterality>
+    
+    
+Class: <http://x.org#anterioposterior>
+
+    Annotations: 
+        rdfs:label "anterioposterior"@en
+    
+    
+Class: <http://x.org#limb>
+
+    Annotations: 
+        rdfs:label "limb"@en
+    
+    
+Class: <http://x.org#left-posterior-limb-stylopod>
+
+    Annotations: 
+        rdfs:label "left posterior limb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#stylopod>
+         and (<http://x.org#part_of> some 
+            (<http://x.org#left>
+             and <http://x.org#limb>
+             and <http://x.org#posterior>))
+    
+    
+Class: <http://x.org#right>
+
+    Annotations: 
+        rdfs:label "right"@en
+    
+    SubClassOf: 
+        <http://x.org#laterality>
+    
+    

@@ -1,0 +1,36 @@
+/* -*- Mode: Prolog -*- */
+:- include(spatial).
+:- include(ordinal_series).
+
+
+limb *--> ?spatial4,@limb. % laterality only specified if axis is specified
+
+% ----------------------------------------
+% LIMB SEGMENTS
+% ----------------------------------------
+
+limb *--> ?spatial4,@limb. % laterality only specified if axis is specified
+
+limb_segment *--> free_limb_segment | girdle.
+free_limb_segment *--> stylopod | zeugopod | autopod.
+
+stylopod *--> limb, @stylopod.
+zeugopod *--> limb, @zeugopod.
+autopod *--> limb, @autopod.
+girdle *--> limb, @girdle.
+
+limb_multisegment *--> [@zeugopod,plus,@autopod,of],limb(L)
+        ::
+        limb_multisegment and part_of some(L) and has_part some zeugopod and has_part some autopod.
+
+
+anatomical_digit *--> limb/part_of, @anatomical_digit, ?in_ordinal_series(1-5).
+parent_limb(part_of some L) --> limb(L).
+
+% TODO: add context; e.g. human
+rephrase [@anterior,@limb] as @forelimb.
+rephrase [@posterior,@limb] as @hindlimb.
+rephrase [@forelimb, @anatomical_digit] as @finger.
+rephrase [@hindlimb, @anatomical_digit] as @toe.
+rephrase [@finger, one] as @thumb.
+

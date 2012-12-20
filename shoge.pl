@@ -98,11 +98,11 @@ system:term_expansion(In, Out) :-
 
 % EXPANSION
 %  TODO: treat basic *--> patterns as SubClassOf
-system:term_expansion((H*-->B :: X),Goal) :-
+system:term_expansion((H*-->B :: X),Goals) :-
         !,
         H =.. [P|Args],
         H2 =.. [P,X|Args],
-        dcg_translate_rule( (H2-->B), Goal).
+        dcg_translate_rule( (H2-->B), Goals).
 system:term_expansion(H*-->B,[Goal|AxiomGoals]) :-
         axioms_from_production(H,B,AxiomGoals),
         % we add an argument such that e.g. limb_segment *--> ... becomes limb_segment(X and Y and ...)
@@ -132,7 +132,7 @@ add_arg(@(X),[@X],@X) :- !.            % TODO
 add_arg(X,X,thing) :- is_list(X),!.
 add_arg(X,Y,A) :- atom(X),!,Y =.. [X,A].
 %add_arg(X,Y,A) :- X =.. [P|L],!,add_argl(L,L2,A),Y =.. [P|L2]. % REMOVED - strictly only replaced args..
-add_arg(?(X),(X2,{Z=A};[],{Z=thing}),Z) :- !,add_arg(X,X2,A). % better to rewrite entire goal
+add_arg(?(X),(X2,{Z=A};[],{Z=thing}),Z) :- !, add_arg(X,X2,A). % better to rewrite entire goal?
 add_arg(X/P,Y,P some A) :- !,Y =.. [X,A].  % e.g. limb/part_of, @digit
 add_arg(P some X,Y,P some A) :- !,Y =.. [X,A].  % e.g. limb/part_of, @digit
 add_arg(X,Y,A) :- nonvar(X),X =.. [P|L], !, Y =.. [P,A|L].
@@ -222,6 +222,7 @@ rewrite_phrase_1([H|L1],[H|L2]) :-
 
 expression_phrase(X,P,_Opts) :-
         phrase(X,P1),
+        debug(shoge,'  rewriting: ~w',[P1]),
         rewrite_phrase(P1,P).
 
 
@@ -264,23 +265,43 @@ generate_ontologies(Ps) :-
 % generate an OWL ontology in-memory using Unit as a base
 %
 % Opts:
-%  on_completion(POPL_Pattern)
+%  * on_completion(POPL_Pattern)
+%  * ontology(GenOnt)
+generate_ontology(P) :-        
+        generate_ontology(P,[]).
 generate_ontology(P,Opts) :-
-        option(ontology(O),Opts),
+        option(ontology(O),Opts,'http://x.org'),
+        generate_ontology(P,O,Opts).
+generate_ontology(P,O,Opts) :-
+        var(O),
+        !,
+        O='htp://x.org',
+        generate_ontology(P,O,Opts).
+generate_ontology(P,O,Opts) :-
+        nonvar(O),
+        !,
+        forall(ontology(Imp),
+               assert_axiom(ontologyImports(O,Imp),O)),
         assert_axiom(ontology(O)),
-
         % assert mini-ontology included in grammar files
         % (important for declaring data properties etc)
+        debug(shoge,'Generating axiomlist for ~w',[O]),
         forall(axiomlist(AL),
                forall((member(A,AL),internal_to_owl(A,A2)),
                       assert_axiom(A2,O))),
+
+        debug(shoge,'Generating +Axioms for ~w',[O]),
         forall((+(A),internal_to_owl(A,A2)),
                assert_axiom(A2,O)),
         
+        debug(shoge,'generate_axiom/2 for ~w',[O]),
         forall(generate_axiom(P,A),
                assert_axiom(A,O)),
+
+        debug(shoge,'about for ~w',[O]),
         forall(generate_axiom(about,A),
                assert_axiom(A,O)),
+
         remove_unsatisfiable(O,Opts),
         name_unnamed_entities(O),
         % TODO - proper re-syncing of reasoner
@@ -288,8 +309,6 @@ generate_ontology(P,Opts) :-
                popl_translate(X,[syntax(plsyn),translate(labels),ontology(O)])),
         simplify_all_axioms(O).
 
-generate_ontology(P) :-        
-        generate_ontology(P,[ontology('http://x.org')]).
 
 remove_unsatisfiable(O,Opts) :-
         owl_nothing(Nothing),
@@ -298,7 +317,7 @@ remove_unsatisfiable(O,Opts) :-
                    internal_to_owl(X < Nothing, Axiom),
                    assert_axiom(Axiom, O))),
         assume_entity_declarations,
-        initialize_reasoner(pellet,RE,Opts),
+        initialize_reasoner(elk,RE,Opts),
         findall(C,reasoner_ask(RE,unsatisfiable(C)),UCs),
         maplist(retract_class_and_axioms,UCs).
 
@@ -335,9 +354,9 @@ add_default_label(X,_) :-
 % default format is OWL (RDF/XML) unless overridden with
 % format(Fmt) in Opts list
 generate_and_save_ontology(P,File,Opts) :-
-        generate_ontology(P),
-        option(format(Fmt),Opts,owl),
-        save_axioms(File,Fmt).
+        generate_ontology(P,Ont,Opts),
+        option(format(Fmt),Opts,rdf_direct),
+        save_axioms(File,Fmt,[ontology(Ont)]).
 generate_and_save_ontology(P,File) :-
         generate_and_save_ontology(P,File,[]).
 
@@ -367,7 +386,9 @@ generate_plaxiom(Ps,Axiom) :-
 generate_plaxiom(P,Axiom) :-
         P\=about,
         atom(P),
+        debug(shoge,'  P: ~w',[P]),
         unit_goal_structure(P,G,ClassExpr),
+        debug(shoge,'    G=~w TargetExpression: ~w',[G,ClassExpr]),
         expression_phrase(G,Toks,[]),
         tokens_label(Toks,Label),
         structure_toks_iri(ClassExpr,Toks,IRI),
@@ -379,6 +400,7 @@ generate_plaxiom(P,Axiom) :-
                ]).
 generate_plaxiom(about,Axiom) :-
         unit_goal_structure(about,G,Axiom),
+        debug(shoge,'  G: ~w',[G]),
         phrase(G,_).
 
 internal_to_owl(X label L,Axiom) :-
@@ -405,7 +427,9 @@ structure_toks_iri(_,Toks,IRI) :-
         concat_tokens(Frags,'-',N),
         atom_concat('http://x.org#',N,IRI).
 
-rewrite_class_expression_with_IRIs(X,X) :- atom(X),!.
+rewrite_class_expression_with_IRIs(X,X) :- atomic(X),!.
+rewrite_class_expression_with_IRIs(thing and X,X2) :- !, rewrite_class_expression_with_IRIs(X,X2).
+rewrite_class_expression_with_IRIs(X and thing,X2) :- !, rewrite_class_expression_with_IRIs(X,X2).
 rewrite_class_expression_with_IRIs(R some X,R2 some X2) :- structure_toks_iri(_,[@R],R2),!,rewrite_class_expression_with_IRIs(X,X2).
 rewrite_class_expression_with_IRIs(@X,Y) :- structure_toks_iri(_,[@X],Y),!.
 rewrite_class_expression_with_IRIs(X,Y) :- X =.. ArgsX,maplist(rewrite_class_expression_with_IRIs,ArgsX,ArgsY),Y =.. ArgsY.
@@ -498,6 +522,8 @@ parse_term_to_expression(Unit,Toks,Expr,_) :-
 token_to_symbol(T,T). % force this 
 %token_to_symbol(T,@T).
 
+% use this to generate a grammar
+% requires a reasoner to be set
 list_terminals_from_ontology(Symbol,Class,Opts) :-
         nb_current(reasoner,Reasoner),
         list_terminal_for_class(Symbol,Class,Opts),
@@ -556,6 +582,12 @@ simplify_expression(X,E,true,Map) :-
         member(E-X2,Map),
         structurally_equivalent(X,X2),
         !.
+simplify_expression(X and thing,E,true,Map) :-
+        simplify_expression(X,E,true,Map),
+        !.
+simplify_expression(thing and X,E,true,Map) :-
+        simplify_expression(X,E,true,Map),
+        !.
 simplify_expression(In,Out,_,Map) :-
         !,
         In =.. [P|Args],
@@ -592,6 +624,7 @@ user:parse_arg_hook(['--set-context',G|L],L,null) :- retractall(organism_type(_)
 user:parse_arg_hook(['--grammar',G|L],L,null) :- load_grammar(G).
 user:parse_arg_hook(['--generate-ontology',GA|L],L,goal(generate_ontologies(Gs))) :-
         atomic_list_concat(Gs,',',GA).
+user:parse_arg_hook(['--generate-and-save-ontology',P,F|L],L,goal(generate_and_save_ontology(P,F))).
 user:parse_arg_hook(['--generate-phrases',G|L],L,goal(list_generated_phrases(G))).
 user:parse_arg_hook(['--generate-expressions',G|L],L,goal(list_generated_expressions(G))).
 user:parse_arg_hook(['--make-terminals',G,C|L],L,goal(list_terminals_from_ontology(G,C,[]))).

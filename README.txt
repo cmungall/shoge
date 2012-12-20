@@ -28,7 +28,7 @@ Example grammar file:
 Save this as "limbs_simple.shg". Then generate phrases (on command line):
 
 ==
-  $ shoge  --grammar limbs --generate-phrases limb_segment
+  $ shoge  --grammar limbs_simple --generate-phrases limb_segment
   [@left,@anterior,@limb,@stylopod]
   [@left,@posterior,@limb,@stylopod]
   [@right,@anterior,@limb,@stylopod]

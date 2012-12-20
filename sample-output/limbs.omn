@@ -1,0 +1,3358 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://x.org>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+Datatype: xsd:nonNegativeInteger
+
+    
+ObjectProperty: <http://x.org#has_part>
+
+    Annotations: 
+        rdfs:label "has_part"@en
+    
+    
+ObjectProperty: <http://x.org#has_order>
+
+    Annotations: 
+        rdfs:label "has_order"@en
+    
+    
+ObjectProperty: <http://x.org#right_ordinal>
+
+    Annotations: 
+        rdfs:label "right_ordinal"@en
+    
+    
+ObjectProperty: <http://x.org#left_ordinal>
+
+    Annotations: 
+        rdfs:label "left_ordinal"@en
+    
+    
+ObjectProperty: <http://x.org#in_left_side_of>
+
+    Annotations: 
+        rdfs:label "in_left_side_of"@en
+    
+    
+ObjectProperty: <http://x.org#in_right_side_of>
+
+    Annotations: 
+        rdfs:label "in_right_side_of"@en
+    
+    
+ObjectProperty: <http://x.org#part_of>
+
+    Annotations: 
+        rdfs:label "part_of"@en
+    
+    Characteristics: 
+        Transitive
+    
+    
+DataProperty: <http://x.org#has_order>
+
+    Annotations: 
+        rdfs:label "has_order"@en
+    
+    
+DataProperty: <http://x.org#left_ordinal>
+
+    Annotations: 
+        rdfs:label "left_ordinal"@en
+    
+    
+DataProperty: <http://x.org#right_ordinal>
+
+    Annotations: 
+        rdfs:label "right_ordinal"@en
+    
+    
+Class: <http://x.org#distal-phalanx-of-limb-anatomical_digit>
+
+    Annotations: 
+        rdfs:label "distal phalanx of limb anatomical_digit"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-finger-two>
+
+    Annotations: 
+        rdfs:label "distal phalanx of finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-two>)
+    
+    
+Class: <http://x.org#interdigital_region-between-right-forelimb-digit-two-and-three>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right forelimb digit two and three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#left_ordinal> value "2"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-forelimb-digit-three-and-four>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left forelimb digit three and four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#left_ordinal> value "3"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#limb-anatomical_digit-two>
+
+    Annotations: 
+        rdfs:label "limb anatomical_digit two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#limb-anatomical_digit-one>
+
+    Annotations: 
+        rdfs:label "limb anatomical_digit one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#anterior>
+
+    Annotations: 
+        rdfs:label "anterior"@en
+    
+    SubClassOf: 
+        <http://x.org#ap_axis>
+    
+    
+Class: <http://x.org#right-toe-five>
+
+    Annotations: 
+        rdfs:label "right toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-right-toe-four>
+
+    Annotations: 
+        rdfs:label "phalanx of right toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-four>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-finger-two>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-two>)
+    
+    
+Class: <http://x.org#limb-anatomical_digit>
+
+    Annotations: 
+        rdfs:label "limb anatomical_digit"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+    
+    
+Class: <http://x.org#phalanx-of-right-finger-five>
+
+    Annotations: 
+        rdfs:label "phalanx of right finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-five>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-toe-two>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-two>)
+    
+    
+Class: <http://x.org#adult>
+
+    Annotations: 
+        rdfs:label "adult"@en
+    
+    SubClassOf: 
+        <http://x.org#morphoform>
+    
+    
+Class: <http://x.org#right-finger>
+
+    Annotations: 
+        rdfs:label "right finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-toe>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe>)
+    
+    
+Class: <http://x.org#right-toe-three>
+
+    Annotations: 
+        rdfs:label "right toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#medial-phalanx-of-finger-two>
+
+    Annotations: 
+        rdfs:label "medial phalanx of finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-toe>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe>)
+    
+    
+Class: <http://x.org#toe-one>
+
+    Annotations: 
+        rdfs:label "toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#medial-phalanx-of-toe-five>
+
+    Annotations: 
+        rdfs:label "medial phalanx of toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-five>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-finger>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger>)
+    
+    
+Class: <http://x.org#mature_anatomical_entity>
+
+    Annotations: 
+        rdfs:label "mature_anatomical_entity"@en
+    
+    SubClassOf: 
+        <http://x.org#anatomical_entity>
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-finger-three>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-three>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-toe-three>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-three>)
+    
+    
+Class: <http://x.org#zeugopod-plus-autopod-of-left-forelimb>
+
+    Annotations: 
+        rdfs:label "zeugopod plus autopod of left forelimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb_multisegment>
+         and (<http://x.org#has_part> some <http://x.org#autopod>)
+         and (<http://x.org#has_part> some <http://x.org#zeugopod>)
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-finger-three>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-three>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-toe-three>
+
+    Annotations: 
+        rdfs:label "distal phalanx of toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-three>)
+    
+    
+Class: <http://x.org#phalanx-of-right-toe-five>
+
+    Annotations: 
+        rdfs:label "phalanx of right toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-five>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-toe-four>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-four>)
+    
+    
+Class: <http://x.org#interdigital_region-between-forelimb-digit-three-and-four>
+
+    Annotations: 
+        rdfs:label "interdigital_region between forelimb digit three and four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#left_ordinal> value "3"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-toe>
+
+    Annotations: 
+        rdfs:label "phalanx of toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-finger-two>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-finger-five>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-five>)
+    
+    
+Class: <http://x.org#interdigital_region>
+
+    Annotations: 
+        rdfs:label "interdigital_region"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_unit>
+    
+    
+Class: <http://x.org#zeugopod-plus-autopod-of-left-hindlimb>
+
+    Annotations: 
+        rdfs:label "zeugopod plus autopod of left hindlimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb_multisegment>
+         and (<http://x.org#has_part> some <http://x.org#autopod>)
+         and (<http://x.org#has_part> some <http://x.org#zeugopod>)
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-toe-two>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-two>)
+    
+    
+Class: <http://x.org#interdigital_region-between-limb-digit-two-and-three>
+
+    Annotations: 
+        rdfs:label "interdigital_region between limb digit two and three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#left_ordinal> value "2"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-toe-one>
+
+    Annotations: 
+        rdfs:label "phalanx of toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-one>)
+    
+    
+Class: <http://x.org#finger-five>
+
+    Annotations: 
+        rdfs:label "finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-finger-five>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-five>)
+    
+    
+Class: <http://x.org#phalanx-of-right-thumb>
+
+    Annotations: 
+        rdfs:label "phalanx of right thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-thumb>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-toe-one>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-one>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-toe>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe>)
+    
+    
+Class: <http://x.org#phalanx-of-left-finger-two>
+
+    Annotations: 
+        rdfs:label "phalanx of left finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-finger-four>
+
+    Annotations: 
+        rdfs:label "medial phalanx of finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-four>)
+    
+    
+Class: <http://x.org#left-finger-four>
+
+    Annotations: 
+        rdfs:label "left finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-toe>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-toe>)
+    
+    
+Class: <http://x.org#right-toe-four>
+
+    Annotations: 
+        rdfs:label "right toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-forelimb-digit-one-and-two>
+
+    Annotations: 
+        rdfs:label "interdigital_region between forelimb digit one and two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#left_ordinal> value "1"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#medial-phalanx-of-toe>
+
+    Annotations: 
+        rdfs:label "medial phalanx of toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-finger-four>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-four>)
+    
+    
+Class: <http://x.org#distal>
+
+    Annotations: 
+        rdfs:label "distal"@en
+    
+    SubClassOf: 
+        <http://x.org#proximality>
+    
+    
+Class: <http://x.org#toe>
+
+    Annotations: 
+        rdfs:label "toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+    
+    
+Class: <http://x.org#phalanx-of-right-toe>
+
+    Annotations: 
+        rdfs:label "phalanx of right toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe>)
+    
+    
+Class: <http://x.org#limb-girdle>
+
+    Annotations: 
+        rdfs:label "limb girdle"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#girdle>
+         and <http://x.org#limb>
+    
+    
+Class: <http://x.org#left>
+
+    Annotations: 
+        rdfs:label "left"@en
+    
+    SubClassOf: 
+        <http://x.org#body_laterality>
+    
+    
+Class: <http://x.org#interdigital_region-between-right-hindlimb-digit-two-and-three>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right hindlimb digit two and three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#left_ordinal> value "2"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-forelimb-digit-two-and-three>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left forelimb digit two and three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#left_ordinal> value "2"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-finger-three>
+
+    Annotations: 
+        rdfs:label "phalanx of finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-three>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-toe-three>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-three>)
+    
+    
+Class: <http://x.org#right>
+
+    Annotations: 
+        rdfs:label "right"@en
+    
+    SubClassOf: 
+        <http://x.org#body_laterality>
+    
+    
+Class: <http://x.org#long_bone>
+
+    Annotations: 
+        rdfs:label "long_bone"@en
+    
+    SubClassOf: 
+        <http://x.org#skeletal_unit>
+    
+    
+Class: <http://x.org#zeugopod-plus-autopod-of-forelimb>
+
+    Annotations: 
+        rdfs:label "zeugopod plus autopod of forelimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb_multisegment>
+         and (<http://x.org#has_part> some <http://x.org#autopod>)
+         and (<http://x.org#has_part> some <http://x.org#zeugopod>)
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-hindlimb-digit-four-and-five>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left hindlimb digit four and five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#left_ordinal> value "4"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-finger-four>
+
+    Annotations: 
+        rdfs:label "phalanx of finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-four>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-thumb>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-thumb>)
+    
+    
+Class: <http://x.org#phalanx-of-limb-anatomical_digit-four>
+
+    Annotations: 
+        rdfs:label "phalanx of limb anatomical_digit four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-four>)
+    
+    
+Class: <http://x.org#interdigital_region-between-forelimb-digit-four-and-five>
+
+    Annotations: 
+        rdfs:label "interdigital_region between forelimb digit four and five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#left_ordinal> value "4"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#precursor>
+
+    Annotations: 
+        rdfs:label "precursor"@en
+    
+    SubClassOf: 
+        <http://x.org#anatomical_entity>,
+        <http://x.org#morphoform>
+    
+    
+Class: <http://x.org#proximal-phalanx-of-finger-two>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#finger-two>)
+    
+    
+Class: <http://x.org#finger>
+
+    Annotations: 
+        rdfs:label "finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+    
+    
+Class: <http://x.org#limb_multisegment>
+
+    Annotations: 
+        rdfs:label "limb_multisegment"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_unit>
+    
+    
+Class: <http://x.org#phalanx-of-left-toe-five>
+
+    Annotations: 
+        rdfs:label "phalanx of left toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-five>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-limb-anatomical_digit-three>
+
+    Annotations: 
+        rdfs:label "distal phalanx of limb anatomical_digit three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-three>)
+    
+    
+Class: <http://x.org#anatomical_entity>
+
+    Annotations: 
+        rdfs:label "anatomical_entity"@en
+    
+    
+Class: <http://x.org#ap_axis>
+
+    Annotations: 
+        rdfs:label "ap_axis"@en
+    
+    SubClassOf: 
+        <http://x.org#spatial4>
+    
+    
+Class: <http://x.org#toe-four>
+
+    Annotations: 
+        rdfs:label "toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#finger-three>
+
+    Annotations: 
+        rdfs:label "finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-forelimb-digit-four-and-five>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left forelimb digit four and five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#left_ordinal> value "4"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#free_limb_segment>
+
+    Annotations: 
+        rdfs:label "free_limb_segment"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_segment>
+    
+    
+Class: <http://x.org#hindlimb>
+
+    Annotations: 
+        rdfs:label "hindlimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+    
+    
+Class: <http://x.org#limb-stylopod>
+
+    Annotations: 
+        rdfs:label "limb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#stylopod>
+    
+    
+Class: <http://x.org#interdigital_region-between-hindlimb-digit-three-and-four>
+
+    Annotations: 
+        rdfs:label "interdigital_region between hindlimb digit three and four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#left_ordinal> value "3"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-finger>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-finger>)
+    
+    
+Class: <http://x.org#phalanx-of-limb-anatomical_digit-one>
+
+    Annotations: 
+        rdfs:label "phalanx of limb anatomical_digit one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-one>)
+    
+    
+Class: <http://x.org#phalanx-of-left-toe-two>
+
+    Annotations: 
+        rdfs:label "phalanx of left toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-two>)
+    
+    
+Class: <http://x.org#finger-two>
+
+    Annotations: 
+        rdfs:label "finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-finger-four>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-four>)
+    
+    
+Class: <http://x.org#body>
+
+    Annotations: 
+        rdfs:label "body"@en
+    
+    
+Class: <http://x.org#right-hindlimb-stylopod>
+
+    Annotations: 
+        rdfs:label "right hindlimb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and <http://x.org#stylopod>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#interdigital_region-between-right-hindlimb-digit-three-and-four>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right hindlimb digit three and four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#left_ordinal> value "3"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-toe-two>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#toe-two>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-toe>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#toe>)
+    
+    
+Class: <http://x.org#phalanx-of-right-finger-three>
+
+    Annotations: 
+        rdfs:label "phalanx of right finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-three>)
+    
+    
+Class: <http://x.org#phalanx-of-right-finger-two>
+
+    Annotations: 
+        rdfs:label "phalanx of right finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-two>)
+    
+    
+Class: <http://x.org#forelimb-autopod>
+
+    Annotations: 
+        rdfs:label "forelimb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#autopod>
+         and <http://x.org#limb>
+    
+    
+Class: <http://x.org#phalanx-of-finger-two>
+
+    Annotations: 
+        rdfs:label "phalanx of finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-toe-three>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-three>)
+    
+    
+Class: <http://x.org#left-forelimb-autopod>
+
+    Annotations: 
+        rdfs:label "left forelimb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#autopod>
+         and <http://x.org#limb>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#right-toe-one>
+
+    Annotations: 
+        rdfs:label "right toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-finger-five>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-five>)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-forelimb-digit-one-and-two>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left forelimb digit one and two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#left_ordinal> value "1"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#left-thumb>
+
+    Annotations: 
+        rdfs:label "left thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#toe-two>
+
+    Annotations: 
+        rdfs:label "toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-hindlimb-digit-two-and-three>
+
+    Annotations: 
+        rdfs:label "interdigital_region between hindlimb digit two and three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#left_ordinal> value "2"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-finger>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-limb-anatomical_digit-four>
+
+    Annotations: 
+        rdfs:label "medial phalanx of limb anatomical_digit four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-four>)
+    
+    
+Class: <http://x.org#left-toe>
+
+    Annotations: 
+        rdfs:label "left toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-toe-one>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-one>)
+    
+    
+Class: <http://x.org#phalanx-of-left-toe-four>
+
+    Annotations: 
+        rdfs:label "phalanx of left toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-four>)
+    
+    
+Class: <http://x.org#right-finger-four>
+
+    Annotations: 
+        rdfs:label "right finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-right-toe-three>
+
+    Annotations: 
+        rdfs:label "phalanx of right toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-three>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-toe-two>
+
+    Annotations: 
+        rdfs:label "medial phalanx of toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-limb-anatomical_digit-two>
+
+    Annotations: 
+        rdfs:label "medial phalanx of limb anatomical_digit two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-two>)
+    
+    
+Class: <http://x.org#phalanx-of-limb-anatomical_digit-five>
+
+    Annotations: 
+        rdfs:label "phalanx of limb anatomical_digit five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-five>)
+    
+    
+Class: <http://x.org#interdigital_region-between-right-hindlimb-digit-four-and-five>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right hindlimb digit four and five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#left_ordinal> value "4"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#left-hindlimb-girdle>
+
+    Annotations: 
+        rdfs:label "left hindlimb girdle"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#girdle>
+         and <http://x.org#limb>
+         and <http://x.org#posterior>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-toe-five>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-five>)
+    
+    
+Class: <http://x.org#toe-five>
+
+    Annotations: 
+        rdfs:label "toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#left-finger-three>
+
+    Annotations: 
+        rdfs:label "left finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-limb-anatomical_digit-one>
+
+    Annotations: 
+        rdfs:label "distal phalanx of limb anatomical_digit one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-one>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-finger-four>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-four>)
+    
+    
+Class: <http://x.org#limb>
+
+    Annotations: 
+        rdfs:label "limb"^^xsd:string
+    
+    SubClassOf: 
+        <http://x.org#limb_unit>
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-toe-four>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-four>)
+    
+    
+Class: <http://x.org#proximality>
+
+    Annotations: 
+        rdfs:label "proximality"@en
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-toe-three>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-three>)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-hindlimb-digit-two-and-three>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left hindlimb digit two and three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#left_ordinal> value "2"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-toe-four>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-four>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-toe-two>
+
+    Annotations: 
+        rdfs:label "distal phalanx of toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-two>)
+    
+    
+Class: <http://x.org#right-hindlimb>
+
+    Annotations: 
+        rdfs:label "right hindlimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-toe-three>
+
+    Annotations: 
+        rdfs:label "medial phalanx of toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-three>)
+    
+    
+Class: <http://x.org#finger-four>
+
+    Annotations: 
+        rdfs:label "finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-toe-one>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-one>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-limb-anatomical_digit-one>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of limb anatomical_digit one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-one>)
+    
+    
+Class: <http://x.org#proximal>
+
+    Annotations: 
+        rdfs:label "proximal"@en
+    
+    SubClassOf: 
+        <http://x.org#proximality>
+    
+    
+Class: <http://x.org#proximal-phalanx-of-toe-five>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#toe-five>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-toe-five>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-five>)
+    
+    
+Class: <http://x.org#left-finger-five>
+
+    Annotations: 
+        rdfs:label "left finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#skeleton>
+
+    Annotations: 
+        rdfs:label "skeleton"@en
+    
+    SubClassOf: 
+        <http://x.org#skeletal_unit>
+    
+    
+Class: <http://x.org#proximal-phalanx-of-limb-anatomical_digit-five>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of limb anatomical_digit five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-five>)
+    
+    
+Class: <http://x.org#left-finger>
+
+    Annotations: 
+        rdfs:label "left finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-finger-three>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-three>)
+    
+    
+Class: <http://x.org#left-toe-one>
+
+    Annotations: 
+        rdfs:label "left toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#thumb>
+
+    Annotations: 
+        rdfs:label "thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#body_laterality>
+
+    Annotations: 
+        rdfs:label "body_laterality"@en
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-toe-one>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-one>)
+    
+    
+Class: <http://x.org#right-hindlimb-girdle>
+
+    Annotations: 
+        rdfs:label "right hindlimb girdle"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#girdle>
+         and <http://x.org#limb>
+         and <http://x.org#posterior>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-thumb>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-thumb>)
+    
+    
+Class: <http://x.org#medial>
+
+    Annotations: 
+        rdfs:label "medial"@en
+    
+    SubClassOf: 
+        <http://x.org#proximality>
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-finger-five>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-five>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-toe-four>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-four>)
+    
+    
+Class: <http://x.org#right-finger-three>
+
+    Annotations: 
+        rdfs:label "right finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: owl:Nothing
+
+    
+Class: <http://x.org#proximal-phalanx-of-left-thumb>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-thumb>)
+    
+    
+Class: <http://x.org#hindlimb-stylopod>
+
+    Annotations: 
+        rdfs:label "hindlimb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and <http://x.org#stylopod>
+    
+    
+Class: <http://x.org#stylopod>
+
+    Annotations: 
+        rdfs:label "stylopod"@en
+    
+    SubClassOf: 
+        <http://x.org#free_limb_segment>
+    
+    
+Class: <http://x.org#phalanx-of-left-finger>
+
+    Annotations: 
+        rdfs:label "phalanx of left finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger>)
+    
+    
+Class: <http://x.org#left-toe-four>
+
+    Annotations: 
+        rdfs:label "left toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#skeletal_unit>
+
+    Annotations: 
+        rdfs:label "skeletal_unit"@en
+    
+    SubClassOf: 
+        <http://x.org#mature_anatomical_entity>
+    
+    
+Class: <http://x.org#anatomical_digit>
+
+    Annotations: 
+        rdfs:label "anatomical_digit"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_unit>
+    
+    
+Class: <http://x.org#phalanx-of-thumb>
+
+    Annotations: 
+        rdfs:label "phalanx of thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#thumb>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-finger>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-finger>)
+    
+    
+Class: <http://x.org#phalanx-of-left-toe>
+
+    Annotations: 
+        rdfs:label "phalanx of left toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe>)
+    
+    
+Class: <http://x.org#phalanx-of-left-toe-one>
+
+    Annotations: 
+        rdfs:label "phalanx of left toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-one>)
+    
+    
+Class: <http://x.org#phalanx-of-right-finger>
+
+    Annotations: 
+        rdfs:label "phalanx of right finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-toe-four>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-four>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-toe-five>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-five>)
+    
+    
+Class: <http://x.org#left-forelimb>
+
+    Annotations: 
+        rdfs:label "left forelimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-finger-three>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-three>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-thumb>
+
+    Annotations: 
+        rdfs:label "distal phalanx of thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#thumb>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-finger>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger>)
+    
+    
+Class: <http://x.org#interdigital_region-between-hindlimb-digit-one-and-two>
+
+    Annotations: 
+        rdfs:label "interdigital_region between hindlimb digit one and two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#left_ordinal> value "1"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#right-forelimb-girdle>
+
+    Annotations: 
+        rdfs:label "right forelimb girdle"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#girdle>
+         and <http://x.org#limb>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-toe-five>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-five>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-thumb>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-thumb>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-finger>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#finger>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-toe-two>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-two>)
+    
+    
+Class: <http://x.org#girdle>
+
+    Annotations: 
+        rdfs:label "girdle"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_segment>
+    
+    
+Class: <http://x.org#interdigital_region-between-limb-digit-three-and-four>
+
+    Annotations: 
+        rdfs:label "interdigital_region between limb digit three and four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#left_ordinal> value "3"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-right-hindlimb-digit-one-and-two>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right hindlimb digit one and two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#left_ordinal> value "1"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#left-forelimb-stylopod>
+
+    Annotations: 
+        rdfs:label "left forelimb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and <http://x.org#stylopod>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-limb-anatomical_digit>
+
+    Annotations: 
+        rdfs:label "medial phalanx of limb anatomical_digit"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit>)
+    
+    
+Class: <http://x.org#zeugopod>
+
+    Annotations: 
+        rdfs:label "zeugopod"@en
+    
+    SubClassOf: 
+        <http://x.org#free_limb_segment>
+    
+    
+Class: <http://x.org#limb_unit>
+
+    Annotations: 
+        rdfs:label "limb_unit"@en
+    
+    SubClassOf: 
+        <http://x.org#mature_anatomical_entity>
+    
+    
+Class: <http://x.org#right-toe-two>
+
+    Annotations: 
+        rdfs:label "right toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#left-hindlimb-autopod>
+
+    Annotations: 
+        rdfs:label "left hindlimb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and <http://x.org#limb>
+         and <http://x.org#posterior>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#right-forelimb>
+
+    Annotations: 
+        rdfs:label "right forelimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#right-forelimb-stylopod>
+
+    Annotations: 
+        rdfs:label "right forelimb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and <http://x.org#stylopod>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-toe-five>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-five>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-finger-four>
+
+    Annotations: 
+        rdfs:label "distal phalanx of finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-four>)
+    
+    
+Class: <http://x.org#phalanx-of-right-toe-two>
+
+    Annotations: 
+        rdfs:label "phalanx of right toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-finger-three>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-three>)
+    
+    
+Class: <http://x.org#phalanx-of-toe-two>
+
+    Annotations: 
+        rdfs:label "phalanx of toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-two>)
+    
+    
+Class: <http://x.org#phalanx-of-finger-five>
+
+    Annotations: 
+        rdfs:label "phalanx of finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-five>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-finger-five>
+
+    Annotations: 
+        rdfs:label "medial phalanx of finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-five>)
+    
+    
+Class: <http://x.org#right-finger-two>
+
+    Annotations: 
+        rdfs:label "right finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-limb-anatomical_digit>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of limb anatomical_digit"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit>)
+    
+    
+Class: <http://x.org#right-forelimb-autopod>
+
+    Annotations: 
+        rdfs:label "right forelimb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#autopod>
+         and <http://x.org#limb>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#limb-zeugopod>
+
+    Annotations: 
+        rdfs:label "limb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#zeugopod>
+    
+    
+Class: <http://x.org#phalanx-of-left-finger-three>
+
+    Annotations: 
+        rdfs:label "phalanx of left finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-three>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-limb-anatomical_digit-two>
+
+    Annotations: 
+        rdfs:label "distal phalanx of limb anatomical_digit two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-two>)
+    
+    
+Class: <http://x.org#phalanx-of-limb-anatomical_digit>
+
+    Annotations: 
+        rdfs:label "phalanx of limb anatomical_digit"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit>)
+    
+    
+Class: <http://x.org#right-finger-five>
+
+    Annotations: 
+        rdfs:label "right finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#forelimb-girdle>
+
+    Annotations: 
+        rdfs:label "forelimb girdle"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#girdle>
+         and <http://x.org#limb>
+    
+    
+Class: <http://x.org#zeugopod-plus-autopod-of-hindlimb>
+
+    Annotations: 
+        rdfs:label "zeugopod plus autopod of hindlimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb_multisegment>
+         and (<http://x.org#has_part> some <http://x.org#autopod>)
+         and (<http://x.org#has_part> some <http://x.org#zeugopod>)
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-limb-anatomical_digit-four>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of limb anatomical_digit four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-four>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-toe-four>
+
+    Annotations: 
+        rdfs:label "distal phalanx of toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-four>)
+    
+    
+Class: <http://x.org#right-forelimb-zeugopod>
+
+    Annotations: 
+        rdfs:label "right forelimb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and <http://x.org#zeugopod>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#hindlimb-zeugopod>
+
+    Annotations: 
+        rdfs:label "hindlimb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and <http://x.org#zeugopod>
+    
+    
+Class: <http://x.org#medial-phalanx-of-toe-four>
+
+    Annotations: 
+        rdfs:label "medial phalanx of toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-four>)
+    
+    
+Class: <http://x.org#zeugopod-plus-autopod-of-right-forelimb>
+
+    Annotations: 
+        rdfs:label "zeugopod plus autopod of right forelimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb_multisegment>
+         and (<http://x.org#has_part> some <http://x.org#autopod>)
+         and (<http://x.org#has_part> some <http://x.org#zeugopod>)
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+    
+    
+Class: <http://x.org#phalanx-of-left-finger-five>
+
+    Annotations: 
+        rdfs:label "phalanx of left finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-five>)
+    
+    
+Class: <http://x.org#phalanx-of-limb-anatomical_digit-two>
+
+    Annotations: 
+        rdfs:label "phalanx of limb anatomical_digit two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-two>)
+    
+    
+Class: <http://x.org#phalanx-of-left-thumb>
+
+    Annotations: 
+        rdfs:label "phalanx of left thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-thumb>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-finger>
+
+    Annotations: 
+        rdfs:label "medial phalanx of finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-toe>
+
+    Annotations: 
+        rdfs:label "distal phalanx of toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe>)
+    
+    
+Class: <http://x.org#morphoform>
+
+    Annotations: 
+        rdfs:label "morphoform"@en
+    
+    
+Class: <http://x.org#medial-phalanx-of-finger-three>
+
+    Annotations: 
+        rdfs:label "medial phalanx of finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-three>)
+    
+    
+Class: <http://x.org#left-forelimb-girdle>
+
+    Annotations: 
+        rdfs:label "left forelimb girdle"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#girdle>
+         and <http://x.org#limb>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#zeugopod-plus-autopod-of-right-hindlimb>
+
+    Annotations: 
+        rdfs:label "zeugopod plus autopod of right hindlimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb_multisegment>
+         and (<http://x.org#has_part> some <http://x.org#autopod>)
+         and (<http://x.org#has_part> some <http://x.org#zeugopod>)
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+    
+    
+Class: <http://x.org#autopod>
+
+    Annotations: 
+        rdfs:label "autopod"@en
+    
+    SubClassOf: 
+        <http://x.org#free_limb_segment>
+    
+    
+Class: <http://x.org#interdigital_region-between-hindlimb-digit-four-and-five>
+
+    Annotations: 
+        rdfs:label "interdigital_region between hindlimb digit four and five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#left_ordinal> value "4"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-toe-one>
+
+    Annotations: 
+        rdfs:label "distal phalanx of toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-one>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-limb-anatomical_digit-five>
+
+    Annotations: 
+        rdfs:label "distal phalanx of limb anatomical_digit five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-five>)
+    
+    
+Class: <http://x.org#left-hindlimb-stylopod>
+
+    Annotations: 
+        rdfs:label "left hindlimb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and <http://x.org#stylopod>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-finger>
+
+    Annotations: 
+        rdfs:label "distal phalanx of finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger>)
+    
+    
+Class: <http://x.org#interdigital_region-between-limb-digit-four-and-five>
+
+    Annotations: 
+        rdfs:label "interdigital_region between limb digit four and five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#left_ordinal> value "4"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-limb-anatomical_digit-three>
+
+    Annotations: 
+        rdfs:label "phalanx of limb anatomical_digit three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-three>)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-hindlimb-digit-three-and-four>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left hindlimb digit three and four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#left_ordinal> value "3"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#phalanx-of-left-finger-four>
+
+    Annotations: 
+        rdfs:label "phalanx of left finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-four>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-limb-anatomical_digit-three>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of limb anatomical_digit three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-three>)
+    
+    
+Class: <http://x.org#left-toe-five>
+
+    Annotations: 
+        rdfs:label "left toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#forelimb-stylopod>
+
+    Annotations: 
+        rdfs:label "forelimb stylopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and <http://x.org#stylopod>
+    
+    
+Class: <http://x.org#proximal-phalanx-of-toe-one>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#toe-one>)
+    
+    
+Class: <http://x.org#limb_segment>
+
+    Annotations: 
+        rdfs:label "limb_segment"@en
+    
+    SubClassOf: 
+        <http://x.org#limb_unit>
+    
+    
+Class: <http://x.org#left-hindlimb>
+
+    Annotations: 
+        rdfs:label "left hindlimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#left-finger-two>
+
+    Annotations: 
+        rdfs:label "left finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-forelimb>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#zeugopod-plus-autopod-of-limb>
+
+    Annotations: 
+        rdfs:label "zeugopod plus autopod of limb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb_multisegment>
+         and (<http://x.org#has_part> some <http://x.org#autopod>)
+         and (<http://x.org#has_part> some <http://x.org#zeugopod>)
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-toe-five>
+
+    Annotations: 
+        rdfs:label "distal phalanx of toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-five>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-limb-anatomical_digit-five>
+
+    Annotations: 
+        rdfs:label "medial phalanx of limb anatomical_digit five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-five>)
+    
+    
+Class: <http://x.org#spatial4>
+
+    Annotations: 
+        rdfs:label "spatial4"@en
+    
+    
+Class: <http://x.org#forelimb>
+
+    Annotations: 
+        rdfs:label "forelimb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-finger-two>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-finger-two>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-two>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-right-finger-four>
+
+    Annotations: 
+        rdfs:label "medial phalanx of right finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-four>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-finger-three>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#finger-three>)
+    
+    
+Class: <http://x.org#forelimb-zeugopod>
+
+    Annotations: 
+        rdfs:label "forelimb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and <http://x.org#zeugopod>
+    
+    
+Class: <http://x.org#left-hindlimb-zeugopod>
+
+    Annotations: 
+        rdfs:label "left hindlimb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and <http://x.org#zeugopod>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-finger>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-toe-two>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-two>)
+    
+    
+Class: <http://x.org#phalanx-of-toe-four>
+
+    Annotations: 
+        rdfs:label "phalanx of toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-four>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-toe-three>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#toe-three>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-toe>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe>)
+    
+    
+Class: <http://x.org#limb-anatomical_digit-three>
+
+    Annotations: 
+        rdfs:label "limb anatomical_digit three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-toe-five>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-five>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-finger-four>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#finger-four>)
+    
+    
+Class: <http://x.org#interdigital_region-between-right-forelimb-digit-one-and-two>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right forelimb digit one and two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#left_ordinal> value "1"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-toe>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-toe>)
+    
+    
+Class: <http://x.org#right-toe>
+
+    Annotations: 
+        rdfs:label "right toe"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-hindlimb>)
+    
+    
+Class: <http://x.org#phalanx-of-right-toe-one>
+
+    Annotations: 
+        rdfs:label "phalanx of right toe one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-one>)
+    
+    
+Class: <http://x.org#left-toe-two>
+
+    Annotations: 
+        rdfs:label "left toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-right-forelimb-digit-four-and-five>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right forelimb digit four and five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#left_ordinal> value "4"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-toe-two>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-two>)
+    
+    
+Class: <http://x.org#phalanx-of-right-finger-four>
+
+    Annotations: 
+        rdfs:label "phalanx of right finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-four>)
+    
+    
+Class: <http://x.org#phalanx-of-toe-five>
+
+    Annotations: 
+        rdfs:label "phalanx of toe five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-five>)
+    
+    
+Class: <http://x.org#right-hindlimb-autopod>
+
+    Annotations: 
+        rdfs:label "right hindlimb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and <http://x.org#limb>
+         and <http://x.org#posterior>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#phalanx>
+
+    Annotations: 
+        rdfs:label "phalanx"@en
+    
+    SubClassOf: 
+        <http://x.org#long_bone>,
+        <http://x.org#limb_unit>
+    
+    
+Class: <http://x.org#toe-three>
+
+    Annotations: 
+        rdfs:label "toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#hindlimb>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-finger-four>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-four>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-toe-three>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-three>)
+    
+    
+Class: <http://x.org#phalanx-of-left-toe-three>
+
+    Annotations: 
+        rdfs:label "phalanx of left toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-three>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-finger-two>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-two>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-finger-five>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-five>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-thumb>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#thumb>)
+    
+    
+Class: <http://x.org#phalanx-of-finger>
+
+    Annotations: 
+        rdfs:label "phalanx of finger"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger>)
+    
+    
+Class: <http://x.org#limb-anatomical_digit-four>
+
+    Annotations: 
+        rdfs:label "limb anatomical_digit four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#limb-autopod>
+
+    Annotations: 
+        rdfs:label "limb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and <http://x.org#limb>
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-finger-four>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left finger four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-four>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-right-finger-three>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of right finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#right-finger-three>)
+    
+    
+Class: <http://x.org#left-toe-three>
+
+    Annotations: 
+        rdfs:label "left toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-toe-three>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-three>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-left-finger-five>
+
+    Annotations: 
+        rdfs:label "medial phalanx of left finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-five>)
+    
+    
+Class: <http://x.org#limb-anatomical_digit-five>
+
+    Annotations: 
+        rdfs:label "limb anatomical_digit five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-finger-five>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#finger-five>)
+    
+    
+Class: <http://x.org#embryonic>
+
+    Annotations: 
+        rdfs:label "embryonic"@en
+    
+    SubClassOf: 
+        <http://x.org#morphoform>
+    
+    
+Class: <http://x.org#posterior>
+
+    Annotations: 
+        rdfs:label "posterior"@en
+    
+    SubClassOf: 
+        <http://x.org#ap_axis>
+    
+    
+Class: <http://x.org#distal-phalanx-of-limb-anatomical_digit-four>
+
+    Annotations: 
+        rdfs:label "distal phalanx of limb anatomical_digit four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-four>)
+    
+    
+Class: <http://x.org#right-thumb>
+
+    Annotations: 
+        rdfs:label "right thumb"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anatomical_digit>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-right-forelimb-digit-three-and-four>
+
+    Annotations: 
+        rdfs:label "interdigital_region between right forelimb digit three and four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#right-forelimb>)
+         and (<http://x.org#left_ordinal> value "3"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-forelimb-digit-two-and-three>
+
+    Annotations: 
+        rdfs:label "interdigital_region between forelimb digit two and three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#forelimb>)
+         and (<http://x.org#left_ordinal> value "2"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-limb-digit-one-and-two>
+
+    Annotations: 
+        rdfs:label "interdigital_region between limb digit one and two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#limb>)
+         and (<http://x.org#left_ordinal> value "1"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#interdigital_region-between-left-hindlimb-digit-one-and-two>
+
+    Annotations: 
+        rdfs:label "interdigital_region between left hindlimb digit one and two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#interdigital_region>
+         and (<http://x.org#part_of> some <http://x.org#left-hindlimb>)
+         and (<http://x.org#left_ordinal> value "1"^^xsd:nonNegativeInteger)
+         and (<http://x.org#right_ordinal> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#left-forelimb-zeugopod>
+
+    Annotations: 
+        rdfs:label "left forelimb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#anterior>
+         and <http://x.org#limb>
+         and <http://x.org#zeugopod>
+         and (<http://x.org#in_left_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#medial-phalanx-of-limb-anatomical_digit-three>
+
+    Annotations: 
+        rdfs:label "medial phalanx of limb anatomical_digit three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#medial>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-three>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-left-finger-two>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of left finger two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#left-finger-two>)
+    
+    
+Class: <http://x.org#phalanx-of-toe-three>
+
+    Annotations: 
+        rdfs:label "phalanx of toe three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#toe-three>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-toe-four>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#toe-four>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-left-toe-two>
+
+    Annotations: 
+        rdfs:label "distal phalanx of left toe two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#left-toe-two>)
+    
+    
+Class: <http://x.org#hindlimb-autopod>
+
+    Annotations: 
+        rdfs:label "hindlimb autopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#autopod>
+         and <http://x.org#limb>
+         and <http://x.org#posterior>
+    
+    
+Class: <http://x.org#hindlimb-girdle>
+
+    Annotations: 
+        rdfs:label "hindlimb girdle"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#girdle>
+         and <http://x.org#limb>
+         and <http://x.org#posterior>
+    
+    
+Class: <http://x.org#right-hindlimb-zeugopod>
+
+    Annotations: 
+        rdfs:label "right hindlimb zeugopod"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#limb>
+         and <http://x.org#posterior>
+         and <http://x.org#zeugopod>
+         and (<http://x.org#in_right_side_of> some <http://x.org#body>)
+    
+    
+Class: <http://x.org#proximal-phalanx-of-limb-anatomical_digit-two>
+
+    Annotations: 
+        rdfs:label "proximal phalanx of limb anatomical_digit two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#phalanx>
+         and <http://x.org#proximal>
+         and (<http://x.org#part_of> some <http://x.org#limb-anatomical_digit-two>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-finger-five>
+
+    Annotations: 
+        rdfs:label "distal phalanx of finger five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-five>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-finger-three>
+
+    Annotations: 
+        rdfs:label "distal phalanx of finger three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#finger-three>)
+    
+    
+Class: <http://x.org#distal-phalanx-of-right-toe-four>
+
+    Annotations: 
+        rdfs:label "distal phalanx of right toe four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#distal>
+         and <http://x.org#phalanx>
+         and (<http://x.org#part_of> some <http://x.org#right-toe-four>)
+    
+    
