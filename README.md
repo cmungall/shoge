@@ -244,6 +244,77 @@ Shoge can be used to enhance existing ontologies
 
 Here the core ontology already has classes called 'limb', 'limb segment', 'zeugopod' - but not specific class such as anterior limb left zeugopod
 
+#### Example 8: Crosscutting subdivisions
+
+A digestive tract can be subdivided on the proximal-distal axis into
+segments, and on a perpendicular axis into layers. The core partonomy
+can be compactly encoded using hierarchy/3 as follows:
+
+    hierarchy(digestive_tract,
+              segment,
+              [esophagus,stomach,intestine=[
+                                            small_intestine=[duodenum,jejunum,ileum],
+                                            large_intestine=[cecum,colon=[
+                                                                          ascending_colon,
+                                                                          transverse_colon,
+                                                                          sigmoid_colon
+                                                                          ],
+                                                             rectum,anal_canal]]]).
+    hierarchy(wall,
+              layer,
+              [mucosa=[epithelium,lamina_propria,muscularis_mucosa],
+               submucosa,
+               muscularis_propria=[circular_muscle,longitudinal_muscle],
+               serosa]).
+
+The following grammar generates the cross-product of all segments and
+all layers:
+
+    structure *--> layer_of_digestive_tract | segment | layer.
+    
+    layer_of_digestive_tract *--> layer, [of], segment/maximal_part_of.
+     
+    segment(@X) --> {hierarchy_member_type(X,digestive_tract)},[@X].
+    layer(@X) --> {hierarchy_member_type(X,wall)},[@X].
+
+The following rules generate additional axioms connecting continuous
+segments in the proximo-distal axis and adjacent layers:
+
+    about *-->
+            layer_of_digestive_tract(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
+            { adjacent_to( LT1, LT2) },
+            layer_of_digestive_tract(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
+            :: X < adjacent_to some Y.
+    
+    about *-->
+            layer_of_digestive_tract(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
+            { continuous_with( SX, SY) },
+            layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
+            :: X < continuous_with some Y.
+    
+    about *-->
+            layer_of_digestive_tract(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
+            { part_of( LT1, LT2) },
+            layer_of_digestive_tract(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
+            :: X < part_of some Y.
+    
+    about *-->
+            layer_of_digestive_tract(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
+            { part_of( SX, SY) },
+            layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
+            :: X < part_of some Y.
+
+
+    adjacent_to(X,Y) :- hierarchy(wall,L),hierarchy_pair(X,Y,L).
+    part_of(X,Y) :- hierarchy(T,L),hierarchy_parent(X,Y,[T=L]).
+    
+    continuous_with(X,Y) :- hierarchy(digestive_tract,L),hierarchy_pair(X,Y,L).
+
+See
+[digestive_tract.obo](https://github.com/cmungall/shoge/blob/master/sample-output/digestive_tract.obo)
+in the sample-output directory
+
+
 ## Grammar design
 
 Often there are multiple grammars that can generate the same structures. For example:
