@@ -1,12 +1,16 @@
 # Shoge
 
-Shoge is a tool for generating ontologies based on simple grammatical
-rules.
+Shoge (Serial Homology Ontology Generation Engine) is a tool for
+generating ontologies from a grammar.
 
 ## Examples
 
- * See the grammars/ directory for example generative grammars
- * See the sample-output/ directory for examples of generated ontologies
+See the examples in this repository
+
+ * grammars/ *example grammars*
+     * limbs_simple.shg *basic limb segment generation*
+     * limbs.shg *more complex variant of above*
+ * sample-output/ *examples of ontologies generated from these grammars*
 
 ## Synopsis
 
@@ -55,7 +59,7 @@ Generate ontology:
 
 The 10 rules in the grammar generates 24 classes and 43 axioms.
 
-## ABOUT
+## Details
 
 Shoge is a tool for generating ontologies based on simple grammatical
 rules. The principle can be loosely explained in terms of serial
@@ -77,7 +81,7 @@ repeated structures is often done manually, which is tedious and error
 prone. Automated Reasoners can help with validation and
 classification, but not with ontology generation.
 
-## GRAMMARS
+### Grammars
 
 Generation rules are expressed as extended Definite Clause Grammars
 (DCGs). These simultaneously generate the human-readable textual
@@ -119,7 +123,7 @@ left)". The [of] terminal generates part of the phrase but not the
 class expression. The "@autopod" indicates that there is a core
 generic ontology class by this name.
 
-### Compilation to DCGs
+#### Compilation to DCGs
 
 Grammar rules are compiled down prolog DCGs. Arguments indicating
 class expressions are automatically added. For example
@@ -137,16 +141,16 @@ is compiled to:
     autopod(@autopod and part_of some X) *--> [@autopod],[of],limb(X).
 
 
-## Examples
+### Examples
 
-### Example 2: naming
+#### Example 2: naming
 
 A grammar file can contain rules for contracting names such as "anterior limb autopod" to "hand":
 
     'hand' is_name_of anterior limb autopod.
     'foot' is_name_of posterior limb autopod.
 
-### Example 3: ordinal series
+#### Example 3: ordinal series
 
 Iterative homology is the repeated generation of similar structures
 along some axis - e.g. digits or vertebrae.
@@ -161,7 +165,7 @@ together with an OWL expression:
 
     autopod and part_of some (limb and left and anterior) and has_order value 2.
 
-### Example 4: handling variation
+#### Example 4: handling variation
 
 Not every structure is repeated identically. For example, humans have
 3 phalanges for every digit other than digit 1.
@@ -179,7 +183,7 @@ This encodes the rule that thumbs of a human do not have medial
 phalanges. This term and any related terms will be excluded during
 ontology generation.
 
-### Example 5a: consecutive ordinals
+#### Example 5a: consecutive ordinals
 
 
     interdigital_region *--> 
@@ -189,7 +193,7 @@ ontology generation.
     % TODO
 
 
-### Example 5b: consecutive ordinals
+#### Example 5b: consecutive ordinals
 
 Interdigital regions are associated with pairs of digits rather than "favoring" any one digit:
 
@@ -201,7 +205,7 @@ Interdigital regions are associated with pairs of digits rather than "favoring" 
     consecutive_number_pair(left_ordinal value X and right_ordinal value Y) --> whole_number(X,1-5),[and],{Y is X+1},whole_number(Y).
 
 
-### Example 6: additional axiom generation rules
+#### Example 6: additional axiom generation rules
 
 
     v_level *--> @cervical,in_ordinal_series(1-7).
@@ -228,7 +232,7 @@ Interdigital regions are associated with pairs of digits rather than "favoring" 
     develops_from(vertebra_cartilage_condensation, vertebra_pre_cartilage_condensation).
 
 
-### Example 7: enhancing existing ontologies
+#### Example 7: enhancing existing ontologies
 
 Shoge can be used to enhance existing ontologies
 
