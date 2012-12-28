@@ -2,14 +2,6 @@
 
 :- include(ordinal_series).
 
-/*
-:- switch.
-:- case('Homo sapiens').
-:- case('Mus').
-:- default.
-:- end.
-*/
-
 somite_number *--> in_ordinal_series(1-39).
 
 :- if(in_context('Homo sapiens')).
@@ -39,35 +31,6 @@ somite_number *--> in_ordinal_series(1-3).  % REDUCE FOR TESTING
 :- endif.
 
 
-/*
-:- if(in_context('Homo sapiens')).
-
-somite_number *--> in_ordinal_series(1-39).
-
-:- else.
-:- if(in_context('Mus')).
-
-somite_number *--> in_ordinal_series(1-65).
-
-:- else.
-:- if(in_context('chick')).
-
-somite_number *--> in_ordinal_series(1-50).
-
-:- else.
-:- if(in_context('snake')).
-
-somite_number *--> in_ordinal_series(1-500).
-
-:- else.
-
-somite_number *--> in_ordinal_series(1-3).  % REDUCE FOR TESTING
-
-:- endif.
-:- endif.
-:- endif.
-:- endif.
-*/
 
 somitic_element *--> somite.
 somitic_element *--> sclerotome.
@@ -82,10 +45,24 @@ myotome *--> @myotome,somite_number.
 dermomyotome *--> @dermomyotome,somite_number.
 
 about *-->
-        {develops_from(S1,S2)}, % RULE
-        somitic_element(S1 and X),[develops,from],somitic_element(S2 and X) % PHRASE
+        somitic_element(S1),
+        {S1 =::= ( (@T1) and X),
+         develops_from(T1,T2)},
+        [develops,from],
+        somitic_element(S2),
+        {S2 =::= ( (@T2) and X)}
         ::
-        S1 and X < develops_from some S2 and X. % AXIOM
+        S1 < develops_from some S2.
+
+about *-->
+        somitic_element(S1),
+        {S1 =::= ( (@T) and has_order value literal(type(_,N))),
+         N_prev is N-1},
+        [posterior_to],
+        somitic_element(S2),
+        {S2 =::= ( (@T) and has_order value literal(type(_,N_prev)))}
+        ::
+        S1 < posterior_to some S2.
 
 % from EHDAA2
 develops_from(dermatome,dermomyotome).

@@ -43,7 +43,7 @@ Save this as "limbs_simple.shg". Then generate phrases (on command line):
     [@right,@posterior,@limb,@autopod]
 ==
 
-List generated OWL axioms:
+List generated OWL axioms (in Thea PL-syntax):
 
 ==
     $ shoge  --grammar limbs_simple --generate-ontology limb_segment --list-axioms
@@ -65,10 +65,10 @@ in the sample-output directory
 
 ## Details
 
-Shoge is a tool for generating ontologies based on simple grammatical
-rules. The principle can be loosely explained in terms of serial
-homology - the repetition of core structures of patterns, sometimes
-with variation, within an organism.
+Shoge is a tool for generating ontologies and anatomical maps based on
+simple grammatical rules. The principle can be loosely explained in
+terms of serial homology - the repetition of core structures of
+patterns, sometimes with variation, within an organism.
 
 For example, the developmental program for creating a vertebral
 element is repeated multiple times along a vertebral column in an
@@ -83,7 +83,16 @@ proximal epiphysis of middle phalanx of left little toe" (FMA:230787).
 Generating exhaustive or semi-exhaustive catalogs or ontologies of
 repeated structures is often done manually, which is tedious and error
 prone. Automated Reasoners can help with validation and
-classification, but not with ontology generation.
+classification, but not with ontology generation. Furthermore, an OWL
+TBox model of a piece of anatomy must follow a tree structure, which
+can be problematic for modeling all the various connections and
+articulations in a structure.
+
+Shoge is designed to generate large complex TBox or ABox models of
+pieces of anatomy from a small set of rules. These maps can be used to
+annotate with data (e.g. gene expression) and to faciliatate
+comparisons, between species, and within species (e.g. mutant
+phenotype comparisons).
 
 ### Grammars
 
@@ -115,7 +124,7 @@ convenience, it does not affect the logic.
  * @Atom - an ontology symbol, denoted using the @ functor, generates
       an ontology term. This can be thought of as an atomic unit.
 
-A symbol can also be of the form Relation some Term
+A symbol can also be of the form 'Relation some Term'
 
 For example, the following rule:
 
@@ -129,8 +138,9 @@ generic ontology class by this name.
 
 #### Compilation to DCGs
 
-Grammar rules are compiled down prolog DCGs. Arguments indicating
-class expressions are automatically added. For example
+Grammar rules are compiled down prolog Definite Clause Grammars
+(DCGs). Arguments indicating class expressions are automatically
+added. For example
 
     x *--> y1, y2, ..., yn.
 
@@ -138,12 +148,19 @@ is compiled to:
 
     x(Y1 and Y2 and ... and Yn) --> y1(Y1), y2(Y2), ..., yn(YN).
 
+For example, the following grammar rule
+
     autopod *--> @autopod, [of], part_of some limb_of.
 
 is compiled to:
 
-    autopod(@autopod and part_of some X) *--> [@autopod],[of],limb(X).
+    autopod(@autopod and part_of some X) --> [@autopod],[of],limb(X).
 
+The *--> construct is a syntactic convenience - the direct DCG form
+can be authored directly if preferred.
+
+Other prolog DCG features such as including prolog goals with {}s can
+be freely mixed.
 
 ### Examples
 
@@ -175,7 +192,7 @@ Not every structure is repeated identically. For example, humans have
 3 phalanges for every digit other than digit 1.
 
 
-    phalanx *--> ?proximality,@phalanx,[of],part_of some anatomical_digit_of.
+    phalanx *--> ?proximality,@phalanx,[of],part_of some anatomical_digit.
     proximality *--> @proximal.
     proximality *--> @distal.
     proximality *--> @medial.
@@ -183,9 +200,9 @@ Not every structure is repeated identically. For example, humans have
     exclude(phalanx and medial and part_of some (anatomical_digit and has_order value 1)).
 
 
-This encodes the rule that thumbs of a human do not have medial
-phalanges. This term and any related terms will be excluded during
-ontology generation.
+This encodes the rule that thumbs and halluces of a human do not have
+medial phalanges. This term and any related terms will be excluded
+during ontology generation.
 
 #### Example 5a: consecutive ordinals
 
@@ -228,12 +245,16 @@ Interdigital regions are associated with pairs of digits rather than "favoring" 
     
     about *-->
             {develops_from(S2,S1)},
-            v_element(S2 and X),[develops,from],v_element(S1 and X)
+            v_element((@S2) and X),[develops,from],v_element((@S1) and X)
             ::
             S2 and X < develops_from some S2 and X.
     
     develops_from(vertebra, vertebra_cartilage_condensation).
     develops_from(vertebra_cartilage_condensation, vertebra_pre_cartilage_condensation).
+
+See
+[vertebra_development.omn](https://github.com/cmungall/shoge/blob/master/sample-output/vertebra_development.omn)
+in the sample-output directory
 
 
 #### Example 7: enhancing existing ontologies

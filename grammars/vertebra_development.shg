@@ -2,12 +2,10 @@
 
 :- include(ordinal_series).
 
-/*
 v_level *--> cervical,in_ordinal_series(1-7).
 v_level *--> thoracic,in_ordinal_series(1-12).
 v_level *--> lumbar,in_ordinal_series(1-5).
 v_level *--> sacral,in_ordinal_series(1-5).
-*/
 v_level *--> coccygeal,in_ordinal_series(1-4).
 
 cervical *--> ['C'] :: cervical.
@@ -31,7 +29,7 @@ axis is_name_of vertebra and has_order value 2.
 
 about *-->
         {develops_from(S2,S1)},
-        v_element(S2 and X),[develops,from],v_element(S1 and X)
+        v_element((@S2) and X),[develops,from],v_element((@S1) and X)
         ::
         S2 and X < develops_from some S2 and X.
 

@@ -8,20 +8,27 @@
 hierarchy(T,L) :- hierarchy(T,_,L).
 hierarchy(digestive_tract,
           segment,
-          [esophagus,stomach,intestine=[
-                                        small_intestine=[duodenum,jejunum,ileum],
-                                        large_intestine=[cecum,colon=[
-                                                                      ascending_colon,
-                                                                      transverse_colon,
-                                                                      sigmoid_colon
-                                                                      ],
-                                                         rectum,anal_canal]]]).
+          [pre_intestine=[
+                          esophagus,
+                          stomach
+                         ],
+           intestine=[
+                      small_intestine=[duodenum,jejunum,ileum],
+                      large_intestine=[cecum,colon=[
+                                                    ascending_colon,
+                                                    transverse_colon,
+                                                    sigmoid_colon
+                                                   ],
+                                       terminal_portion=[
+                                                         rectum,anal_canal
+                                                        ]
+                                      ]]]).
 hierarchy(wall,
           layer,
-          [mucosa=[epithelium,lamina_propria,muscularis_mucosa],
+          [mucosa=[epithelium,lamina_propria,muscularis_mucosae],
            submucosa,
            muscularis_propria=[circular_muscle,longitudinal_muscle],
-           serosa]).
+           serosa_or_advetitia]).
 
 % ----------------------------------------
 % GRAMMAR
@@ -52,25 +59,34 @@ about *-->
         layer_of_digestive_tract(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
         { adjacent_to( LT1, LT2) },
         layer_of_digestive_tract(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
-        :: X < adjacent_to some Y.
+        :: X < inner_to some Y.
 
 about *-->
         layer_of_digestive_tract(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
         { continuous_with( SX, SY) },
-        layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
-        :: X < continuous_with some Y.
+        layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))},
+        { Layer=wall}  % TEMPORARY - for testing
+        :: X < distally_continuous_with some Y.
 
 about *-->
         layer_of_digestive_tract(X),{X =::= ( (@LT1) and maximal_part_of some (@S))},
         { part_of( LT1, LT2) },
         layer_of_digestive_tract(Y),{Y =::= ( (@LT2) and maximal_part_of some (@S))}
-        :: X < part_of some Y.
+        :: X < sublayer_of some Y.
 
 about *-->
         layer_of_digestive_tract(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
         { part_of( SX, SY) },
         layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))}
-        :: X < part_of some Y.
+        :: X < subsegment_of some Y.
+
+% FOR TESTING:
+about *-->
+        layer_of_digestive_tract(X),{X =::= ( (@Layer) and maximal_part_of some (@SX))},
+        { part_of( SX, SY) },
+        layer_of_digestive_tract(Y),{Y =::= ( (@Layer) and maximal_part_of some (@SY))},
+        {Layer=wall}
+        :: X < wall_subsegment_of some Y.
 
 
 % ----------------------------------------

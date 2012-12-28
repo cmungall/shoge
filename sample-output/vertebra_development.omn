@@ -1,0 +1,1529 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://x.org>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+Datatype: xsd:nonNegativeInteger
+
+    
+ObjectProperty: <http://x.org#has_order>
+
+    Annotations: 
+        rdfs:label "has_order"@en
+    
+    
+ObjectProperty: <http://x.org#develops_from>
+
+    Annotations: 
+        rdfs:label "develops_from"@en
+    
+    
+ObjectProperty: <http://x.org#part_of>
+
+    Characteristics: 
+        Transitive
+    
+    
+DataProperty: <http://x.org#has_order>
+
+    Annotations: 
+        rdfs:label "has_order"@en
+    
+    
+Class: <http://x.org#vertebra-S-four>
+
+    Annotations: 
+        rdfs:label "vertebra S four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#coccygeal>
+
+    Annotations: 
+        rdfs:label "coccygeal"@en
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-two>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-L-two>
+
+    Annotations: 
+        rdfs:label "vertebra L two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-S-two>
+
+    Annotations: 
+        rdfs:label "vertebra S two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-12>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-S-one>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation S one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-11>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-S-five>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation S five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation"@en
+    
+    SubClassOf: 
+        <http://x.org#v_element>
+    
+    
+Class: <http://x.org#vertebra-C-one>
+
+    Annotations: 
+        rdfs:label "vertebra C one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-10>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-S-one>
+
+    Annotations: 
+        rdfs:label "vertebra S one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-S-five>
+
+    Annotations: 
+        rdfs:label "vertebra S five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-L-two>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation L two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-C-four>
+
+    Annotations: 
+        rdfs:label "vertebra C four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-C-five>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation C five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-one>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-L-three>
+
+    Annotations: 
+        rdfs:label "vertebra L three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-CC-two>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation CC two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-three>
+
+    Annotations: 
+        rdfs:label "vertebra T three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-four>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-L-four>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation L four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-C-7>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation C 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-C-6>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation C 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-three>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-S-two>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation S two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-CC-two>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation CC two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-L-five>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation L five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-C-7>
+
+    Annotations: 
+        rdfs:label "vertebra C 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-C-6>
+
+    Annotations: 
+        rdfs:label "vertebra C 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-L-four>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation L four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-one>
+
+    Annotations: 
+        rdfs:label "vertebra T one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-L-three>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation L three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-S-three>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation S three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#cervical>
+
+    Annotations: 
+        rdfs:label "cervical"@en
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-one>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-four>
+
+    Annotations: 
+        rdfs:label "vertebra T four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-CC-one>
+
+    Annotations: 
+        rdfs:label "vertebra CC one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#sacral>
+
+    Annotations: 
+        rdfs:label "sacral"@en
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-S-four>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation S four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-L-two>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation L two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-L-one>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation L one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-C-two>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation C two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-CC-three>
+
+    Annotations: 
+        rdfs:label "vertebra CC three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-11>
+
+    Annotations: 
+        rdfs:label "vertebra T 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-10>
+
+    Annotations: 
+        rdfs:label "vertebra T 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-C-three>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation C three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-12>
+
+    Annotations: 
+        rdfs:label "vertebra T 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-five>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-S-five>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation S five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-6>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-7>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-8>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-9>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-C-two>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation C two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-CC-three>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation CC three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-three>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-C-five>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation C five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-T-four>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation T four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-S-one>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation S one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-L-five>
+
+    Annotations: 
+        rdfs:label "vertebra L five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-CC-one>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation CC one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-S-three>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation S three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-S-four>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation S four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-L-one>
+
+    Annotations: 
+        rdfs:label "vertebra L one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation"@en
+    
+    SubClassOf: 
+        <http://x.org#v_element>
+    
+    
+Class: <http://x.org#vertebra>
+
+    Annotations: 
+        rdfs:label "vertebra"@en
+    
+    SubClassOf: 
+        <http://x.org#v_element>
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-CC-three>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation CC three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-C-five>
+
+    Annotations: 
+        rdfs:label "vertebra C five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-two>
+
+    Annotations: 
+        rdfs:label "vertebra T two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-CC-one>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation CC one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-CC-two>
+
+    Annotations: 
+        rdfs:label "vertebra CC two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-L-one>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation L one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-C-6>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation C 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-five>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-C-one>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation C one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#thoracic>
+
+    Annotations: 
+        rdfs:label "thoracic"@en
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-C-7>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation C 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-S-three>
+
+    Annotations: 
+        rdfs:label "vertebra S three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-C-one>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation C one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-7>
+
+    Annotations: 
+        rdfs:label "vertebra T 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-C-four>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation C four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#lumbar>
+
+    Annotations: 
+        rdfs:label "lumbar"@en
+    
+    
+Class: <http://x.org#vertebra-T-8>
+
+    Annotations: 
+        rdfs:label "vertebra T 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-6>
+
+    Annotations: 
+        rdfs:label "vertebra T 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#v_element>
+
+    Annotations: 
+        rdfs:label "v_element"@en
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-C-three>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation C three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-CC-four>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation CC four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-9>
+
+    Annotations: 
+        rdfs:label "vertebra T 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-CC-four>
+
+    Annotations: 
+        rdfs:label "vertebra CC four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#coccygeal>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-C-four>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation C four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-L-three>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation L three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-L-four>
+
+    Annotations: 
+        rdfs:label "vertebra L four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#lumbar>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-L-five>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation L five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#lumbar>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-T-five>
+
+    Annotations: 
+        rdfs:label "vertebra T five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#thoracic>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_cartilage_condensation-S-two>
+
+    Annotations: 
+        rdfs:label "vertebra_cartilage_condensation S two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sacral>
+         and <http://x.org#vertebra_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#sacral>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra_cartilage_condensation>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-11>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-12>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-C-three>
+
+    Annotations: 
+        rdfs:label "vertebra C three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-10>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-two>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-9>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra-C-two>
+
+    Annotations: 
+        rdfs:label "vertebra C two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#cervical>
+         and <http://x.org#vertebra>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#cervical>
+         and (<http://x.org#develops_from> some <http://x.org#vertebra>)
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-8>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-7>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-T-6>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation T 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#thoracic>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#vertebra_pre_cartilage_condensation-CC-four>
+
+    Annotations: 
+        rdfs:label "vertebra_pre_cartilage_condensation CC four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#coccygeal>
+         and <http://x.org#vertebra_pre_cartilage_condensation>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    

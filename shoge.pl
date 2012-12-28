@@ -106,8 +106,8 @@ system:term_expansion((H*-->B :: X),Goals) :-
 system:term_expansion(H*-->B,[Goal|AxiomGoals]) :-
         axioms_from_production(H,B,AxiomGoals),
         % we add an argument such that e.g. limb_segment *--> ... becomes limb_segment(X and Y and ...)
-        add_arg(B,B2,Args),
-        add_arg(H,H2,Args),
+        add_arg(B,B2,Args), % +,-,-
+        add_arg(H,H2,Args), % +,=,+
         dcg_translate_rule( (H2-->B2), Goal).
 
 % todo - normalization in DCG expansion
@@ -431,6 +431,7 @@ rewrite_class_expression_with_IRIs(X,X) :- atomic(X),!.
 rewrite_class_expression_with_IRIs(thing and X,X2) :- !, rewrite_class_expression_with_IRIs(X,X2).
 rewrite_class_expression_with_IRIs(X and thing,X2) :- !, rewrite_class_expression_with_IRIs(X,X2).
 rewrite_class_expression_with_IRIs(R some X,R2 some X2) :- structure_toks_iri(_,[@R],R2),!,rewrite_class_expression_with_IRIs(X,X2).
+rewrite_class_expression_with_IRIs(R value X,R2 value X2) :- structure_toks_iri(_,[@R],R2),!,rewrite_class_expression_with_IRIs(X,X2).
 rewrite_class_expression_with_IRIs(@X,Y) :- structure_toks_iri(_,[@X],Y),!.
 rewrite_class_expression_with_IRIs(X,Y) :- X =.. ArgsX,maplist(rewrite_class_expression_with_IRIs,ArgsX,ArgsY),Y =.. ArgsY.
 
