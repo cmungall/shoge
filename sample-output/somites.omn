@@ -1,0 +1,2788 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://x.org>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+Datatype: xsd:nonNegativeInteger
+
+    
+ObjectProperty: <http://x.org#has_order>
+
+    Annotations: 
+        rdfs:label "has_order"@en
+    
+    
+ObjectProperty: <http://x.org#develops_from>
+
+    Annotations: 
+        rdfs:label "develops_from"@en
+    
+    
+ObjectProperty: <http://x.org#posterior_to>
+
+    Annotations: 
+        rdfs:label "posterior_to"@en
+    
+    
+ObjectProperty: <http://x.org#part_of>
+
+    Characteristics: 
+        Transitive
+    
+    
+DataProperty: <http://x.org#has_order>
+
+    Annotations: 
+        rdfs:label "has_order"@en
+    
+    
+Class: <http://x.org#myotome-12>
+
+    Annotations: 
+        rdfs:label "myotome 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-11>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-12>
+    
+    
+Class: <http://x.org#sclerotome-33>
+
+    Annotations: 
+        rdfs:label "sclerotome 33"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "33"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-32>,
+        <http://x.org#develops_from> some <http://x.org#somite-33>
+    
+    
+Class: <http://x.org#myotome-13>
+
+    Annotations: 
+        rdfs:label "myotome 13"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "13"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-12>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-13>
+    
+    
+Class: <http://x.org#sclerotome-34>
+
+    Annotations: 
+        rdfs:label "sclerotome 34"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "34"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-33>,
+        <http://x.org#develops_from> some <http://x.org#somite-34>
+    
+    
+Class: <http://x.org#sclerotome-35>
+
+    Annotations: 
+        rdfs:label "sclerotome 35"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "35"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-34>,
+        <http://x.org#develops_from> some <http://x.org#somite-35>
+    
+    
+Class: <http://x.org#myotome-14>
+
+    Annotations: 
+        rdfs:label "myotome 14"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "14"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-13>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-14>
+    
+    
+Class: <http://x.org#sclerotome-36>
+
+    Annotations: 
+        rdfs:label "sclerotome 36"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "36"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-35>,
+        <http://x.org#develops_from> some <http://x.org#somite-36>
+    
+    
+Class: <http://x.org#myotome-15>
+
+    Annotations: 
+        rdfs:label "myotome 15"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "15"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-15>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-14>
+    
+    
+Class: <http://x.org#myotome-16>
+
+    Annotations: 
+        rdfs:label "myotome 16"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "16"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-16>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-15>
+    
+    
+Class: <http://x.org#sclerotome-30>
+
+    Annotations: 
+        rdfs:label "sclerotome 30"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "30"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-30>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-29>
+    
+    
+Class: <http://x.org#myotome-17>
+
+    Annotations: 
+        rdfs:label "myotome 17"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "17"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-17>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-16>
+    
+    
+Class: <http://x.org#myotome-two>
+
+    Annotations: 
+        rdfs:label "myotome two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-one>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-two>
+    
+    
+Class: <http://x.org#sclerotome-31>
+
+    Annotations: 
+        rdfs:label "sclerotome 31"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "31"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-31>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-30>
+    
+    
+Class: <http://x.org#myotome-18>
+
+    Annotations: 
+        rdfs:label "myotome 18"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "18"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-18>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-17>
+    
+    
+Class: <http://x.org#sclerotome-32>
+
+    Annotations: 
+        rdfs:label "sclerotome 32"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "32"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-31>,
+        <http://x.org#develops_from> some <http://x.org#somite-32>
+    
+    
+Class: <http://x.org#myotome-19>
+
+    Annotations: 
+        rdfs:label "myotome 19"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "19"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-19>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-18>
+    
+    
+Class: <http://x.org#somite-10>
+
+    Annotations: 
+        rdfs:label "somite 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-9>
+    
+    
+Class: <http://x.org#dermatome-6>
+
+    Annotations: 
+        rdfs:label "dermatome 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-6>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-five>
+    
+    
+Class: <http://x.org#dermatome-7>
+
+    Annotations: 
+        rdfs:label "dermatome 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-7>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-6>
+    
+    
+Class: <http://x.org#dermatome-8>
+
+    Annotations: 
+        rdfs:label "dermatome 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-8>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-7>
+    
+    
+Class: <http://x.org#somite-13>
+
+    Annotations: 
+        rdfs:label "somite 13"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "13"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-12>
+    
+    
+Class: <http://x.org#dermatome-9>
+
+    Annotations: 
+        rdfs:label "dermatome 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-9>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-8>
+    
+    
+Class: <http://x.org#somite-14>
+
+    Annotations: 
+        rdfs:label "somite 14"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "14"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-13>
+    
+    
+Class: <http://x.org#somite-11>
+
+    Annotations: 
+        rdfs:label "somite 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-10>
+    
+    
+Class: <http://x.org#somite-12>
+
+    Annotations: 
+        rdfs:label "somite 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-11>
+    
+    
+Class: <http://x.org#dermatome-one>
+
+    Annotations: 
+        rdfs:label "dermatome one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-one>
+    
+    
+Class: <http://x.org#sclerotome-38>
+
+    Annotations: 
+        rdfs:label "sclerotome 38"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "38"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-37>,
+        <http://x.org#develops_from> some <http://x.org#somite-38>
+    
+    
+Class: <http://x.org#sclerotome-37>
+
+    Annotations: 
+        rdfs:label "sclerotome 37"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "37"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-36>,
+        <http://x.org#develops_from> some <http://x.org#somite-37>
+    
+    
+Class: <http://x.org#sclerotome-five>
+
+    Annotations: 
+        rdfs:label "sclerotome five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-four>,
+        <http://x.org#develops_from> some <http://x.org#somite-five>
+    
+    
+Class: <http://x.org#myotome-11>
+
+    Annotations: 
+        rdfs:label "myotome 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-10>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-11>
+    
+    
+Class: <http://x.org#myotome-10>
+
+    Annotations: 
+        rdfs:label "myotome 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-10>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-9>
+    
+    
+Class: <http://x.org#sclerotome-39>
+
+    Annotations: 
+        rdfs:label "sclerotome 39"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "39"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-39>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-38>
+    
+    
+Class: <http://x.org#dermatome>
+
+    Annotations: 
+        rdfs:label "dermatome"@en
+    
+    SubClassOf: 
+        <http://x.org#somitic_element>
+    
+    
+Class: <http://x.org#myotome-one>
+
+    Annotations: 
+        rdfs:label "myotome one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-one>
+    
+    
+Class: <http://x.org#dermomyotome>
+
+    Annotations: 
+        rdfs:label "dermomyotome"@en
+    
+    SubClassOf: 
+        <http://x.org#somitic_element>
+    
+    
+Class: <http://x.org#dermatome-three>
+
+    Annotations: 
+        rdfs:label "dermatome three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-two>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-three>
+    
+    
+Class: <http://x.org#dermomyotome-two>
+
+    Annotations: 
+        rdfs:label "dermomyotome two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-one>,
+        <http://x.org#develops_from> some <http://x.org#somite-two>
+    
+    
+Class: <http://x.org#sclerotome-10>
+
+    Annotations: 
+        rdfs:label "sclerotome 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-10>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-9>
+    
+    
+Class: <http://x.org#sclerotome-11>
+
+    Annotations: 
+        rdfs:label "sclerotome 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-11>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-10>
+    
+    
+Class: <http://x.org#sclerotome-12>
+
+    Annotations: 
+        rdfs:label "sclerotome 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-12>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-11>
+    
+    
+Class: <http://x.org#sclerotome-13>
+
+    Annotations: 
+        rdfs:label "sclerotome 13"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "13"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-13>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-12>
+    
+    
+Class: <http://x.org#sclerotome-14>
+
+    Annotations: 
+        rdfs:label "sclerotome 14"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "14"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-14>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-13>
+    
+    
+Class: <http://x.org#somite-35>
+
+    Annotations: 
+        rdfs:label "somite 35"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "35"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-34>
+    
+    
+Class: <http://x.org#somite-36>
+
+    Annotations: 
+        rdfs:label "somite 36"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "36"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-35>
+    
+    
+Class: <http://x.org#somite-33>
+
+    Annotations: 
+        rdfs:label "somite 33"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "33"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-32>
+    
+    
+Class: <http://x.org#somite-34>
+
+    Annotations: 
+        rdfs:label "somite 34"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "34"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-33>
+    
+    
+Class: <http://x.org#somite-31>
+
+    Annotations: 
+        rdfs:label "somite 31"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "31"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-30>
+    
+    
+Class: <http://x.org#somite-32>
+
+    Annotations: 
+        rdfs:label "somite 32"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "32"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-31>
+    
+    
+Class: <http://x.org#somite-30>
+
+    Annotations: 
+        rdfs:label "somite 30"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "30"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-29>
+    
+    
+Class: <http://x.org#somite-29>
+
+    Annotations: 
+        rdfs:label "somite 29"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "29"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-28>
+    
+    
+Class: <http://x.org#somite-28>
+
+    Annotations: 
+        rdfs:label "somite 28"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "28"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-27>
+    
+    
+Class: <http://x.org#somite-27>
+
+    Annotations: 
+        rdfs:label "somite 27"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "27"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-26>
+    
+    
+Class: <http://x.org#somite-26>
+
+    Annotations: 
+        rdfs:label "somite 26"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "26"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-25>
+    
+    
+Class: <http://x.org#sclerotome-16>
+
+    Annotations: 
+        rdfs:label "sclerotome 16"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "16"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-16>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-15>
+    
+    
+Class: <http://x.org#sclerotome-15>
+
+    Annotations: 
+        rdfs:label "sclerotome 15"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "15"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-15>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-14>
+    
+    
+Class: <http://x.org#sclerotome-18>
+
+    Annotations: 
+        rdfs:label "sclerotome 18"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "18"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-17>,
+        <http://x.org#develops_from> some <http://x.org#somite-18>
+    
+    
+Class: <http://x.org#sclerotome-17>
+
+    Annotations: 
+        rdfs:label "sclerotome 17"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "17"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-17>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-16>
+    
+    
+Class: <http://x.org#sclerotome-19>
+
+    Annotations: 
+        rdfs:label "sclerotome 19"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "19"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-18>,
+        <http://x.org#develops_from> some <http://x.org#somite-19>
+    
+    
+Class: <http://x.org#sclerotome-20>
+
+    Annotations: 
+        rdfs:label "sclerotome 20"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "20"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-19>,
+        <http://x.org#develops_from> some <http://x.org#somite-20>
+    
+    
+Class: <http://x.org#sclerotome-21>
+
+    Annotations: 
+        rdfs:label "sclerotome 21"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "21"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-20>,
+        <http://x.org#develops_from> some <http://x.org#somite-21>
+    
+    
+Class: <http://x.org#sclerotome-24>
+
+    Annotations: 
+        rdfs:label "sclerotome 24"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "24"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-23>,
+        <http://x.org#develops_from> some <http://x.org#somite-24>
+    
+    
+Class: <http://x.org#sclerotome-25>
+
+    Annotations: 
+        rdfs:label "sclerotome 25"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "25"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-24>,
+        <http://x.org#develops_from> some <http://x.org#somite-25>
+    
+    
+Class: <http://x.org#sclerotome-22>
+
+    Annotations: 
+        rdfs:label "sclerotome 22"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "22"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-21>,
+        <http://x.org#develops_from> some <http://x.org#somite-22>
+    
+    
+Class: <http://x.org#sclerotome-23>
+
+    Annotations: 
+        rdfs:label "sclerotome 23"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "23"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-22>,
+        <http://x.org#develops_from> some <http://x.org#somite-23>
+    
+    
+Class: <http://x.org#somite-22>
+
+    Annotations: 
+        rdfs:label "somite 22"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "22"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-21>
+    
+    
+Class: <http://x.org#somite-23>
+
+    Annotations: 
+        rdfs:label "somite 23"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "23"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-22>
+    
+    
+Class: <http://x.org#somite-24>
+
+    Annotations: 
+        rdfs:label "somite 24"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "24"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-23>
+    
+    
+Class: <http://x.org#somite-25>
+
+    Annotations: 
+        rdfs:label "somite 25"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "25"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-24>
+    
+    
+Class: <http://x.org#somite-20>
+
+    Annotations: 
+        rdfs:label "somite 20"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "20"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-19>
+    
+    
+Class: <http://x.org#somite-21>
+
+    Annotations: 
+        rdfs:label "somite 21"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "21"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-20>
+    
+    
+Class: <http://x.org#somite-19>
+
+    Annotations: 
+        rdfs:label "somite 19"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "19"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-18>
+    
+    
+Class: <http://x.org#myotome-five>
+
+    Annotations: 
+        rdfs:label "myotome five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-five>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-four>
+    
+    
+Class: <http://x.org#somite-16>
+
+    Annotations: 
+        rdfs:label "somite 16"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "16"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-15>
+    
+    
+Class: <http://x.org#somite-15>
+
+    Annotations: 
+        rdfs:label "somite 15"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "15"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-14>
+    
+    
+Class: <http://x.org#somite-18>
+
+    Annotations: 
+        rdfs:label "somite 18"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "18"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-17>
+    
+    
+Class: <http://x.org#somite-17>
+
+    Annotations: 
+        rdfs:label "somite 17"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "17"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-16>
+    
+    
+Class: <http://x.org#sclerotome-29>
+
+    Annotations: 
+        rdfs:label "sclerotome 29"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "29"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-29>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-28>
+    
+    
+Class: <http://x.org#somite-6>
+
+    Annotations: 
+        rdfs:label "somite 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-five>
+    
+    
+Class: <http://x.org#sclerotome-28>
+
+    Annotations: 
+        rdfs:label "sclerotome 28"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "28"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-28>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-27>
+    
+    
+Class: <http://x.org#somite-7>
+
+    Annotations: 
+        rdfs:label "somite 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-6>
+    
+    
+Class: <http://x.org#sclerotome-27>
+
+    Annotations: 
+        rdfs:label "sclerotome 27"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "27"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-26>,
+        <http://x.org#develops_from> some <http://x.org#somite-27>
+    
+    
+Class: <http://x.org#sclerotome-26>
+
+    Annotations: 
+        rdfs:label "sclerotome 26"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "26"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-25>,
+        <http://x.org#develops_from> some <http://x.org#somite-26>
+    
+    
+Class: <http://x.org#somite-8>
+
+    Annotations: 
+        rdfs:label "somite 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-7>
+    
+    
+Class: <http://x.org#somite-9>
+
+    Annotations: 
+        rdfs:label "somite 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-8>
+    
+    
+Class: <http://x.org#sclerotome-two>
+
+    Annotations: 
+        rdfs:label "sclerotome two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-one>,
+        <http://x.org#develops_from> some <http://x.org#somite-two>
+    
+    
+Class: <http://x.org#somitic_element>
+
+    Annotations: 
+        rdfs:label "somitic_element"@en
+    
+    
+Class: <http://x.org#dermomyotome-five>
+
+    Annotations: 
+        rdfs:label "dermomyotome five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-five>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-four>
+    
+    
+Class: <http://x.org#somite-four>
+
+    Annotations: 
+        rdfs:label "somite four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-three>
+    
+    
+Class: <http://x.org#sclerotome-8>
+
+    Annotations: 
+        rdfs:label "sclerotome 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-8>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-7>
+    
+    
+Class: <http://x.org#sclerotome-9>
+
+    Annotations: 
+        rdfs:label "sclerotome 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-9>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-8>
+    
+    
+Class: <http://x.org#sclerotome-6>
+
+    Annotations: 
+        rdfs:label "sclerotome 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-6>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-five>
+    
+    
+Class: <http://x.org#sclerotome-7>
+
+    Annotations: 
+        rdfs:label "sclerotome 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-7>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-6>
+    
+    
+Class: <http://x.org#dermatome-37>
+
+    Annotations: 
+        rdfs:label "dermatome 37"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "37"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-37>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-36>
+    
+    
+Class: <http://x.org#dermatome-36>
+
+    Annotations: 
+        rdfs:label "dermatome 36"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "36"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-36>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-35>
+    
+    
+Class: <http://x.org#dermatome-39>
+
+    Annotations: 
+        rdfs:label "dermatome 39"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "39"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-39>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-38>
+    
+    
+Class: <http://x.org#dermatome-38>
+
+    Annotations: 
+        rdfs:label "dermatome 38"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "38"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-38>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-37>
+    
+    
+Class: <http://x.org#dermatome-five>
+
+    Annotations: 
+        rdfs:label "dermatome five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-five>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-four>
+    
+    
+Class: <http://x.org#sclerotome>
+
+    Annotations: 
+        rdfs:label "sclerotome"@en
+    
+    SubClassOf: 
+        <http://x.org#somitic_element>
+    
+    
+Class: <http://x.org#dermatome-30>
+
+    Annotations: 
+        rdfs:label "dermatome 30"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "30"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-29>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-30>
+    
+    
+Class: <http://x.org#dermatome-31>
+
+    Annotations: 
+        rdfs:label "dermatome 31"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "31"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-30>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-31>
+    
+    
+Class: <http://x.org#dermatome-32>
+
+    Annotations: 
+        rdfs:label "dermatome 32"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "32"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-32>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-31>
+    
+    
+Class: <http://x.org#dermatome-33>
+
+    Annotations: 
+        rdfs:label "dermatome 33"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "33"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-33>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-32>
+    
+    
+Class: <http://x.org#dermatome-34>
+
+    Annotations: 
+        rdfs:label "dermatome 34"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "34"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-34>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-33>
+    
+    
+Class: <http://x.org#dermatome-35>
+
+    Annotations: 
+        rdfs:label "dermatome 35"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "35"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-35>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-34>
+    
+    
+Class: <http://x.org#dermatome-29>
+
+    Annotations: 
+        rdfs:label "dermatome 29"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "29"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-28>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-29>
+    
+    
+Class: <http://x.org#dermatome-28>
+
+    Annotations: 
+        rdfs:label "dermatome 28"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "28"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-27>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-28>
+    
+    
+Class: <http://x.org#somite>
+
+    Annotations: 
+        rdfs:label "somite"@en
+    
+    SubClassOf: 
+        <http://x.org#somitic_element>
+    
+    
+Class: <http://x.org#dermatome-27>
+
+    Annotations: 
+        rdfs:label "dermatome 27"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "27"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-26>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-27>
+    
+    
+Class: <http://x.org#dermatome-26>
+
+    Annotations: 
+        rdfs:label "dermatome 26"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "26"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-25>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-26>
+    
+    
+Class: <http://x.org#dermatome-25>
+
+    Annotations: 
+        rdfs:label "dermatome 25"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "25"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-24>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-25>
+    
+    
+Class: <http://x.org#dermatome-four>
+
+    Annotations: 
+        rdfs:label "dermatome four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-four>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-three>
+    
+    
+Class: <http://x.org#somite-three>
+
+    Annotations: 
+        rdfs:label "somite three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-two>
+    
+    
+Class: <http://x.org#dermatome-23>
+
+    Annotations: 
+        rdfs:label "dermatome 23"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "23"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-22>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-23>
+    
+    
+Class: <http://x.org#dermatome-24>
+
+    Annotations: 
+        rdfs:label "dermatome 24"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "24"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-23>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-24>
+    
+    
+Class: <http://x.org#dermatome-21>
+
+    Annotations: 
+        rdfs:label "dermatome 21"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "21"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-21>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-20>
+    
+    
+Class: <http://x.org#dermatome-22>
+
+    Annotations: 
+        rdfs:label "dermatome 22"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "22"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-21>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-22>
+    
+    
+Class: <http://x.org#dermatome-20>
+
+    Annotations: 
+        rdfs:label "dermatome 20"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "20"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-20>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-19>
+    
+    
+Class: <http://x.org#dermatome-19>
+
+    Annotations: 
+        rdfs:label "dermatome 19"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "19"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-19>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-18>
+    
+    
+Class: <http://x.org#dermatome-18>
+
+    Annotations: 
+        rdfs:label "dermatome 18"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "18"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-17>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-18>
+    
+    
+Class: <http://x.org#dermatome-15>
+
+    Annotations: 
+        rdfs:label "dermatome 15"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "15"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-14>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-15>
+    
+    
+Class: <http://x.org#dermatome-14>
+
+    Annotations: 
+        rdfs:label "dermatome 14"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "14"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-13>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-14>
+    
+    
+Class: <http://x.org#dermatome-17>
+
+    Annotations: 
+        rdfs:label "dermatome 17"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "17"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-16>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-17>
+    
+    
+Class: <http://x.org#dermatome-16>
+
+    Annotations: 
+        rdfs:label "dermatome 16"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "16"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-15>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-16>
+    
+    
+Class: <http://x.org#dermatome-two>
+
+    Annotations: 
+        rdfs:label "dermatome two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-two>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-one>
+    
+    
+Class: <http://x.org#somite-two>
+
+    Annotations: 
+        rdfs:label "somite two"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "2"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-one>
+    
+    
+Class: <http://x.org#myotome-8>
+
+    Annotations: 
+        rdfs:label "myotome 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-8>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-7>
+    
+    
+Class: <http://x.org#myotome-7>
+
+    Annotations: 
+        rdfs:label "myotome 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-7>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-6>
+    
+    
+Class: <http://x.org#myotome-9>
+
+    Annotations: 
+        rdfs:label "myotome 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-9>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-8>
+    
+    
+Class: <http://x.org#dermatome-10>
+
+    Annotations: 
+        rdfs:label "dermatome 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-10>,
+        <http://x.org#posterior_to> some <http://x.org#dermatome-9>
+    
+    
+Class: <http://x.org#dermatome-11>
+
+    Annotations: 
+        rdfs:label "dermatome 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-10>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-11>
+    
+    
+Class: <http://x.org#dermatome-12>
+
+    Annotations: 
+        rdfs:label "dermatome 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-11>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-12>
+    
+    
+Class: <http://x.org#dermatome-13>
+
+    Annotations: 
+        rdfs:label "dermatome 13"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermatome>
+         and (<http://x.org#has_order> value "13"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermatome-12>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-13>
+    
+    
+Class: <http://x.org#myotome-6>
+
+    Annotations: 
+        rdfs:label "myotome 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-6>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-five>
+    
+    
+Class: <http://x.org#dermomyotome-four>
+
+    Annotations: 
+        rdfs:label "dermomyotome four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-four>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-three>
+    
+    
+Class: <http://x.org#sclerotome-three>
+
+    Annotations: 
+        rdfs:label "sclerotome three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-three>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-two>
+    
+    
+Class: <http://x.org#dermomyotome-one>
+
+    Annotations: 
+        rdfs:label "dermomyotome one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-one>
+    
+    
+Class: <http://x.org#sclerotome-one>
+
+    Annotations: 
+        rdfs:label "sclerotome one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-one>
+    
+    
+Class: <http://x.org#somite-five>
+
+    Annotations: 
+        rdfs:label "somite five"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "5"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-four>
+    
+    
+Class: <http://x.org#myotome-four>
+
+    Annotations: 
+        rdfs:label "myotome four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-four>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-three>
+    
+    
+Class: <http://x.org#dermomyotome-8>
+
+    Annotations: 
+        rdfs:label "dermomyotome 8"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "8"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-7>,
+        <http://x.org#develops_from> some <http://x.org#somite-8>
+    
+    
+Class: <http://x.org#dermomyotome-9>
+
+    Annotations: 
+        rdfs:label "dermomyotome 9"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "9"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-9>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-8>
+    
+    
+Class: <http://x.org#dermomyotome-6>
+
+    Annotations: 
+        rdfs:label "dermomyotome 6"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "6"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-6>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-five>
+    
+    
+Class: <http://x.org#dermomyotome-7>
+
+    Annotations: 
+        rdfs:label "dermomyotome 7"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "7"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-7>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-6>
+    
+    
+Class: <http://x.org#somite-39>
+
+    Annotations: 
+        rdfs:label "somite 39"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "39"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-38>
+    
+    
+Class: <http://x.org#myotome-20>
+
+    Annotations: 
+        rdfs:label "myotome 20"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "20"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-20>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-19>
+    
+    
+Class: <http://x.org#somite-37>
+
+    Annotations: 
+        rdfs:label "somite 37"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "37"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-36>
+    
+    
+Class: <http://x.org#myotome-21>
+
+    Annotations: 
+        rdfs:label "myotome 21"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "21"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-21>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-20>
+    
+    
+Class: <http://x.org#dermomyotome-30>
+
+    Annotations: 
+        rdfs:label "dermomyotome 30"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "30"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-30>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-29>
+    
+    
+Class: <http://x.org#somite-38>
+
+    Annotations: 
+        rdfs:label "somite 38"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "38"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#somite-37>
+    
+    
+Class: <http://x.org#myotome-22>
+
+    Annotations: 
+        rdfs:label "myotome 22"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "22"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-21>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-22>
+    
+    
+Class: <http://x.org#myotome-24>
+
+    Annotations: 
+        rdfs:label "myotome 24"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "24"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-23>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-24>
+    
+    
+Class: <http://x.org#dermomyotome-20>
+
+    Annotations: 
+        rdfs:label "dermomyotome 20"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "20"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-19>,
+        <http://x.org#develops_from> some <http://x.org#somite-20>
+    
+    
+Class: <http://x.org#myotome-23>
+
+    Annotations: 
+        rdfs:label "myotome 23"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "23"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-22>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-23>
+    
+    
+Class: <http://x.org#dermomyotome-21>
+
+    Annotations: 
+        rdfs:label "dermomyotome 21"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "21"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-20>,
+        <http://x.org#develops_from> some <http://x.org#somite-21>
+    
+    
+Class: <http://x.org#myotome-26>
+
+    Annotations: 
+        rdfs:label "myotome 26"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "26"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-26>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-25>
+    
+    
+Class: <http://x.org#dermomyotome-22>
+
+    Annotations: 
+        rdfs:label "dermomyotome 22"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "22"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-21>,
+        <http://x.org#develops_from> some <http://x.org#somite-22>
+    
+    
+Class: <http://x.org#myotome-25>
+
+    Annotations: 
+        rdfs:label "myotome 25"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "25"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-24>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-25>
+    
+    
+Class: <http://x.org#dermomyotome-23>
+
+    Annotations: 
+        rdfs:label "dermomyotome 23"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "23"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-22>,
+        <http://x.org#develops_from> some <http://x.org#somite-23>
+    
+    
+Class: <http://x.org#myotome-28>
+
+    Annotations: 
+        rdfs:label "myotome 28"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "28"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-28>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-27>
+    
+    
+Class: <http://x.org#dermomyotome-24>
+
+    Annotations: 
+        rdfs:label "dermomyotome 24"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "24"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-23>,
+        <http://x.org#develops_from> some <http://x.org#somite-24>
+    
+    
+Class: <http://x.org#myotome-27>
+
+    Annotations: 
+        rdfs:label "myotome 27"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "27"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-27>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-26>
+    
+    
+Class: <http://x.org#dermomyotome-25>
+
+    Annotations: 
+        rdfs:label "dermomyotome 25"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "25"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-24>,
+        <http://x.org#develops_from> some <http://x.org#somite-25>
+    
+    
+Class: <http://x.org#dermomyotome-26>
+
+    Annotations: 
+        rdfs:label "dermomyotome 26"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "26"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-25>,
+        <http://x.org#develops_from> some <http://x.org#somite-26>
+    
+    
+Class: <http://x.org#myotome-29>
+
+    Annotations: 
+        rdfs:label "myotome 29"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "29"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-29>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-28>
+    
+    
+Class: <http://x.org#dermomyotome-27>
+
+    Annotations: 
+        rdfs:label "dermomyotome 27"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "27"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-26>,
+        <http://x.org#develops_from> some <http://x.org#somite-27>
+    
+    
+Class: <http://x.org#dermomyotome-28>
+
+    Annotations: 
+        rdfs:label "dermomyotome 28"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "28"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-28>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-27>
+    
+    
+Class: <http://x.org#dermomyotome-29>
+
+    Annotations: 
+        rdfs:label "dermomyotome 29"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "29"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-29>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-28>
+    
+    
+Class: <http://x.org#somite-one>
+
+    Annotations: 
+        rdfs:label "somite one"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#somite>
+         and (<http://x.org#has_order> value "1"^^xsd:nonNegativeInteger)
+    
+    
+Class: <http://x.org#myotome-three>
+
+    Annotations: 
+        rdfs:label "myotome three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-two>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-three>
+    
+    
+Class: <http://x.org#myotome-32>
+
+    Annotations: 
+        rdfs:label "myotome 32"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "32"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-31>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-32>
+    
+    
+Class: <http://x.org#myotome-33>
+
+    Annotations: 
+        rdfs:label "myotome 33"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "33"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-33>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-32>
+    
+    
+Class: <http://x.org#myotome-30>
+
+    Annotations: 
+        rdfs:label "myotome 30"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "30"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-29>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-30>
+    
+    
+Class: <http://x.org#myotome-31>
+
+    Annotations: 
+        rdfs:label "myotome 31"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "31"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-30>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-31>
+    
+    
+Class: <http://x.org#dermomyotome-33>
+
+    Annotations: 
+        rdfs:label "dermomyotome 33"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "33"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-32>,
+        <http://x.org#develops_from> some <http://x.org#somite-33>
+    
+    
+Class: <http://x.org#myotome-37>
+
+    Annotations: 
+        rdfs:label "myotome 37"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "37"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-36>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-37>
+    
+    
+Class: <http://x.org#dermomyotome-34>
+
+    Annotations: 
+        rdfs:label "dermomyotome 34"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "34"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-34>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-33>
+    
+    
+Class: <http://x.org#myotome-36>
+
+    Annotations: 
+        rdfs:label "myotome 36"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "36"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-36>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-35>
+    
+    
+Class: <http://x.org#myotome-35>
+
+    Annotations: 
+        rdfs:label "myotome 35"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "35"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-35>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-34>
+    
+    
+Class: <http://x.org#dermomyotome-31>
+
+    Annotations: 
+        rdfs:label "dermomyotome 31"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "31"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-30>,
+        <http://x.org#develops_from> some <http://x.org#somite-31>
+    
+    
+Class: <http://x.org#dermomyotome-32>
+
+    Annotations: 
+        rdfs:label "dermomyotome 32"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "32"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-31>,
+        <http://x.org#develops_from> some <http://x.org#somite-32>
+    
+    
+Class: <http://x.org#myotome-34>
+
+    Annotations: 
+        rdfs:label "myotome 34"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "34"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-34>,
+        <http://x.org#posterior_to> some <http://x.org#myotome-33>
+    
+    
+Class: <http://x.org#dermomyotome-37>
+
+    Annotations: 
+        rdfs:label "dermomyotome 37"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "37"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-36>,
+        <http://x.org#develops_from> some <http://x.org#somite-37>
+    
+    
+Class: <http://x.org#dermomyotome-38>
+
+    Annotations: 
+        rdfs:label "dermomyotome 38"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "38"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-37>,
+        <http://x.org#develops_from> some <http://x.org#somite-38>
+    
+    
+Class: <http://x.org#myotome>
+
+    Annotations: 
+        rdfs:label "myotome"@en
+    
+    SubClassOf: 
+        <http://x.org#somitic_element>
+    
+    
+Class: <http://x.org#dermomyotome-35>
+
+    Annotations: 
+        rdfs:label "dermomyotome 35"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "35"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-34>,
+        <http://x.org#develops_from> some <http://x.org#somite-35>
+    
+    
+Class: <http://x.org#myotome-39>
+
+    Annotations: 
+        rdfs:label "myotome 39"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "39"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-38>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-39>
+    
+    
+Class: <http://x.org#dermomyotome-36>
+
+    Annotations: 
+        rdfs:label "dermomyotome 36"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "36"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-35>,
+        <http://x.org#develops_from> some <http://x.org#somite-36>
+    
+    
+Class: <http://x.org#myotome-38>
+
+    Annotations: 
+        rdfs:label "myotome 38"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#myotome>
+         and (<http://x.org#has_order> value "38"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#myotome-37>,
+        <http://x.org#develops_from> some <http://x.org#dermomyotome-38>
+    
+    
+Class: <http://x.org#dermomyotome-39>
+
+    Annotations: 
+        rdfs:label "dermomyotome 39"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "39"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-39>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-38>
+    
+    
+Class: <http://x.org#dermomyotome-three>
+
+    Annotations: 
+        rdfs:label "dermomyotome three"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "3"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-three>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-two>
+    
+    
+Class: <http://x.org#dermomyotome-15>
+
+    Annotations: 
+        rdfs:label "dermomyotome 15"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "15"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-15>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-14>
+    
+    
+Class: <http://x.org#dermomyotome-16>
+
+    Annotations: 
+        rdfs:label "dermomyotome 16"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "16"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-16>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-15>
+    
+    
+Class: <http://x.org#dermomyotome-13>
+
+    Annotations: 
+        rdfs:label "dermomyotome 13"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "13"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-13>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-12>
+    
+    
+Class: <http://x.org#dermomyotome-14>
+
+    Annotations: 
+        rdfs:label "dermomyotome 14"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "14"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-14>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-13>
+    
+    
+Class: <http://x.org#dermomyotome-11>
+
+    Annotations: 
+        rdfs:label "dermomyotome 11"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "11"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-11>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-10>
+    
+    
+Class: <http://x.org#dermomyotome-12>
+
+    Annotations: 
+        rdfs:label "dermomyotome 12"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "12"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-12>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-11>
+    
+    
+Class: <http://x.org#dermomyotome-10>
+
+    Annotations: 
+        rdfs:label "dermomyotome 10"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "10"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-9>,
+        <http://x.org#develops_from> some <http://x.org#somite-10>
+    
+    
+Class: <http://x.org#sclerotome-four>
+
+    Annotations: 
+        rdfs:label "sclerotome four"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#sclerotome>
+         and (<http://x.org#has_order> value "4"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-four>,
+        <http://x.org#posterior_to> some <http://x.org#sclerotome-three>
+    
+    
+Class: <http://x.org#dermomyotome-19>
+
+    Annotations: 
+        rdfs:label "dermomyotome 19"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "19"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-18>,
+        <http://x.org#develops_from> some <http://x.org#somite-19>
+    
+    
+Class: <http://x.org#dermomyotome-17>
+
+    Annotations: 
+        rdfs:label "dermomyotome 17"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "17"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#develops_from> some <http://x.org#somite-17>,
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-16>
+    
+    
+Class: <http://x.org#dermomyotome-18>
+
+    Annotations: 
+        rdfs:label "dermomyotome 18"^^xsd:string
+    
+    EquivalentTo: 
+        <http://x.org#dermomyotome>
+         and (<http://x.org#has_order> value "18"^^xsd:nonNegativeInteger)
+    
+    SubClassOf: 
+        <http://x.org#posterior_to> some <http://x.org#dermomyotome-17>,
+        <http://x.org#develops_from> some <http://x.org#somite-18>
+    
+    
